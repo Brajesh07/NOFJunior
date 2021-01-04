@@ -1,81 +1,498 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tonoofy</title>
-    <link rel="stylesheet" href="https://dl3.pushbulletusercontent.com/NjSkLkJ9iL2PxhYuL77RNoWmOHD8azkW/style.css">
-	<link rel="stylesheet" href="https://dl3.pushbulletusercontent.com/pwKwS5ubihsZWkXyQ2M44QDUkoYsMU9X/hamburger.css">
-</head>
-<body>
-	
-    <header>
-		
-		
-        <nav>
-            <div class="container">
-				<!--h3 class="logo">Brand<span>Name</span></h3-->
-				<a href="#"><img src="https://dl3.pushbulletusercontent.com/ceJgHgugF8tTttuHZOU8xvJs9WllxTHF/Logo.png" class="logo" alt="logo"></a>
-				<!-- new rules -->
-							<div class="menu-wrap">
-								 <input type="checkbox" class="toggler">
-								 <div class="hamburger"><div></div></div>
-								 <div class="menu"><div><div>
-									 <ul>
-										 <li><a href="#">Demo video</a></li>
-										 <li><a href="#">About</a></li>
-										 <li><a href="#">Privacy Policy</a></li>
-										 <li><a href="#">Terms of Service</a></li>
-										 <li><a href="#">Refund</a></li>
-										 <li><a href="#">Disclaimer</a></li>
-										 <li><a href="#">Contact Us</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-				</div>
-				
-				<!-- new rules -->
-            </div>
-			
-        </nav>
-		
-		
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <h1 class="big-title translate" data-speed="0.1"><samp>power of</samp><br>Artificial Inteligence<br> <samp>&amp; fun of</samp> <br><samp>Cartoons</samp> </h1>
-		
-		
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <img src="https://i.postimg.cc/mgvddm0N/5.png" class="frog translate" data-speed="-0.25" alt="">
-        <img src="https://i.postimg.cc/fTbgktcX/4.png.png" class="mountain1 translate" data-speed="-0.2" alt="">
-        <img src="https://i.postimg.cc/SQfwnbw0/3.png" class="mountain2 translate" data-speed="0.4" alt="">
-        <img src="https://i.postimg.cc/8zY8Tdxj/2.png" class="mountain3 translate" data-speed="0.3" alt="">
-        <img src="https://i.postimg.cc/fW7hY9Sr/1.jpg" class="sky translate" data-speed="0.5" alt="">
-    </header>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-    <section>
-        <div class="shadow"></div>
-
-        <div class="container">
-            <div class="content opacity">
-                <h3 class="title">
-                    About
-                    <div class="border"></div>
-                </h3>
-                <p class="text">Toonofy Global Pvt Ltd.:Toonofy is an education technology company delivering the engaging learning experiences to students across the globe. Toonofy is the world's only interactive, gamified and animation based International Olympiad examination powered with Artificial Intelligence.<br>We have mapped the entire syllabus into animated stories.<br>The questions are interactive, with voice support which means the students can touch the cartoons, and other elements on the screen, read &amp; listen to the question as well.<br>Our revolutionary technology identifies individual student learning gaps and fills those gaps through the algorithmically generated analysis report &amp; the remedial plans. Students from Play Group to 5th can participate.</p>
-				
-            </div>
-
-            <div class="imgContainer opacity">
-                <img src="https://i.postimg.cc/9FzXnxNp/About-Us.gif" alt="">
-				<a class="btn" href="Syllabus.html" target="_blank">view syllabus</a>
-				<a class="btn" href="Demo.html" target="_blank">Demo video</a>
-            </div>
-        </div>
-		<footer class="footer"> © 2025 Toonofy Global Pvt. Ltd. All Rights Reserved. <a href="About Us.html">About Us</a>  | <a href="Privacy Policy.html">Privacy Policy</a>  |  <a href="Terms of Service.html">Terms of Service</a> |  <a href="Refund.html">Refund</a>  |  <a href="Disclaimer.html">Disclaimer</a> |  <a href="Contact Us.html">Contact Us</a></footer>
-    </section>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
     
-    <script src="https://dl3.pushbulletusercontent.com/h5ApBvdxIVrw3tEloNjvi8aG5uz0TZqE/app.js"></script>
-</body>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  </head>
+  <body>
+  
+  <nav class="navbar sticky-top navbar-expand-md navbar-light">
+
+    <a class="navbar-brand" href="index.html">
+      <img src="images/nof-junior-logo-cloud.png" alt="NOF junior">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schools.html">SCHOOLS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="parents.html">PARENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="awards.html">AWARDS &amp; RECOGNITION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.nof.org.in/">OLYMPIAD FOR CLASS 6-12</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="downloads.html">DOWNLOADS</a>
+        </li>
+
+        <li class="nav-item">
+          <div class="main">
+            <p>More...</p>
+              <div class="hide">
+                <ul>
+                  <li><a  href="practice.html">PRACTICE KIT</a></li>
+                  <li><a  href="#sec-five">PRACTICE KIT</a></li>
+                  <li><a  href="reports.html">REPORTS &amp; ANALYSIS</a></li>
+                  <li><a  href="registration.html">REGISTER YOUR SCHOOL</a></li>
+                  <li><a  href="#sec-six">CONTACT</a></li>
+                  <li><a  href="about-us.html">ABOUT US</a></li>
+                  <li><a  href="partner.html">PARTNER WITH US</a></li>
+                  <li><a  href="blog.html">BLOG</a></li>
+                </ul>
+              </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  
+ <i class="fab fa-pinterest fa-2x stick-icon" style="top: 100px;">
+   <a href="https://in.pinterest.com/5855264130ae1e564c13d784250868/"></a>
+ </i>
+ <i class="fab fa-instagram fa-2x stick-icon" style="top: 140px;">
+   <a href="https://www.instagram.com/nofjunior/"></a>
+ </i>
+ <i class="fab fa-facebook-f fa-2x stick-icon" style="top: 180px; right: 20px">
+   <a href="https://www.facebook.com/NOF-Junior-105382224526859/"></a>
+ </i>
+ <i class="fab fa-youtube fa-2x stick-icon" style="top: 220px;">
+   <a href="https://www.youtube.com/channel/UCoVgu8YEtOEDZRnHoebokEA"></a>
+ </i>
+
+ <a class="stick btnone" href="#">EXAM DATES</a>
+ <a class="stick btntwo" href="#">GUIDELINES</a>
+ 
+
+
+
+  <section class="sec-one">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h1>Olympiads for<br>Pre-Primary to Class 5</h1>
+          <h3>Animation based ONLINE Experience</h3>
+          <a href="https://pages.razorpay.com/nofjunior-olympiad"><button class="btn-1">REGISTER NOW</button></a>
+          <a href="https://nofexam.com/auth/login"><button class="btn-2">NOF Junior ONLINE EXAM</button></a>
+        </div>
+        <div class="col-md-8">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/0eoav57Py8c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="sec-two">
+    <div class="">
+      <div class="row">
+        <div class="col-md">
+          <div class="img-div"><img src="images/sub-math.jpg" alt="Italian Trulli" class="img"></div>
+          <div class="detail">
+            <a>INTERNATIONAL JUNIOR <span>MATH</span> OLYMPIAD</a>
+            <p>For Playgroup to Class 5</p>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="img-div"><img src="images/sub-science.jpg" alt="Italian Trulli" class="img"></div>
+          <div class="detail">
+            <a>INTERNATIONAL JUNIOR <span>SCIENCE</span> OLYMPIAD</a>
+            <p>For Playgroup to Class 5</p>
+          </div>
+        </div>
+        <div class="col-md"><div class="img-div"><img src="images/sub-english.jpg" alt="Italian Trulli" class="img"></div>
+          <div class="detail">
+            <a>INTERNATIONAL JUNIOR <span>ENGLISH</span> OLYMPIAD</a>
+            <p>For Playgroup to Class 5</p>
+          </div></div>
+        <div class="col-md"><div class="img-div"><img src="images/sub-gk.jpg" alt="Italian Trulli" class="img"></div>
+          <div class="detail">
+            <a>INTERNATIONAL JUNIOR <span>GK</span> OLYMPIAD</a>
+            <p>For Playgroup to Class 5</p>
+          </div></div>
+      </div>
+
+      <div class="row second">
+        <div class="col-md">
+          <div class="img-div"><img src="images/sub-cyber.jpg" alt="Italian Trulli" class="img"></div>
+          <div class="detail">
+            <a>INTERNATIONAL JUNIOR <span>CYBER</span> OLYMPIAD</a>
+            <p>For Playgroup to Class 5</p>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="img-div"><img src="images/sub-math.jpg" alt="Italian Trulli" class="img"></div>
+          <div class="detail">
+            <a>INTERNATIONAL JUNIOR <span>MATH</span> OLYMPIAD</a>
+            <p>For Playgroup to Class 5</p>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="img-div"><img src="images/sub-math.jpg" alt="Italian Trulli" class="img"></div>
+          <div class="detail">
+            <a>INTERNATIONAL JUNIOR <span>MATH</span> OLYMPIAD</a>
+            <p>For Playgroup to Class 5</p>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="img-div"><img src="images/sub-math.jpg" alt="Italian Trulli" class="img"></div>
+          <div class="detail">
+            <a>INTERNATIONAL JUNIOR <span>MATH</span> OLYMPIAD</a>
+            <p>For Playgroup to Class 5</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  
+  <section class="sec-three">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <h2>What is NOF Junior</h2>
+          <p>
+            Children love cartoons as compared to learning from books. Gamified animated content motivates them and encourages them to take actions. 
+            <br>
+            <br>
+            NOF Junior is a gamified assessment platform and not a regular pen and paper-based test, the questions asked are interactive, children can touch the cartoons and other elements on the screen , questions have voice support for better understanding. This makes the entire exercise very entertaining & engaging
+          </p>
+        </div>
+        <div class="col-md">
+          <iframe width="465" height="252" src="https://www.youtube-nocookie.com/embed/0eoav57Py8c" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="parallax"></div>
+ 
+  <section class="sec-four">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <h2>NOF Junior Assessment</h2>
+          <p>
+            NOF Junior Olympiad is a convenient online experience, so schools have the discretion to conduct the Olympiad as per their convenience vs. the inconvenience of adhering to one particular date.
+            <br>
+            <br>
+            Being technically simulated, it has the capacity to engage learners as young as 2.5 years. The assessment is conducted digitally.
+          </p>
+        </div>
+        <div class="col-md">
+          <div id="demo" class="carousel slide" data-ride="carousel">
+
+             <!-- Indicators -->
+               <ul class="carousel-indicators">
+                 <li data-target="#demo" data-slide-to="0" class="active"></li>
+                 <li data-target="#demo" data-slide-to="1"></li>
+                 <li data-target="#demo" data-slide-to="2"></li>
+              </ul>
+  
+            <!-- The slideshow -->
+             <div class="carousel-inner">
+              <div class="carousel-item active">   
+                <img src="https://static.wixstatic.com/media/205f6d_fea39263dec049d38a1fa4b89f571f9c~mv2.png/v1/fill/w_514,h_317,al_c,q_85,usm_0.66_1.00_0.01/205f6d_fea39263dec049d38a1fa4b89f571f9c~mv2.webp" alt="NOF Junior Exam">
+              </div> 
+              <div class="carousel-item">
+                 <img src="https://static.wixstatic.com/media/205f6d_f72ce3eff38440ac8007bedf03a98695~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_f72ce3eff38440ac8007bedf03a98695~mv2.webp" alt="NOF Junior Exam">
+             </div>
+             <div class="carousel-item">
+                 <img src="https://static.wixstatic.com/media/205f6d_6ea7f4c177cd438396a021fa808b5bc5~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_6ea7f4c177cd438396a021fa808b5bc5~mv2.webp" alt="NOF Junior Exam">
+             </div>
+             <div class="carousel-item">
+                 <img src="https://static.wixstatic.com/media/205f6d_6af229bf751749829b1eac6e05ad6930~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_6af229bf751749829b1eac6e05ad6930~mv2.webp" alt="NOF Junior Exam">
+             </div>
+
+             <div class="carousel-item">
+                <img src="https://static.wixstatic.com/media/205f6d_9fabebcfae064ce39c80d30487452df6~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_9fabebcfae064ce39c80d30487452df6~mv2.webp" alt="NOF Junior Exam">
+             </div>   
+             <div class="carousel-item">
+                <img src="https://static.wixstatic.com/media/205f6d_d1270e55bdb44f2694d0f95d28f28771~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_d1270e55bdb44f2694d0f95d28f28771~mv2.webp" alt="NOF Junior Exam">
+             </div>   
+             <div class="carousel-item">  
+                <img src="https://static.wixstatic.com/media/205f6d_555f57c1f5ee499daf26e9c98dc35145~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_555f57c1f5ee499daf26e9c98dc35145~mv2.webp" alt="NOF Junior Exam">
+             </div>     
+             <div class="carousel-item">   
+                <img src="https://static.wixstatic.com/media/205f6d_1ab94e8ea71649f0a57eb98716bb12f7~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_1ab94e8ea71649f0a57eb98716bb12f7~mv2.webp" alt="NOF Junior Exam">
+             </div>   
+             <div class="carousel-item">
+               <img src="https://static.wixstatic.com/media/205f6d_e1bc8edc84854f4fa0c265c74b10e0ef~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_e1bc8edc84854f4fa0c265c74b10e0ef~mv2.webp" alt="NOF Junior Exam">
+             </div>  
+             <div class="carousel-item">   
+                <img src="https://static.wixstatic.com/media/205f6d_f8499157e6fb4e9882c41548efcb3d63~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_f8499157e6fb4e9882c41548efcb3d63~mv2.webp" alt="NOF Junior Exam">
+             </div>   
+             <div class="carousel-item">   
+                <img src="https://static.wixstatic.com/media/205f6d_a46a3c45b572444da1672b8384bb2e97~mv2.jpg/v1/fill/w_514,h_317,al_c,q_80,usm_0.66_1.00_0.01/205f6d_a46a3c45b572444da1672b8384bb2e97~mv2.webp" alt="NOF Junior Exam">
+             </div>   
+
+             <div class="carousel-item">
+                 <img src="images/IMG_20200225_110609.jpg" alt="">
+             </div>
+             <div class="carousel-item">
+                 <img src="images/IMG_20200225_110650.jpg" alt="">
+             </div>
+             <div class="carousel-item">
+                 <img src="images/IMG_20200228_112016.jpg" alt="">
+             </div>
+             <div class="carousel-item">
+                 <img src="images/IMG_20200228_112022.jpg" alt="">
+             </div>
+             <div class="carousel-item">
+                 <img src="images/IMG_20200228_112022.jpg" alt="">
+             </div>
+             <div class="carousel-item">
+                 <img src="images/IMG_20200228_112022.jpg" alt="">
+             </div>
+             <div class="carousel-item">
+                 <img src="images/IMG_20200228_112022.jpg" alt="">
+             </div>
+             <div class="carousel-item">
+                 <img src="images/IMG_20200228_112022.jpg" alt="">
+             </div>
+            </div>
+  
+              <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section  class="sec-five" id="sec-five">
+    <div class="">
+      <h2>Practice Books for Olympiad</h2>
+      
+      <div class="row">
+
+        <div class="col-md">
+          <img src="images/Kindergarten-Math-Skills.png" alt="Math Olympiad">
+          <h4>MATH <br> PRACTICE KIT</h4>
+          <a href="practice.html"><button>KNOW MORE</button></a>
+        </div>
+
+        <div class="col-md" style="background-color: #f86;">
+          <img src="images/Easy-Science-Experiments-750x463.png" alt="Science Olympiad">
+          <h4>SCIENCE <br> PRACTICE KIT</h4>
+          <a href="practice.html"><button>KNOW MORE</button></a>
+        </div>
+        <div class="col-md" style="background-color: rgb(153, 153, 238);">
+          <img src="images/english.png" alt="English Olympiad">
+          <h4>ENGLISH <br> PRACTICE KIT</h4>
+          <a href="practice.html"><button>KNOW MORE</button></a>
+        </div>
+        <div class="col-md" style="background-color: rgb(173, 247, 90);">
+          <img src="images/gk.jpg" alt="GK Olympiad">
+          <h4>GK <br> PRACTICE KIT</h4>
+          <a href="practice.html"><button>KNOW MORE</button></a>
+        </div>
+        <div class="col-md" style="background-color: #2cc;">
+          <img src="images/cyber.jpg" alt="Cyber Olympiad">
+          <h4>CYBER <br> PRACTICE KIT</h4>
+          <a href="practice.html"><button>KNOW MORE</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  <section class="sec-six" id="sec-six">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <h6>CLASSES FOR INTERNATIONAL OLYMPIADS</h6>
+          <ul>
+            <li><a href="olympiad.html">Olympiad exam for Pre-Primary</a></li>
+			  <li><a href="">Olympiad exam for Nursery</a></li>
+            <li><a href="">Olympiad exam for LKG</a></li>
+            <li><a href="">Olympiad exam for UKG</a></li>
+            <li><a href="">Olympiad exam for Class 1</a></li>
+            <li><a href="">Olympiad exam for Class 2</a></li>
+            <li><a href="">Olympiad exam for Class 3</a></li>
+            <li><a href="">Olympiad exam for Class 4</a></li>
+            <li><a href="">Olympiad exam for Class 5</a></li>
+          </ul>
+        </div>
+        <div class="col-md">
+          <h6>INTERNATIONAL OLYMPIADS</h6>
+          <ul>
+            <li><a href="">International Junior Maths Olympiad</a></li>
+            <li><a href="">International Junior Science Olympiad</a></li>
+            <li><a href="">International Junior English Olympiad</a></li>
+            <li><a href="">International Junior GK Olympiad</a></li>
+            <li><a href="">International Junior Cyber Olympiad</a></li>
+          </ul>
+        </div>
+        <div class="col-md">
+          <h6>PRACTICE BOOKS FOR OLYMPIADS</h6>
+          <ul>
+            <li><a href="">Maths Practice Books for Olympiads</a></li>
+            <li><a href="">English Practice Books for Olympiads</a></li>
+            <li><a href="">Science Practice Books for Olympiads</a></li>
+            <li><a href="">GK Practice Books for Olympiads</a></li>
+            <li><a href="">Cyber Practice Books for Olympiads</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="sec-seven">
+    <div class="conatiner">
+      <div class="row">
+        <div class="col-md address">
+          <h2>NOF Junior</h2>
+          <p>108, Saket <br> Indore 452018 MP</p>
+          <p>junior@groupnof.com <br> +91 93011 95542</p>
+          <div class="icon">
+            <i class="fab fa-pinterest fa-2x" style="margin-right: 10px;">
+              <a href="https://in.pinterest.com/5855264130ae1e564c13d784250868/"></a>
+            </i>
+            <i class="fab fa-instagram fa-2x" style="margin-right: 10px;">
+              <a href="https://www.instagram.com/nofjunior/"></a>
+            </i>
+            <i class="fab fa-facebook-f fa-2x" style="margin-right: 10px;">
+              <a href="https://www.facebook.com/NOF-Junior-105382224526859/"></a>
+            </i>
+            <i class="fab fa-youtube fa-2x" style="margin-right: 10px;">
+              <a href="https://www.youtube.com/channel/UCoVgu8YEtOEDZRnHoebokEA"></a>
+            </i>
+          </div>
+        </div>
+        <div class="col-md form">
+          <h2>Get in touch with us</h2>
+          <form>
+            <input placeholder="First Name">
+            <input placeholder="Last Name" class="even">
+            <br>
+            <input placeholder="Phone">
+            <input placeholder="Email" class="even">
+            <br>
+            <textarea placeholder="Type your message here..."></textarea>
+
+          
+              <div class="row submit">
+                <div class="col-sm">
+                  <div class="checkmark" 
+                      style = "width: 200px;
+                      height:50px;  
+                      padding:10px;
+                      background-color:white;
+                      border-radius:1px;" >
+                      <label>
+                        <input type="checkbox" style="
+                        float: left; 
+                        width:30px; 
+                        margin-top:-4px;
+                        " >
+                        <span style="float: left;
+                        color: black;"> I'm not a robot</span>
+                      </label>
+                  </div>
+                </div>
+                <div class="col-sm" id="btn"><button>Submit</button></div>
+              </div>
+            
+
+            <p>Thanks for submitting!</p>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.388091538412!2d75.897959!3d22.7246349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c1071e66436e26a!2sNational%20Olympiad%20Foundation!5e0!3m2!1sen!2sin!4v1608547736958!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
+  </div>
+
+  <section class="sec-eight">
+    <div class="row">
+      <div class="col-md">
+        <ul>
+          <li style="border-right: 1px solid #44e;"><a href="privacy.html">Privacy Policy</a></li>
+          <li style="border-right: 1px solid #44e;">Terms of Service</li>
+          <li>Disclaimer</li>
+        </ul>
+      </div>
+      <div class="col-md">
+        <p>Made with ♥ for kids. © NOF Junior 2020-2022. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+	
+		function callMap() {
+			
+			var location = {lat: 34.433340, lng: -93.029950 };
+			var map = new google.maps.Map(document.getElementById("api"), {
+				zoom: 4,
+				center: location
+			});
+			
+		}
+		
+		</script>
+	  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP9YUjtESieV5DTEIDJY2egTjJAdfnezg&callback=callMap">
+	
+	  </script>
+	
+  </body>
 </html>
+
