@@ -439,15 +439,22 @@ body {
   background-color: transparent;
   height: 40px;
   padding-left: 10px;
-  width: 45%;
+  width: 100%;
   font-weight: 600;
   margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .sec-seven .even{
   margin-left: 5%;
 }
-
+.sec-seven .get-in-touch .row{
+  margin: 0;
+}
+.sec-seven  .error-msg, .one .error-msg{
+  font-size: 14px;
+  color: #ff0000;
+}
 .sec-seven form input::placeholder {
   color: white;
 }
