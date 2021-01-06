@@ -12,8 +12,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <script src="https://www.google.com/recaptcha/api.js"></script>
 
   </head>
   <body>
@@ -39,7 +37,7 @@
           <a class="nav-link" href="parents.html">PARENTS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="awards.html">AWARDS &amp; RECOGNITIONS</a>
+          <a class="nav-link" href="awards.html">AWARDS &amp; RECOGNITION</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://www.nof.org.in/">OLYMPIAD FOR CLASS 6-12</a>
@@ -383,28 +381,53 @@
           </div>
         </div>
         <div class="col-md form">
-          <h2>Get in touch with us</h2>
-          <form id="test" method="post" data-email="brajesh@nof.org.in" action="https://script.google.com/macros/s/AKfycbwnV1Menn1q9ZVuv9XClsUxDCcmufobFs3aGAE-/exec">
-            <input placeholder="First Name">
-            <input placeholder="Last Name" class="even">
-            <br>
-            <input placeholder="Phone">
-            <input placeholder="Email" class="even">
-            <br>
-            <textarea placeholder="Type your message here..."></textarea>
-
-          
-              <div class="row submit">
-                <div class="col-sm">
-                  <div class="g-recaptcha" data-sitekey="6LfMz2EUAAAAANpK7eWaiCxYq6QcPH8_XvKdIRyK"></div>
-                </div>
-                <div class="col-sm" id="btn"><button>Submit</button></div>
-              </div>
+        <h2>Get in touch with us</h2>
+        <form id="test" class="get-in-touch" method="post" data-email="brajesh@nof.org.in" action="" onsubmit="return submitUserForm();">
+          <div class="row">
+            <div class="form-group col-sm-6">
+              <input type="text" placeholder="First Name" name="fname" id="fname" class="form-control">
+              <h5 id="usercheck" class="error-msg">
+                Enter 3 charecter at least
+              </h5>
+            </div>
+            <div class="form-group col-sm-6">
             
-
-            <p>Thanks for submitting!</p>
-
-          </form>
+              <input type="text" placeholder="Last Name" name="lname" id="lname" class="form-control">
+              <h5 id="lNameCheck" class="error-msg">
+                Enter 3 charecter at least
+              </h5>
+            </div>
+            <div class="form-group col-sm-6">
+              <input placeholder="Enter Phone No." type="text" name="phone" id="phone" class="form-control">
+              <h5 id="phoneCheck" class="error-msg">
+                Enter 10 digit phone number
+              </h5>
+            </div>
+            <div class="form-group col-sm-6">
+              <input type="email" placeholder="Enter Email" name="email" id="email" class="form-control">
+              <h5 id="emailvalid" class="form-text error-msg">
+                Your email must be a valid email
+            </h5>
+            </div>
+            <div class="col-sm-12">
+              <textarea placeholder="Type your message here..."></textarea>
+            </div>
+          </div>
+          
+        
+        
+          <div class="row submit">
+            <div class="col-sm">
+              <div class="g-recaptcha" data-sitekey="6Le2_SIaAAAAAMAJ0algok2n-w8joB75u0l1G4lS" data-callback="verifyCaptcha"></div>
+              <div id="g-recaptcha-error"></div>
+            </div>
+            <div class="col-sm" id="btn"><button type="button" class="submitBtn">Submit</button></div>
+          </div>
+        
+        
+          <p>Thanks for submitting!</p>
+        
+        </form>
         </div>
       </div>
     </div>
@@ -446,8 +469,166 @@
       });
       
     }
-    
+     $(document).ready(function () {
+ 
+       
+       /*error msg function*/
+        $('#usercheck').hide();
+        $('#lNameCheck').hide();
+        $('#phoneCheck').hide();
+        $('#emailvalid').hide();
+       
+       // error variable
+       let usernameError = true;
+       let lastNameError = true;
+       let phoneNoError = true;
+       let emailError = true;
+       
+       //funcation call for validation
+       $('#fname').keyup(function () {
+         validateUsername();
+       });
+       
+       $('#lname').keyup(function () {
+         validatelastname();
+       });
+       
+        $('#phone').keyup(function () {
+         validatePhoneNumber();
+       });
+       $('#email').keyup(function () {
+           validateEmail();
+      });
+         
+      // Validate Email 
+      function validateEmail(){
+        const email =
+          document.getElementById('email');
+        email.addEventListener('blur', () => {
+          let regex =
+            /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+          let s = email.value;
+          if (regex.test(s)) {
+            emailError = true;
+            $('#emailvalid').hide();
+          }
+          else {
+            emailError = false;
+            $('#emailvalid').show();
+          }
+        }) 
+      }
+       
+       
+      // validate phone number
+      function validatePhoneNumber(){
+        let phoneValue = $('#phone').val();
+      
+         if (phoneValue.length < 10) { 
+          $('#phoneCheck').show();
+          
+          phoneNoError = false;
+          return false;
+        }
+        else {
+          $('#phoneCheck').hide();
+        }
+      }
+       
+      //validate last name
+       function validatelastname(){
+         let lnameValue = $('#lname').val();
+         if (lnameValue.length == '') {
+           $('#lNameCheck').show();
+           lastNameError = false;
+           return false;
+         }
+          else if ((lnameValue.length < 3) ||
+           (lnameValue.length > 10)) {
+           $('#lNameCheck').show();
+            
+           lastNameError = false;
+           return false;
+         }
+         else {
+           $('#lNameCheck').hide();
+         }
+       }
+       
+       //validate user first name
+       function validateUsername() {
+         let usernameValue = $('#fname').val();
+         if (usernameValue.length == '') {
+           $('#usercheck').show();
+           usernameError = false;
+           return false;
+         }
+         else if ((usernameValue.length < 3) ||
+           (usernameValue.length > 10)) {
+           $('#usercheck').show();
+           
+           usernameError = false;
+           return false;
+         }
+         else {
+           $('#usercheck').hide();
+         }
+       } 
+             
+       //funcation for submit button
+       $('.submitBtn').click(function () {
+       
+         validateUsername();
+         validatelastname();
+         validatePhoneNumber();
+         validateEmail();
+         var response = grecaptcha.getResponse();
+         if (response.length == 0) {
+           document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+           return false;
+         }
+         if ((usernameError == true) &&
+           (lastNameError == true) &&
+           (phoneNoError == true) &&
+           (emailError == true)) {
+           return true;
+           
+         } else {
+           document.getElementById("test").reset();
+         }
+       }); 
+       
+       
+  });
+  function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+  }
     </script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script type="text/javascript">
+      (function ($, W, D) {
+        var JQUERY4U = {};
+        JQUERY4U.UTIL = {
+          setupFormValidation: function () {
+            $('#google_form').validate({
+              ignore: ":hidden:not(#keycode)",
+              rules: {
+                "hiddencode": {
+                  required: function () {
+                    if (grecaptcha.getResponse() == '') {
+                      return true;
+                    } else { return false; }
+                  }
+                }
+              }
+            });
+          }
+        }
+        $(D).ready(function ($) {
+          JQUERY4U.UTIL.setupFormValidation();
+        });
+      })(jQuery, window, document);
+    </script> -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP9YUjtESieV5DTEIDJY2egTjJAdfnezg&callback=callMap">
   
     </script>
