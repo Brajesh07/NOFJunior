@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Denk+One&display=swap" rel="stylesheet">
+	
+	<!--***************************************** jquery libs start from here  *************************************************-->
+
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $("#btnPrint").live("click", function () {
+            var divContents = $("#dvContainer").html();
+            var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<html><head><title>NOF Junior Report 2020</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            //printWindow.document.color('<html><body></body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        });
+
+        // for mobile trial
+
+    </script>
+
+    <!--***************************************** jquery libs end from here  *************************************************-->
+
+    
+
+
+</head>
+<body style="background-color: white; margin: 0; font-family: denk one;">
+
+<!--********************************************* button ***************************************************************-->
+
+<input type="button" value="Download Now" id="btnPrint"/>
+
+<!--********************************************* button ***************************************************************-->
+
+
+<!--***************************************** main contain start here ***********************************************************-->
+
+ <div id="dvContainer">
+
+ 	
+ 	<div style="width: 793px; height: 1122px; background-size: cover; margin: 0 auto 50px; position: relative;">
+ 		<img src="https://dl3.pushbulletusercontent.com/guHbJmBG6c6wJO3V9JgD48jcZhGg8676/bg.png" style="position: absolute;">
+ 		<div style="float: left; width: 300px; height: 200px; position: absolute; z-index: 1;">
+ 			<p style="margin: 20px 0 0 20px; font-family: denk one; font-size: 20px; color: black;">STUDENT<br>PERFORMANCE REPORT</p> 		
+ 		</div>
+ 		<img src="https://dl3.pushbulletusercontent.com/h7k2pEQjtH4a2cI2o7dK4qt5cLK858yP/junior-logo.png" style="position: absolute; width: 200px; right: 5px;" >
+ 		
+ 		<div style="position: absolute; margin-top: 400px; width: 800px;">
+
+
+ 		<h3 style="color: #00959C; position: absolute; margin: 200px auto 0; font-size: 60px; font-family: denk one; text-align: center; width: 100%; ">
+
+ 			<!----------- Student name  --------->
+
+ 				{{sdfsjkfhkhalfhVansfsdi}}
+
+ 			<!----------- Student name ends  --------->
+ 			
+ 		</h3>
+
+
+ 		<p style="color: #00959C; position: absolute; margin: 300px 10% 0; font-size: 30px; text-align: center; font-family: denk one;">has performed
+
+ 		<!----------- percentage  --------->	
+
+ 		{{$%}}
+
+ 		<!----------- percentage  --------->
+
+ 		better than the total number of students appeared.</p>
+ 		</div>
+ 		<img src="https://dl3.pushbulletusercontent.com/KRz5qFTEHRIIvxPc0lfPwbKuXUfYuW6P/images-one.png" style="width: 793px; position: absolute; bottom: 0 "> 		
+ 	</div>
+
+    <!--------------------------- Second Page ---------------------------------->
+
+    <div style="width: 793px; height: 1122px; background-size: cover; margin: 0 auto 50px; position: relative;">
+        <img src="https://dl3.pushbulletusercontent.com/guHbJmBG6c6wJO3V9JgD48jcZhGg8676/bg.png" style="position: absolute;">
+        <div style="float: left; width: 300px; height: 200px; position: absolute; z-index: 1;">
+            <p style="margin: 20px 0 0 20px; font-family: denk one; font-size: 20px; color: black; ">STUDENT<br>PERFORMANCE REPORT</p> <hr style="width: 200px; position: absolute; margin: 20px 0 0 20px; border-top: 1px solid #fff;">
+            <table style="margin: 30px 0 0 20px; font-family: barlow;">
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Name</td>
+
+                    <!----------- Student name  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!stundent&Name&come&here}}</td>
+
+                    <!----------- Student name ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Class</td>
+
+                    <!----------- Student Class  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!class&come&here}}</td>
+
+                    <!----------- Student class ends here  --------->
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Subject</td>
+
+                    <!----------- Student Subject  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!English}}</td>
+
+                    <!----------- Student subject ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow; ">School</td>
+
+                    <!----------- Student School  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!DPS&MONARCH&INTERNATIONAL&SCHOOL,&DOHA}}</td>
+
+                    <!----------- Student school ends here  --------->
+                </tr>
+            </table>
+        </div>
+        <img src="https://dl3.pushbulletusercontent.com/h7k2pEQjtH4a2cI2o7dK4qt5cLK858yP/junior-logo.png" style="position: absolute; width: 200px; right: 5px;" >
+        <div style="position: relative; width: 644px; margin: 0 auto; padding: 367px 0 0 0;">
+
+        <img src="https://dl3.pushbulletusercontent.com/yVqa29l36DXmBxtDGUmu917vWQNP0oLA/index-bg.png" style="position: absolute; width: 100%; text-align: center; ">
+        <h3 style="font-size: 45pt; position: absolute; margin: 0; padding: 6px 0 0 250px; font-family: denk one;">Index</h3>
+            <table style="list-style-type: none; position: absolute; margin: 150px 0 0 50px;">
+                <tr style="margin-bottom: 30px; ">
+                    <td style="font-size: 30px; padding: 0 270px 0 0; color: #A46080; font-family: denk one;">Strike Rate Analysis</td>
+                    <td style="font-size: 30px; margin: 0 0 0 20px; color: #A46080; font-family: denk one;">3</td>
+                </tr>
+            </table>
+            <table style="list-style-type: none; position: absolute; margin: 250px 0 0 50px;">
+                <tr style="margin-bottom: 30px; ">
+                    <td style="font-size: 30px; padding: 0 270px 0 0; color: #A46080; font-family: denk one;">Topic Wise Analysis</td>
+                    <td style="font-size: 30px; margin: 0 0 0 20px; color: #A46080; font-family: denk one;">4</td>
+                </tr>
+            </table>
+            <table style="list-style-type: none; position: absolute; margin: 350px 0 0 50px;">
+                <tr style="margin-bottom: 30px; ">
+                    <td style="font-size: 30px; padding: 0 220px 0 0; color: #A46080; font-family: denk one;">Difficulty Wise Analysis</td>
+                    <td style="font-size: 30px; margin: 0 0 0 20px; color: #A46080; font-family: denk one;">5</td>
+                </tr>
+            </table>
+            <table style="list-style-type: none; position: absolute; margin: 450px 0 0 50px;">
+                <tr style="margin-bottom: 30px; ">
+                    <td style="font-size: 30px; padding: 0 272px 0 0; color: #A46080; font-family: denk one;">Time Wise Analysis</td>
+                    <td style="font-size: 30px; margin: 0 0 0 20px; color: #A46080; font-family: denk one;">6</td>
+                </tr>
+            </table>
+            <table style="list-style-type: none; position: absolute; margin: 550px 0 0 50px;">
+                <tr style="margin-bottom: 30px; ">
+                    <td style="font-size: 30px; padding: 0 345px 0 0; color: #A46080; font-family: denk one;">Strong Topics</td>
+                    <td style="font-size: 30px; margin: 0 0 0 20px; color: #A46080; font-family: denk one;">7</td>
+                </tr>
+            </table>
+            <table style="list-style-type: none; position: absolute; margin: 650px 0 0 50px;">
+                <tr style="margin-bottom: 30px; ">
+                    <td style="font-size: 30px; padding: 0 240px 0 0; color: #A46080; font-family: denk one;">Areas of Improvement</td>
+                    <td style="font-size: 30px; margin: 0 0 0 20px; color: #A46080; font-family: denk one;">8</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--------------------------- Second Page ---------------------------------->
+
+    <!--------------------------- Third Page ---------------------------------->
+
+    <div style="width: 793px; height: 1122px; background-size: cover; margin: 0 auto 50px; position: relative;">
+        <img src="https://dl3.pushbulletusercontent.com/guHbJmBG6c6wJO3V9JgD48jcZhGg8676/bg.png" style="position: absolute;">
+        <div style="float: left; width: 300px; height: 200px; position: absolute; z-index: 1;">
+            <p style="margin: 20px 0 0 20px; font-family: denk one; font-size: 20px; color: black; ">STUDENT<br>PERFORMANCE REPORT</p> <hr style="width: 200px; position: absolute; margin: 20px 0 0 20px; border-top: 1px solid #fff;">
+            <table style="margin: 30px 0 0 20px; font-family: barlow;">
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Name</td>
+
+                    <!----------- Student name  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!stundent&Name&come&here}}</td>
+
+                    <!----------- Student name ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Class</td>
+
+                    <!----------- Student Class  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!class&come&here}}</td>
+
+                    <!----------- Student class ends here  --------->
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Subject</td>
+
+                    <!----------- Student Subject  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!English}}</td>
+
+                    <!----------- Student subject ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow; ">School</td>
+
+                    <!----------- Student School  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!DPS&MONARCH&INTERNATIONAL&SCHOOL,&DOHA}}</td>
+
+                    <!----------- Student school ends here  --------->
+                </tr>
+            </table>
+        </div>
+        <img src="https://dl3.pushbulletusercontent.com/h7k2pEQjtH4a2cI2o7dK4qt5cLK858yP/junior-logo.png" style="position: absolute; width: 200px; right: 5px;" >
+        <div style="position: relative; width: 644px; margin: 0 20px; padding: 200px 0 0 0;">
+        
+        <h3 style="font-size: 35pt; position: absolute; margin: 0; padding: 20px 0 0; color: #FF7C3E; width: 300px; font-family: denk one;">Strike Rate Analysis</h3>
+
+        <p style="position: absolute; margin: 160px 0; font-size: 50px; color: #273749; font-weight: 800; font-family: denk one;">{{ $ }}/20</p>
+        </div>
+        <img src="https://dl3.pushbulletusercontent.com/xHSFqlBZE56qGTJg5BflNphO2WAGMzQm/target.png" style="position: absolute; width: 700px; right: 0; bottom: 0;">
+    </div>
+
+    <!--------------------------- Third Page ---------------------------------->
+
+    <!--------------------------- Fourth Page ---------------------------------->
+
+    <div style="width: 793px; height: 1122px; background-size: cover; margin: 0 auto 50px; position: relative;">
+        <img src="https://dl3.pushbulletusercontent.com/guHbJmBG6c6wJO3V9JgD48jcZhGg8676/bg.png" style="position: absolute;">
+        <div style="float: left; width: 300px; height: 200px; position: absolute; z-index: 1;">
+            <p style="margin: 20px 0 0 20px; font-family: denk one; font-size: 20px; color: black; ">STUDENT<br>PERFORMANCE REPORT</p> <hr style="width: 200px; position: absolute; margin: 20px 0 0 20px; border-top: 1px solid #fff;">
+            <table style="margin: 30px 0 0 20px; font-family: barlow;">
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Name</td>
+
+                    <!----------- Student name  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!stundent&Name&come&here}}</td>
+
+                    <!----------- Student name ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Class</td>
+
+                    <!----------- Student Class  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!class&come&here}}</td>
+
+                    <!----------- Student class ends here  --------->
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Subject</td>
+
+                    <!----------- Student Subject  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!English}}</td>
+
+                    <!----------- Student subject ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">School</td>
+
+                    <!----------- Student School  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!DPS&MONARCH&INTERNATIONAL&SCHOOL,&DOHA}}</td>
+
+                    <!----------- Student school ends here  --------->
+                </tr>
+            </table>
+        </div>
+        <img src="https://dl3.pushbulletusercontent.com/h7k2pEQjtH4a2cI2o7dK4qt5cLK858yP/junior-logo.png" style="position: absolute; width: 200px; right: 5px;" >
+        <div style="position: relative; width: 794px; margin: 0 auto; padding: 367px 0 0 0;">
+
+        <img src="https://dl3.pushbulletusercontent.com/yZdqFX1gJMDP9bmn4kVJCNbkpwNCSMKS/Topic-bg.png" style="position: absolute; width: 100%;">
+        <h3 style="font-size: 25pt; position: relative; text-align: center; font-family: denk one;">Topic Wise Analysis</h3>
+
+        <div style="position: relative; width: 790px; height: 60px;">
+
+            <img src="https://dl3.pushbulletusercontent.com/IPCESVVNR4qnVVjlw61QTQgSZsVdY1uE/block-1.png" style="position: absolute; width: 200px; margin: 12px 550px 0; ">
+            <p style="font-size: 20px; margin: 10px 50px 0; position: absolute; padding: 10px; font-family: denk one; ">
+
+                {{!Dummy&Topic&Circle&the&letters}}
+
+            </p>
+                    
+            <p style="font-size: 20px; color: #F4E9DF; margin: 10px 550px 0; position: absolute; padding: 10px; font-family: denk one;">
+                
+                {{$}}
+
+            </p>
+
+        </div>
+        <div style="position: relative; width: 790px; height: 60px;">
+
+            <img src="https://dl3.pushbulletusercontent.com/IPCESVVNR4qnVVjlw61QTQgSZsVdY1uE/block-1.png" style="position: absolute; width: 200px; margin: 12px 550px 0; ">
+            <p style="font-size: 20px; margin: 10px 50px 0; position: absolute; padding: 10px; font-family: denk one; ">
+
+                {{!Dummy&Topic&Circle&the&letters}}
+
+            </p>
+                    
+            <p style="font-size: 20px; color: #F4E9DF; margin: 10px 550px 0; position: absolute; padding: 10px; font-family: denk one;">
+                
+                {{$}}
+
+            </p>
+
+        </div>
+        <div style="position: relative; width: 790px; height: 60px;">
+
+            <img src="https://dl3.pushbulletusercontent.com/IPCESVVNR4qnVVjlw61QTQgSZsVdY1uE/block-1.png" style="position: absolute; width: 200px; margin: 12px 550px 0; ">
+            <p style="font-size: 20px; margin: 10px 50px 0; position: absolute; padding: 10px; font-family: denk one;">
+
+                {{!Dummy&Topic&Circle&the&letters}}
+
+            </p>
+                    
+            <p style="font-size: 20px; color: #F4E9DF; margin: 10px 550px 0; position: absolute; padding: 10px; font-family: denk one;">
+                
+                {{$}}
+
+            </p>
+
+        </div>
+        <div style="position: relative; width: 790px; height: 60px;">
+
+            <img src="https://dl3.pushbulletusercontent.com/IPCESVVNR4qnVVjlw61QTQgSZsVdY1uE/block-1.png" style="position: absolute; width: 200px; margin: 12px 550px 0; ">
+            <p style="font-size: 20px; margin: 10px 50px 0; position: absolute; padding: 10px; font-family: denk one; ">
+
+                {{!Dummy&Topic&Circle&the&letters}}
+
+            </p>
+                    
+            <p style="font-size: 20px; color: #F4E9DF; margin: 10px 550px 0; position: absolute; padding: 10px; font-family: denk one;">
+                
+                {{$}}
+
+            </p>
+
+        </div>
+        <div style="position: relative; width: 790px; height: 60px;">
+
+            <img src="https://dl3.pushbulletusercontent.com/IPCESVVNR4qnVVjlw61QTQgSZsVdY1uE/block-1.png" style="position: absolute; width: 200px; margin: 12px 550px 0; ">
+            <p style="font-size: 20px; margin: 10px 50px 0; position: absolute; padding: 10px; font-family: denk one; ">Other</p>
+                    
+            <p style="font-size: 20px; color: #F4E9DF; margin: 10px 550px 0; position: absolute; padding: 10px; font-family: denk one;">
+                
+                {{$}}
+
+            </p>
+
+        </div>
+        
+
+        </div>
+
+        <img src="https://dl3.pushbulletusercontent.com/KRz5qFTEHRIIvxPc0lfPwbKuXUfYuW6P/images-one.png" style="width: 793px; position: absolute; bottom: 0; ">
+    </div>
+
+    <!--------------------------- Fourth Page ---------------------------------->
+
+    <!--------------------------- Fivth Page ---------------------------------->
+
+    <div style="width: 793px; height: 1122px; background-size: cover; margin: 0 auto 50px; position: relative;">
+        <img src="https://dl3.pushbulletusercontent.com/Xxrr1c2CvZEnHfxF7Ob17AF7DsOmfjef/bg-2.png" style="position: absolute;">
+        
+        <div style="float: left; width: 300px; height: 200px; position: absolute;">
+            <p style="margin: 20px 0 0 20px; font-family: denk one; font-size: 20px; color: black; font-family: denk one">STUDENT
+            <br>PERFORMANCE REPORT</p> <hr style="width: 200px; position: absolute; margin: 20px 0 0 20px; border-top: 1px solid #fff;">
+            <table style="margin: 30px 0 0 20px; font-family: barlow;">
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Name</td>
+
+                    <!----------- Student name  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!stundent&Name&come&here}}</td>
+
+                    <!----------- Student name ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Class</td>
+
+                    <!----------- Student Class  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!class&come&here}}</td>
+
+                    <!----------- Student class ends here  --------->
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow;">Subject</td>
+
+                    <!----------- Student Subject  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!English}}</td>
+
+                    <!----------- Student subject ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: barlow; ">School</td>
+
+                    <!----------- Student School  --------->
+
+                    <td style="font-weight: 500; font-family: barlow;">{{!DPS&MONARCH&INTERNATIONAL&SCHOOL,&DOHA}}</td>
+
+                    <!----------- Student school ends here  --------->
+                </tr>
+            </table>
+        </div>
+
+        <img src="https://dl3.pushbulletusercontent.com/h7k2pEQjtH4a2cI2o7dK4qt5cLK858yP/junior-logo.png" style="position: absolute; width: 200px; right: 5px;" >
+        <div style="position: relative; width: 794px; margin: 0 auto; padding: 367px 0 0 0;">
+
+        
+        <h3 style="font-size: 25pt; position: relative; text-align: center; color: #A46080; font-family: denk one;">Difficulty Level Analysis</h3>
+
+            <div style="/*background-color: rgba(255,0,0,0.5);*/ height: 430px; width: 150px; padding: 40px; margin: 10px 50px; float: left;">
+
+                <p style="padding: 14px 0 0 42px; font-size: 25px; font-family: denk one;">
+                    {{ $ }}
+                </p>
+                
+                <p style="padding: 64px 0 0 42px; font-size: 25px; font-family: denk one;">
+                    {{ $ }}
+                </p>
+
+                <p style="padding: 64px 0 0 42px; font-size: 25px; font-family: denk one;">
+                    {{ $ }}
+                </p>
+
+            </div>
+            
+            <div style="/*background-color: rgba(255,0,0,0.5)*/; height: 430px; width: 450px; padding-top: 40px; margin: 10px 0; float: left;"> 
+                <p style="padding: 14px 0 0 0; font-size: 25px; font-family: denk one;">
+                    Difficult questions attempted correctly 
+                </p>
+                
+                <p style="padding: 60px 0 0 0; font-size: 25px; font-family: denk one;">
+                    Medium questions attempted correctly 
+                </p>
+
+                <p style="padding: 65px 0 0 0; font-size: 25px; font-family: denk one;">
+                    Easy questions attempted correctly 
+                </p>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!--------------------------- Fivth Page ---------------------------------->
+
+<!--------------------------- sixth Page ---------------------------------->
+
+    <div style="width: 793px; height: 1122px; background-size: cover; margin: 0 auto 50px; position: relative;">
+        <img src="https://dl3.pushbulletusercontent.com/5OfR8c9d2n21RBISNOdJoPPLz3H8kLci/bg-3.png" style="position: absolute;">
+        
+        <div style="float: left; width: 300px; height: 200px; position: absolute;">
+            <p style="margin: 20px 0 0 20px; font-family: denk one; font-size: 20px; color: black; font-family: denk one; ">STUDENT
+            <br>PERFORMANCE REPORT</p> <hr style="width: 200px; position: absolute; margin: 20px 0 0 20px; border-top: 1px solid #fff;">
+            <table style="margin: 30px 0 0 20px; font-family: barlow;">
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one;">Name</td>
+
+                    <!----------- Student name  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!stundent&Name&come&here}}</td>
+
+                    <!----------- Student name ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one;">Class</td>
+
+                    <!----------- Student Class  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!class&come&here}}</td>
+
+                    <!----------- Student class ends here  --------->
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one;">Subject</td>
+
+                    <!----------- Student Subject  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!English}}</td>
+
+                    <!----------- Student subject ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one; ">School</td>
+
+                    <!----------- Student School  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!DPS&MONARCH&INTERNATIONAL&SCHOOL,&DOHA}}</td>
+
+                    <!----------- Student school ends here  --------->
+                </tr>
+            </table>
+        </div>
+
+        <img src="https://dl3.pushbulletusercontent.com/h7k2pEQjtH4a2cI2o7dK4qt5cLK858yP/junior-logo.png" style="position: absolute; width: 200px; right: 5px;" >
+        <div style="position: relative; width: 794px; margin: 0 auto; padding: 321px 0 0 0;">
+
+        
+            <h3 style="font-size: 25pt; position: absolute; color: #E26161; margin-left: 100px; font-family: denk one;">Time Wise Analysis</h3>
+
+            <p style="width: 20px; margin: 90px 0 0 100px; float: left;">QUESTION NUMBER</p>
+            <p style="width: 125px; margin: 90px 0 0 100px; float: left;">TIME TAKEN TO ANSWER (IN MIN.)</p>
+            
+        <div style="background-color: rgba(255,0,0,0); width: 250px; height: 500px; margin: 135px 0 0 95px; position: absolute;">
+
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+
+                </td>           
+
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+
+        </div>
+
+            <p style="width: 20px; margin: 90px 0 0 70px; float: left; font-family: denk one;">QUESTION NUMBER</p>
+            <p style="width: 125px; margin: 90px 0 0 70px; float: left; font-family: denk one;">TIME TAKEN TO ANSWER (IN MIN.)</p>
+
+        <div style="background-color: rgba(255,0,0,0); width: 250px; height: 500px; margin: 135px 0 0 400px; position: absolute;">
+
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 8px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+            <table style="margin-bottom: 2px;">
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 120px; padding: 10px 0; text-align: center; font-family: denk one;">1</td>
+                
+                <td style="background-image: url(https://dl3.pushbulletusercontent.com/wy5O25C3b2sppwzSrQHzLCETrZqlcZGT/table.png); width: 180px; padding: 10px 0; text-align: center; font-family: denk one;">
+                    
+                    <!----------- time -------->
+
+                    {$time}
+
+                    <!----------- time -------->
+                    
+                </td>
+                
+            </table>
+
+        </div>
+
+     </div>
+     
+     </div>
+
+    </div>
+
+    <!--------------------------- sixth Page ---------------------------------->
+
+<!--------------------------- seventh Page ---------------------------------->
+
+    <div style="width: 793px; height: 1122px; background-size: cover; margin: 0 auto 50px; position: relative;">
+        <img src="https://dl3.pushbulletusercontent.com/guHbJmBG6c6wJO3V9JgD48jcZhGg8676/bg.png" style="position: absolute;">
+        
+        <div style="float: left; width: 300px; height: 200px; position: absolute;">
+            <p style="margin: 20px 0 0 20px; font-family: denk one; font-size: 20px; color: black; font-family: denk one; ">STUDENT
+            <br>PERFORMANCE REPORT</p>
+            <hr style="width: 200px; position: absolute; margin: 20px 0 0 20px; border-top: 1px solid #fff;">
+            <table style="margin: 30px 0 0 20px; font-family: barlow;">
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one;">Name</td>
+
+                    <!----------- Student name  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!stundent&Name&come&here}}</td>
+
+                    <!----------- Student name ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one;">Class</td>
+
+                    <!----------- Student Class  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!class&come&here}}</td>
+
+                    <!----------- Student class ends here  --------->
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one;">Subject</td>
+
+                    <!----------- Student Subject  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!English}}</td>
+
+                    <!----------- Student subject ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one; ">School</td>
+
+                    <!----------- Student School  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!DPS&MONARCH&INTERNATIONAL&SCHOOL,&DOHA}}</td>
+
+                    <!----------- Student school ends here  --------->
+                </tr>
+            </table>
+        </div>
+
+        <img src="https://dl3.pushbulletusercontent.com/h7k2pEQjtH4a2cI2o7dK4qt5cLK858yP/junior-logo.png" style="position: absolute; width: 200px; right: 5px;" >
+        <div style="position: relative; width: 794px; margin: 0 auto; padding: 321px 0 0 0;">
+
+        
+            <h3 style="font-size: 25pt; position: absolute; color: #FF7C3E; margin: 0 0 0 70px; font-family: denk one; ">Strong Topics</h3>
+
+            <ul style="margin: 80px 50px;">
+
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                    <!-- strong topic comes here -->
+
+                    {{ Circle the letters }}
+
+                    <!-- strong topic comes here -->
+
+                </li>
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                <!-- strong topic comes here -->
+
+                {{ Match capital & small }}
+
+                <!-- strong topic comes here -->
+
+                </li>
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                <!-- strong topic comes here -->
+
+                {{ Similar & Opposite }}
+
+                <!-- strong topic comes here -->
+
+                </li>
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                <!-- strong topic comes here -->
+
+                {{ Odd one out }}
+
+                <!-- strong topic comes here -->
+
+                </li>
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                <!-- strong topic comes here -->
+
+                {{ Other }}
+
+                <!-- strong topic comes here -->
+
+                </li>
+            </ul>
+            
+        </div>
+        <img src="strong-topic.png" width="350px;" style="position: absolute; bottom: 0; right:0;"> 
+     </div>
+
+    </div>
+
+    <!--------------------------- seventh Page ---------------------------------->
+
+ 	<!--------------------------- Eight Page ---------------------------------->
+
+ 	<div style="width: 793px; height: 1122px; background-size: cover; margin: 0 auto 50px; position: relative;">
+        <img src="https://dl3.pushbulletusercontent.com/guHbJmBG6c6wJO3V9JgD48jcZhGg8676/bg.png" style="position: absolute;">
+        
+        <div style="float: left; width: 300px; height: 200px; position: absolute;">
+            <p style="margin: 20px 0 0 20px; font-family: denk one; font-size: 20px; color: black; ">STUDENT<br>PERFORMANCE REPORT</p> <hr style="width: 200px; position: absolute; margin: 20px 0 0 20px; border-top: 1px solid #fff; font-family: denk one;">
+            <table style="margin: 30px 0 0 20px; font-family: barlow;">
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one;">Name</td>
+
+                    <!----------- Student name  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!stundent&Name&come&here}}</td>
+
+                    <!----------- Student name ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one;">Class</td>
+
+                    <!----------- Student Class  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!class&come&here}}</td>
+
+                    <!----------- Student class ends here  --------->
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one;">Subject</td>
+
+                    <!----------- Student Subject  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!English}}</td>
+
+                    <!----------- Student subject ends here  --------->
+
+
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px 0 0; color: #FF7C3E; font-weight: 500; font-family: denk one; ">School</td>
+
+                    <!----------- Student School  --------->
+
+                    <td style="font-weight: 500; font-family: denk one;">{{!DPS&MONARCH&INTERNATIONAL&SCHOOL,&DOHA}}</td>
+
+                    <!----------- Student school ends here  --------->
+                </tr>
+            </table>
+        </div>
+
+        <img src="https://dl3.pushbulletusercontent.com/h7k2pEQjtH4a2cI2o7dK4qt5cLK858yP/junior-logo.png" style="position: absolute; width: 200px; right: 5px;" >
+        <div style="position: relative; width: 794px; margin: 0 auto; padding: 321px 0 0 0;">
+
+        
+            <h3 style="font-size: 25pt; position: absolute; color: #FF7C3E; margin: 0 0 0 70px; font-family: denk one; ">Areas of Improvement</h3>
+
+            <ul style="margin: 80px 50px;">
+
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                    <!-- strong topic comes here -->
+
+                    {{ First letter of objects }}
+
+                    <!-- strong topic comes here -->
+
+                </li>
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                <!-- strong topic comes here -->
+
+                {{ Match letters with pictures }}
+
+                <!-- strong topic comes here -->
+
+                </li>
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                <!-- strong topic comes here -->
+
+                {{ Alphabet }}
+
+                <!-- strong topic comes here -->
+
+                </li>
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                <!-- strong topic comes here -->
+
+                {{ Rhyming words }}
+
+                <!-- strong topic comes here -->
+
+                </li>
+                <li style="padding:10px 0 15px 0; font-size: 25px; font-family: denk one;">
+
+                <!-- strong topic comes here -->
+
+                {{ Other }}
+
+                <!-- strong topic comes here -->
+
+                </li>
+            </ul>
+            
+        </div>
+        <img src="https://dl3.pushbulletusercontent.com/cXP2DR3Gf2BTN0qumCarhuIAttutXaTu/areas%20of.png" width="100%;" style="position: absolute; bottom: 0;"> 
+     </div>
+    </div>
+
+ 	<!--------------------------- Eight Page ---------------------------------->
+ 
+</div>
+
+<!--***************************************** main contain end here ***********************************************************-->
+</body>
+</html>
