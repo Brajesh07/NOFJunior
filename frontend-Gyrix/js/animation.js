@@ -1,12 +1,12 @@
 
 //
-var perloader = document.getElementById('loading');
-      setTimeout(function myfunction(){
-        perloader.style.display = 'none';
-      }, 6000);
+// var perloader = document.getElementById('loading');
+//       setTimeout(function myfunction(){
+//         perloader.style.display = 'none';
+//       }, 6000);
   
 //    
-document.getElementById('vid').play();
+//document.getElementById('vid').play();
   
 //
  AOS.init({
@@ -22,13 +22,13 @@ var tl = gsap.timeline({default:{duration: 2.7, ease: Back.easeOut.config(2), op
 var tl2 = gsap.timeline({default:{duration: 1.5, delay:1}})
 var tl3 = gsap.timeline({default:{duration: 1}})
 
-    tl.from(".visual-st", {delay: 1, scale: .0, transformOrigin: 'center'}, "=6.1")	
+    tl.from(".visual-st", {delay: 1, scale: .0, transformOrigin: 'center'}, "-=.1")	
       .from(".file", {scale:0, transformOrigin:'left'})
   .from(".scale", {opacity:0})
 
-tl2.to(".editor", {y: 10, repeat: -1, yoyo:true}, "=6.1")  
+tl2.to(".editor", {y: 10, repeat: -1, yoyo:true}, "=2")  
 
-tl3.from(".main-content", {opacity:0, y: 40, stagger: .3}, "=6.1")
+tl3.from(".main-content", {opacity:0, y: 40, stagger: .3}, "=2")
 
 
 // right hamburger nav 
@@ -42,7 +42,7 @@ function openNav() {
     }
 
 /* about us image animation */
-
+/*
 //Movement Animation to happen
 const circle = document.querySelector(".circle");
 const container = document.querySelector(".hover-area");
@@ -74,3 +74,5 @@ container.addEventListener("mouseleave", (e) => {
   photo.style.transform = "translateZ(0px) rotateZ(0deg)";
   photos.style.transform = "translateZ(0px) rotateZ(0deg)";    
 });
+
+*/

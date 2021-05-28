@@ -1,0 +1,337 @@
+About US
+html
+
+<div class="container">
+			<h2 class="section-services-title py-5">Services</h2>			
+				<div class="row py-5">
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+					<div class="service-card">
+						<div class="service-card-body">
+							<h2 class="service-title">Mobile Application<br>development</h2>
+							<p class="service-para">Backed by the largest community of mobile developers, android promises to be a highly fascinating field of development as the acceptance for mobile apps strongly grows as compared to any other development platform.</p>
+						<img class="service-image" src="/img/theme/mobile development.svg">    
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+					<div class="service-card">
+						<div class="service-card-body">
+							<h2 class="service-title">Web<br>development</h2>
+							<p class="service-para">Backed by the largest community of mobile developers, android promises to be a highly fascinating field of development as the acceptance for mobile apps strongly grows as compared to any other development platform.</p>
+						<img class="service-image" src="/img/theme/Web development.svg">    
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+					<div class="service-card">
+						<div class="service-card-body">
+							<h2 class="service-title">Gaming Application<br>development</h2>
+							<p class="service-para">Backed by the largest community of mobile developers, android promises to be a highly fascinating field of development as the acceptance for mobile apps strongly grows as compared to any other development platform.</p>
+						<img class="service-image" src="/img/theme/Gaming Application development.svg">    
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+					<div class="service-card">
+						<div class="service-card-body">
+							<h2 class="service-title">Healthcare Software<br>Developemrnt</h2>
+							<p class="service-para">Backed by the largest community of mobile developers, android promises to be a highly fascinating field of development as the acceptance for mobile apps strongly grows as compared to any other development platform.</p>
+						<img class="service-image" src="/img/theme/Healthcare Software Developemrnt.svg">    
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+					<div class="service-card">
+						<div class="service-card-body">
+							<h2 class="service-title">Cloud<br>Services</h2>
+							<p class="service-para">Backed by the largest community of mobile developers, android promises to be a highly fascinating field of development as the acceptance for mobile apps strongly grows as compared to any other development platform.</p>
+						<img class="service-image" src="/img/theme/Cloud Services.svg">    
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+					<div class="service-card">
+						<div class="service-card-body">
+							<h2 class="service-title">PASS/ IAAS/<br>SAAS</h2>
+							<p class="service-para">Backed by the largest community of mobile developers, android promises to be a highly fascinating field of development as the acceptance for mobile apps strongly grows as compared to any other development platform.</p>
+						<img class="service-image" src="/img/theme/PASS-IAAS-SAAS.svg">    
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+					<div class="service-card">
+						<div class="service-card-body">
+							<h2 class="service-title">UI/UX<br>development</h2>
+							<p class="service-para">Backed by the largest community of mobile developers, android promises to be a highly fascinating field of development as the acceptance for mobile apps strongly grows as compared to any other development platform.</p>
+						<img class="service-image" src="/img/theme/UI-UX development.svg">    
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+					<div class="service-card">
+						<div class="service-card-body">
+							<h2 class="service-title">Staff<br>Augmentation</h2>
+							<p class="service-para">Backed by the largest community of mobile developers, android promises to be a highly fascinating field of development as the acceptance for mobile apps strongly grows as compared to any other development platform.</p>
+						<img class="service-image" src="/img/theme/Staff Augmentation.svg">    
+						</div>
+					</div>
+				</div>
+
+				</div>
+			
+
+		  </div>
+
+
+
+.section-services{  
+
+    background-image: url(/img/theme/tech-red.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: relative;
+    
+    .section-services-title {
+        text-align: center;    
+        font-family: var(--font-family-poppins);
+        font-weight: 600;
+        color: var(--blue);
+    }       
+
+            .service-card {
+
+                margin: 1rem;
+                display: flex;
+                justify-content: center;
+
+                    .service-card-body{
+                        background-color:#fff;
+                        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2) ;
+                        max-width:270px;
+                        text-align:center;
+                        padding:2rem;
+                        border-radius: 10px;
+                        position:relative;
+                        z-index:1;
+                        overflow:hidden;
+
+                        transition: background-color 500ms ease;
+                    }
+
+                    .service-title {
+                        font-family:var(--font-family-poppins);
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        line-height: 1.8rem;
+                        padding: 1rem 0 0;
+                        color:var(--blue);
+                        
+                        transition: color 500ms ease;
+                    }
+
+                    .service-para {
+                        color:black;
+                        line-height:1.5rem;
+                        font-family:var(--font-serif);
+                        
+                        transition: color 500ms ease;
+                    }
+
+                    .service-image {
+                        position:absolute;
+                        bottom:0;
+                        right: 0;
+                        z-index: -1;
+                        opacity: 0;
+                        height: 180px;
+                        
+                        transition: opacity 600ms ease;
+                    }
+
+                    .service-card-body:hover{
+                        background-color:var(--main-red);
+                    }
+
+                    .service-card-body:hover .service-image{
+                        opacity:0.2;
+                    }
+                    
+                    
+                    .service-card-body:hover .service-title{
+                        color:#fff;
+                    }
+                    
+                    .service-card-body:hover .service-para{
+                        color:#fff;
+                }
+            }
+    
+    .block {
+        background-color: var(--main-red);
+        height: 100px;
+        width: 25px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+}
+
+
+
+<section class="section-two">
+        <div class="container">
+			<div class="row">
+			  <div class="col-lg-6 col-md-6" data-aos="fade-right">
+				<div class="hover-area py-5">
+				<div class="circle">
+					  <div class="photo">
+						<img src="img/theme/photo-1.png">
+					  </div>
+					  <div class="photos">
+						<img src="img/theme/photo-2.png">
+					</div>
+				</div>
+				</div>
+			  </div>
+			  <div class="col-lg-6 col-md-6 img" data-aos="fade-left">
+				<h2 class="heading-2">WHY GYRIX?</h2>
+				<p class="about">At Gyrix, we love to work with Smart, Dynamic, Intelligent and FUN people to develop a culture we all can be proud of. People Excellence is the building block of our success and hence is at the heart of our primary Goals. We believe that real motivation comes from within oneself and we provide a complete creative freedom to every Gyrixian. <br>
+				You’ll get first hand Startup experience to work with high performers, in an environment that lets you challenge your limits. You will be working with world class processes, best tools and valuable technical expertise. The opportunity is a perfect blend of growth, knowledge, companionship and fun. All you need is – to be a self believer, ready to face whatever challenge comes your way with a zeal to outperform your self.</p>
+			  </div>			          
+			</div>
+		  </div>
+		  <div class="red"></div>
+    </section>
+
+
+
+/***** section two ****/
+   
+.section-two {
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: calc(100vh - 80vh);
+    padding-bottom: calc(100vh - 80vh);
+    overflow: hidden;
+
+    .hover-area {
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
+        max-height: 400px;
+        position: relative;
+        z-index: 1;
+
+        .circle {
+            background-image: url(../img/theme/circle.png);
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+
+            .photo img, .photos img {
+                position: absolute;
+                width: 70%;  
+              }
+               
+              
+              .photo img {
+                top: 7rem;  
+                z-index: 1;
+                 
+              }
+              
+              .photos img {
+                right: 0;
+              
+              }
+
+          }
+          
+      } 
+      .red {
+          width: 60px;
+          height: 200px;
+          background-color: var(--main-red);
+      }   
+}
+
+  .heading-2 {
+    color: #023E57;
+    text-align: right;
+    font-weight: 600;
+  }
+
+  .about {
+    color: #023E57;
+     text-align: right;
+     line-height: 2.5rem;
+     position: relative;
+     font-family: PT Serif;
+
+     &::after{
+         content: url(../img/theme/tech-red.svg);
+         transform: scale(.6);
+         position: absolute;
+         right: -5rem;
+         bottom: -5rem;         
+     }
+   
+   }
+
+   @media screen and (max-width: 768px){
+
+            .section-two {
+                height: 100%;
+
+                .about {
+                    line-height: 1.8rem;   
+                }  
+        }
+    }
+
+  
+  @media screen and (max-width: 766px){
+        .hover-area{
+        display: none;
+        }
+        
+        .heading-2 {
+            text-align: center;
+        }
+        
+        .about {
+            text-align: center;
+            line-height: 1.8rem;  
+            padding: 0 1rem; 
+        } 
+        
+        .img {
+            background-image: url(../img/theme/circle.png);
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: -10px 5 0 0;
+            display: block;
+        }
+  
+  }
+  
+  @media screen and (max-width: 425px){
+  .section-two {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 130%;
+  }
+
+    .vh1 {
+        
+        height: 100%;
+    }
+    .about::after{        
+        right: 0;
+        bottom: -4rem;
+    }
+  }

@@ -1,0 +1,14 @@
+<svg id="Staff_Augmentation" data-name="Staff Augmentation" xmlns="http://www.w3.org/2000/svg" width="167.593" height="166.514" viewBox="0 0 167.593 166.514">
+  <g id="Group_56" data-name="Group 56" transform="translate(2.178 2.178)">
+    <path id="Rectangle_625" data-name="Rectangle 625" d="M38.988,0h0A38.988,38.988,0,0,1,77.976,38.988V77.976a0,0,0,0,1,0,0H38.988A38.988,38.988,0,0,1,0,38.988v0A38.988,38.988,0,0,1,38.988,0Z" fill="#f4efef"/>
+    <path id="Rectangle_626" data-name="Rectangle 626" d="M38.988,0h0A38.988,38.988,0,0,1,77.976,38.988v0A38.988,38.988,0,0,1,38.988,77.976H0a0,0,0,0,1,0,0V38.988A38.988,38.988,0,0,1,38.988,0Z" transform="translate(85.261)" fill="#f4efef"/>
+    <path id="Rectangle_627" data-name="Rectangle 627" d="M38.988,0H77.976a0,0,0,0,1,0,0V38.988A38.988,38.988,0,0,1,38.988,77.976h0A38.988,38.988,0,0,1,0,38.988v0A38.988,38.988,0,0,1,38.988,0Z" transform="translate(0 84.182)" fill="#f4efef"/>
+    <path id="Rectangle_628" data-name="Rectangle 628" d="M0,0H38.988A38.988,38.988,0,0,1,77.976,38.988v0A38.988,38.988,0,0,1,38.988,77.976h0A38.988,38.988,0,0,1,0,38.988V0A0,0,0,0,1,0,0Z" transform="translate(85.261 84.182)" fill="#f4efef"/>
+  </g>
+  <g id="Group_57" data-name="Group 57" transform="translate(0)">
+    <path id="Path_120" data-name="Path 120" d="M548.587,468.188H507.421a41.166,41.166,0,1,1,41.166-41.166Zm-41.166-77.976a36.81,36.81,0,1,0,0,73.62h36.81v-36.81A36.852,36.852,0,0,0,507.421,390.212Z" transform="translate(-466.255 -385.856)" fill="#023e57"/>
+    <path id="Path_121" data-name="Path 121" d="M624.868,468.188H583.7V427.022a41.166,41.166,0,1,1,41.166,41.166Zm-36.81-4.356h36.81a36.81,36.81,0,1,0-36.81-36.81Z" transform="translate(-498.441 -385.856)" fill="#023e57"/>
+    <path id="Path_122" data-name="Path 122" d="M507.421,584.148a41.166,41.166,0,1,1,0-82.332h41.166v41.166A41.213,41.213,0,0,1,507.421,584.148Zm0-77.976a36.81,36.81,0,0,0,0,73.621h0a36.852,36.852,0,0,0,36.81-36.81v-36.81Z" transform="translate(-466.255 -417.634)" fill="#023e57"/>
+    <path id="Path_123" data-name="Path 123" d="M624.868,584.148A41.213,41.213,0,0,1,583.7,542.982V501.816h41.166a41.166,41.166,0,0,1,0,82.332Zm-36.81-77.976v36.81a36.81,36.81,0,1,0,36.81-36.81Z" transform="translate(-498.441 -417.634)" fill="#023e57"/>
+  </g>
+</svg>
