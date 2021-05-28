@@ -76,7 +76,7 @@ button.navbar-toggler {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("../img/theme/hambruger.svg") !important;
+  background-image: url("..../img/theme/hambruger.svg") !important;
 }
 
 /* temporary classes */
@@ -127,11 +127,11 @@ body {
 }
 
 .carousel-control-prev-icon {
-  background-image: url(../img/theme/previous-icon.svg) !important;
+  background-image: url(..../img/theme/previous-icon.svg) !important;
 }
 
 .carousel-control-next-icon {
-  background-image: url(../img/theme/next-icon.svg) !important;
+  background-image: url(..../img/theme/next-icon.svg) !important;
 }
 
 /* navigation */
@@ -172,7 +172,7 @@ body {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-top: 20px;
-  background-image: url(../img/theme/tech-white.svg);
+  background-image: url(..../img/theme/tech-white.svg);
   background-size: 5rem;
   background-position: bottom 3rem right 3rem;
   background-repeat: no-repeat;
@@ -450,7 +450,7 @@ body {
 }
 
 .section-three .brain-illustration {
-  background-image: url(../img/theme/brain-line.svg);
+  background-image: url(..../img/theme/brain-line.svg);
   background-size: 100%;
   background-position: bottom left;
   background-repeat: no-repeat;
@@ -644,7 +644,7 @@ body {
   min-height: 370px;
   overflow: hidden;
   background-color: #FDFDFD;
-  background-image: url(../img/theme/logo-transparent.svg);
+  background-image: url(..../img/theme/logo-transparent.svg);
   background-repeat: no-repeat;
   background-position: bottom right -10rem;
 }
@@ -938,7 +938,7 @@ body {
 }
 
 .service-content {
-  background-image: url(/img/theme/circle.png);
+  background-image: url(../img/theme/circle.png);
   background-repeat: no-repeat;
   background-size: 250px;
   background-position: bottom right -7%;
@@ -981,14 +981,14 @@ body {
 }
 
 .content-blog {
-  background-image: url(/img/theme/tech-lines.svg);
+  background-image: url(../img/theme/tech-lines.svg);
   background-repeat: no-repeat;
   background-position: top 2% right;
   background-size: 150px;
 }
 
 .content-blog .row {
-  background-image: url(/img/theme/tech-red-left.svg);
+  background-image: url(../img/theme/tech-red-left.svg);
   background-repeat: no-repeat;
   background-position: bottom 2% left;
   background-size: 100px;
@@ -1231,5 +1231,23 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.about-us {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-us h1 {
+  font-family: var(--font-family-poppins);
+  font-weight: 800;
 }
 /*# sourceMappingURL=main.css.map */

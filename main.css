@@ -1,0 +1,23 @@
+.quote {
+    font-size: 3vh;
+}
+
+h3 {
+    color: var(--color-content-secondary);
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--color-content-secondary);
+    padding: 0.4em 2em;
+    border-radius: .2rem;
+    font-size: 1.5rem;
+}
+
+.button:hover{
+    color: var(--color-content-secondary);
+    background-color: #fff;
+}
