@@ -81,7 +81,7 @@ button.navbar-toggler {
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: url('..../img/theme/hambruger.svg')!important;
+    background-image: url('../img/theme/hambruger.svg')!important;
 }
 
 /* temporary classes */
@@ -123,11 +123,11 @@ body{
 }
 
 .carousel-control-prev-icon {
-    background-image: url(..../img/theme/previous-icon.svg)!important;
+    background-image: url(../img/theme/previous-icon.svg)!important;
 }
 
 .carousel-control-next-icon {
-    background-image: url(..../img/theme/next-icon.svg)!important;
+    background-image: url(../img/theme/next-icon.svg)!important;
 }
 
 
@@ -170,7 +170,7 @@ body{
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 20px;
-        background-image: url(..../img/theme/tech-white.svg);
+        background-image: url(../img/theme/tech-white.svg);
         background-size: 5rem;
         background-position: bottom 3rem right 3rem;
         background-repeat: no-repeat;
@@ -448,7 +448,7 @@ body{
 
 
     .brain-illustration {
-        background-image: url(..../img/theme/brain-line.svg);
+        background-image: url(../img/theme/brain-line.svg);
         background-size: 100%;
         background-position: bottom left;
         background-repeat: no-repeat;
@@ -665,7 +665,7 @@ body{
         min-height: 370px;
         overflow: hidden;
         background-color: #FDFDFD;
-        background-image: url(..../img/theme/logo-transparent.svg);
+        background-image: url(../img/theme/logo-transparent.svg);
         background-repeat: no-repeat;
         background-position: bottom right -10rem;
 
@@ -1035,27 +1035,40 @@ body{
           }
     }
 
-      .service-titel
-      {
-        text-align: center;
-        padding: 2rem;
-        font-family: var(--font-family-poppins);
-        font-weight: 600;
-        color: var(--blue);
-      }
+      .service-titel {
+                    text-align: center;
+                    padding: 2rem;
+                    font-family: var(--font-family-poppins);
+                    font-weight: 600;
+                    color: var(--blue);
+                    position: relative;
+                    width: 100%;                    
+                    max-width: fit-content;
+                    margin: 0 auto;
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 30%;
+                        left: 0;
+                        width: 65%;
+                        background-color: var(--main-red);
+                        height: 4px;
+                    }
+                }
       
-      .server-heading {
-        font-family: var(--font-family-poppins);
-        font-size: 1.2rem;
-        color: var(--blue);
-      }
+            .server-heading {
+                font-family: var(--font-family-poppins);
+                font-size: 1.2rem;
+                color: var(--blue);
+            }
 
      
 
-      ul{
-          font-family:var(--font-serif);
-          font-size: 1rem;
-      }
+            ul{
+                font-family:var(--font-serif);
+                font-size: 1rem;
+            }
 
   }
 
@@ -1315,13 +1328,377 @@ body{
 //about page start from here
 
     .about-us {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 100%;
+        padding-top: 130px;       
         
-        h1{
+        &-main-title{
             font-family: var(--font-family-poppins);
-            font-weight: 800;
+            font-weight: 600;
+            padding: 1rem;
+            color: var(--blue);
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 15%;
+                left: 0;
+                width: 65%;
+                height: 5px;
+                background-color: var(--main-red);
+            }
+        }
+
+        &-main-para{
+            text-align: center;
+            line-height: 1.7rem;
+            font-size: 1.2rem;
+        }
+    
+        &-left-content {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            position: relative;
+
+            .about-us-main-img{
+                width: 100%;
+                max-width: 450px;
+                min-width: 320px;
+                height: auto;                
+            }
+
+            .about-us-main-second-para {
+                position: absolute;
+                background-color: #fff;
+                box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+                width: 65%;
+                padding: 1rem;
+                left: 3%;
+                bottom: 3%;
+
+                li{
+                    font-size: 0.8rem;
+                    color: var(--blue);
+                    line-height: 1rem;
+                }
+                
+            }
+        
+        
+            &-title {
+                font-size: 1.2rem;
+                color: var(--blue);
+                font-weight: 600;
+            }
+
+            
+        }
+
+
+        &-brain-illustration {
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .about-us {                  
+        
+            
+            &-brain-illustration {
+                display: none;
+             
+            }
+            
         }
     }
+
+
+@media screen and (max-width: 425px) {
+    
+
+        .about-us {
+            &-main-para{
+
+                text-align: center;
+                line-height: 1.7rem;
+                font-size: .9rem;
+            }
+        
+            .about-us-main-img{
+                display: none;       
+            }
+
+            .about-us-main-second-para {
+                position: relative;
+                background-color: #fff;
+                box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+                width: 100%;
+                padding: 1rem;
+                left: 0;
+                bottom: 0;            
+                
+            }       
+        
+                       
+            
+        }
+    
+}
+
+.time-line{
+    
+    &-title {
+        font-size: 1.2rem;
+        color: var(--blue);
+        font-weight: 600;
+    }
+
+    &-para {
+        line-height: 1.7rem;
+        font-size: 1.2rem;
+    }
+
+}
+
+.time-line-illustration {
+    background-image: url(../img/theme/circle.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-position:bottom left -10%;
+
+    &-main{
+        &-title{
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -10%;
+                left: -10%;
+                width: 70%;
+                height: 4px;
+                background-color: var(--main-red);
+            }
+        }
+    }
+}
+
+.Charismatic-leader {
+    
+
+    &-main{
+        &-title{            
+            width: fit-content;
+            margin: 0 auto;
+            position: relative;
+            color: #fff;
+
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -10%;
+                left: -10%;
+                width: 70%;
+                height: 4px;
+                background-color: var(--main-red);
+            }
+        }
+    }
+}
+
+
+.passionate-magicians {
+     
+    &-title{            
+            width: fit-content;
+            margin: 0 auto;
+            position: relative;
+            color: var(--blue);
+
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -10%;
+                left: -10%;
+                width: 60%;
+                height: 4px;
+                background-color: var(--main-red);
+            }
+        }
+    
+        &-container {
+            background-color: #000;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+
+            transition: 500ms all ease;
+
+            &-img{
+                width: 100%;
+                opacity: 0.8;
+            }
+        
+        &-section{
+            position: absolute;
+            border: 2px solid #fff;
+            padding: 1rem;
+            width: calc(100% - 10%);
+            height: calc(100% - 10%);
+            overflow: hidden;
+
+            transition: 500ms all ease;
+
+            &-info{
+                position: absolute;
+                right: 10px;
+
+                a{
+                    color: #fff;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    padding: 5px 8px;
+                    font-size: 15px;
+                    margin: 10px;
+                    transition: 500ms all ease;
+                }
+            }
+
+            .down {
+                position: absolute;
+                transform: translateY(400px);
+                text-align: center;
+                font-size: 1rem;
+                left: 0px;
+                padding: 0 25px;
+
+                transition: 700ms all ease;                
+            }
+
+            &-para{
+                margin-top: calc(100% - 20%);
+                color: #fff;
+                text-align: center;
+                transition: 500ms all ease;
+            }
+        }
+            
+        }
+
+        &-container:hover {
+            background-color: #BF353E;            
+        }
+
+        .passionate-magicians-container:hover .passionate-magicians-container-section {
+            background-color: #fff;            
+        }
+
+        .passionate-magicians-container:hover a{
+            color: var(--main-red);
+            border: 2px solid var(--main-red);
+        }
+
+        .passionate-magicians-container:hover .down{
+            transform: translateY(50px);
+        }
+
+        .passionate-magicians-container:hover .passionate-magicians-container-section-para{
+            color: var(--main-red);
+        }
+    
+}
+
+@media screen and (max-width: 425px) {
+   
+    .passionate-magicians {
+     
+               
+            &-container {
+                background-color: var(--main-red);
+                position: relative; 
+                max-width: 380px;
+                height: 300px;
+                width: 80%;
+                margin: 20px 10%;                            
+    
+                
+    
+                &-img{
+                    position: absolute;
+                    max-width: 60px;
+                    height: 60px;
+                    width: 100%;
+                    border-radius: 50%;
+                    left: 10px;
+                    top: 10px;                    
+                }
+            
+            &-section {
+                position: relative;
+                border: none;
+                background-color: transparent;
+
+                &-info{
+                    position: absolute;
+                    bottom: 5px;
+                    left: 0;                    
+                }       
+                
+                &-para{
+                    margin-top: -10px;
+                    text-align: left;
+                    margin-left: 60px;
+                    font-size: 13px;
+                }
+            
+                .down{
+                    transform: translateY(50px);
+                    text-align: left;
+                    font-size: 12px;
+                    left: 0px;
+                    padding: 0;
+                    color: #fff;
+                }
+
+            }
+                
+            }
+    
+           
+    }  
+    .passionate-magicians .passionate-magicians-container:hover .passionate-magicians-container-section {
+        background-color: transparent;
+    } 
+    .passionate-magicians .passionate-magicians-container:hover .passionate-magicians-container-section-para {
+        color: #fff;
+    }
+    .passionate-magicians .passionate-magicians-container:hover a {
+        color: #fff;
+        border: 2px #fff;
+    }
+}
+
+@media screen and (max-width: 320px) {
+.passionate-magicians {
+     
+               
+    &-container {
+        background-color: var(--main-red);
+        position: relative; 
+        max-width: 300px;
+        height: 300px;
+        width: 90%;
+        margin: 20px 5%;  
+    }
+}
+}
