@@ -41,38 +41,15 @@ function openNav() {
      document.getElementById("mySidenav").style.width = "0";
     }
 
-/* about us image animation */
-/*
-//Movement Animation to happen
-const circle = document.querySelector(".circle");
-const container = document.querySelector(".hover-area");
-//Items
-//const title = document.querySelector(".title");
 
-const photo = document.querySelector(".photo img");
-const photos = document.querySelector(".photos img");
+//about us leaders section 
 
-//Moving Animation Event
-container.addEventListener("mousemove", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-  let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-  circle.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+$(document).ready(function() {
+  $('#autoWidth').lightSlider({
+      autoWidth:true,
+      loop:true,
+      onSliderLoad: function() {
+          $('#autoWidth').removeClass('cS-hidden');
+      } 
+  });  
 });
-//Animate In
-container.addEventListener("mouseenter", (e) => {
-  circle.style.transition = "none";
-  //Popout
-  photo.style.transform = "translateZ(200px) rotateZ(-10deg)";
-  photos.style.transform = "translateZ(200px) rotateZ(10deg)";
-  
-});
-//Animate Out
-container.addEventListener("mouseleave", (e) => {
-  circle.style.transition = "all 0.5s ease";
-  circle.style.transform = `rotateY(0deg) rotateX(0deg)`;
-  //Popback
-  photo.style.transform = "translateZ(0px) rotateZ(0deg)";
-  photos.style.transform = "translateZ(0px) rotateZ(0deg)";    
-});
-
-*/
