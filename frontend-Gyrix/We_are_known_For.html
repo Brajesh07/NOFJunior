@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="vendor/css/bootstrap.min.css"-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/lightslider.css">
+    <title>Gyrix</title>
+</head>
+<body onLoad="myfunction()">
+	<!--div id="loading">
+		<video loop autoplay muted id="vid">
+		  <source src="loader.mp4" type="video/mp4">
+		  <source src="loader.ogg" type="video/ogg">		  
+		  Your browser does not support HTML video.
+		</video>
+	</div-->
+    
+    <nav class="navbar navbar-expand-lg navbar-light box-shadow fixed-top" style="z-index: 10;">
+        <div class="container-fluid">
+          <a class="navbar-brand desktop-logo" href="#"><img src="img/brand/desktop-logo.svg" alt=""></a>
+          <a class="navbar-brand mobile-logo" href="#"><img src="img/brand/mobile-logo.svg" alt=""></a>
+          <button onclick="openNav()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContenta">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link poppins-regular active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link poppins-regular" href="#">About Gyrix</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link poppins-regular" href="#">We are known For</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link poppins-regular" href="#">Join us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link poppins-regular" href="#">Contact Us</a>
+              </li>			  	  
+            </ul>            
+          </div>
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/theme/close.svg" alt=""></a>
+            <ul class="navbar-nav ml-auto py-4">
+                <li class="nav-item">
+                    <a class="poppins-regular py-4 active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="poppins-regular py-4" href="#">About Gyrix</a>
+                </li>
+                <li class="nav-item">
+                <a class="poppins-regular py-4" href="#">We are known For</a>
+                </li>               
+                <li class="nav-item">
+                    <a class="poppins-regular py-4" href="#">Join us</a>
+                </li>
+				<li class="nav-item">
+                    <a class="poppins-regular py-4" href="#">Contact us</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    
+
+    <section class="we-known">
+            <h1 class="we-known-heading">We are known For</h1>
+            <p class="we-known-para">Technology should be empowering, inclusive and simple enough for a kid to understand. We demystify it so even the most complicated problem is free from technical jargons.</p>
+    </section>
+
+    <section class="grid">
+      <div class="grid-img we-img-1">
+        <img src="img/theme/we-known-img-1.svg" alt="">
+      </div>
+      <div class="grid-content we-content-1">
+        <div class="grid-content-warp">
+          <h3 class="grid-content-title">We Design</h3>
+          <p class="grid-content-para-right">A picture speaks a thousand words, or lines of code; our Human-Centric design team makes sure that your business delivers a stellar experience.</p>
+          <ul>
+            <li>E-commerce websites & Mobile apps</li>
+            <li>Portfolio Pages</li>
+            <li>UI/UX Frameworks</li>
+          </ul>
+      </div>
+      </div>
+
+      <div class="grid-img we-img-2">
+        <img src="img/theme/we-known-img-2.svg" alt="">
+      </div>
+      <div class="grid-content we-content-2">
+        <div class="grid-content-warp">
+        <h3 class="grid-content-title">We Develop</h3>
+        <p class="grid-content-para-left">We do the heavy lifting so you can focus where necessary - your business.</p>
+        <ul>
+          <li>Chatbot</li>
+          <li>Mobile Apps</li>
+          <li>Custom Software for your business needs</li>
+          <li>IoT Applications</li>
+          <li>Cloud based SAAS/PAAS Applications</li>
+          <li>Enterprise Applications</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="grid-img we-img-3">
+        <img src="img/theme/we-known-img-3.svg" alt="">
+      </div>
+      <div class="grid-content we-content-3">
+        <div class="grid-content-warp">
+        <h3 class="grid-content-title">We Consult</h3>
+        <p class="grid-content-para-right">We provide meaningful and actionable insights that resonate with your business objectives.</p>
+        <ul>
+          <li>Business Process Improvement & Automation</li>
+          <li>Prototype the MVP version for your business idea</li>
+          <li>Get HIPAA, GDPR, PCI Compliance</li>
+          <li>Project Management & Consultation</li>          
+          <li>Evaluation & Monitoring of your execution team</li>
+        </ul>
+      </div>
+      </div> 
+
+       <div class="grid-img-content we-content-center">
+        <h3 class="grid-content-center">We Execute</h3>
+        <p class="grid-content-center-para">We have built customized white-lable solutions to solve common business needs, feel free to ask for a demo and get started with speed.</p>
+      </div> 
+
+      <div class="grid-img we-img-4">
+        <img src="img/theme/we-known-img-4.svg" alt="">
+      </div>
+      <div class="grid-content we-content-4">
+        <div class="grid-content-warp">
+        <ul>
+          <li>E-Learning
+            <ol>
+              <li>Learning Management System</li>
+              <li>School / Institute Management</li>
+              <li>Exam Management</li>
+            </ol>
+            <li>GPS Tracking Systems
+              <ol>
+                <li>Logistic Vehicle Tracking</li>
+                <li>Food Delivery Systems</li>
+                <li>Online Grocery and Product Delivery Systems</li>
+              </ol>
+            </li>
+          </li>          
+        </ul>
+      </div>
+      </div>
+      
+       <div class="grid-content we-content-5">
+        <div class="grid-content-warp">            
+        <ul>
+          <li>E-Commerce & Marketplaces Finance
+            <ol>
+              <li>Account & Invoicing Management</li>
+              <li>Micro Loan Credit System</li>              
+            </ol>
+            <li>Social Networks
+              <ol>
+                <li>Community Management</li>
+                <li>Alumni or closed social groups</li>
+                <li>Photo or Video based Entertainment apps</li>
+              </ol>
+            </li>
+          </li>          
+        </ul>
+      </div>
+      </div>
+
+       <div class="grid-img we-img-5">
+        <img src="img/theme/we-known-img-5.svg" alt="">
+      </div>
+      <div class="grid-content we-content-6"> 
+        <div class="grid-content-warp">             
+        <ul>
+          <li>Sports & Gaming
+            <ol>
+              <li> Fantasy games apps</li>
+              <li>Player or Team Performance Prediction algorithms</li>              
+            </ol>
+            <li>Healthcare
+              <ol>
+                <li>Gym or Activity Management Systems</li>
+                <li>Patient Appointment Systems</li>
+                <li>Clinic or Hospital Management Systems</li>
+              </ol>
+            </li>
+          </li>          
+        </ul>
+        </div>
+      </div> 
+       <div class="grid-content we-content-7"> 
+        <div class="grid-content-warp">                                
+        <ul>
+          <li>Human Resource Care
+            <ol>
+              <li>HRMS</li>
+              <li>Office Inventory management</li>
+              <li>Recruitment & ApplicantTracking system</li>
+            </ol>
+            <li>Business Management
+              <ol>
+                <li>Task or Project Management</li>
+                <li>Attendance Management</li>
+                <li>Employee time monitoring, work tracking system</li>
+              </ol>
+            </li>
+          </li>          
+        </ul>
+      </div> 
+      </div>
+
+       <div class="grid-img we-img-6">
+        <img src="img/theme/we-known-img-6.svg" alt="">
+      </div>
+      <div class="grid-content we-content-8">
+        <div class="grid-content-warp"> 
+        <h3 class="grid-content-title">We Implement</h3>
+        <p class="grid-content-para-right">We constantly learn, unlearn, relearn, and upskill ourselves to translate your business needs through technology.</p>
+        <ul>
+          <li>No Code, Low Code, or Deep Tech Code</li>
+          <li>Entreprise Applications</li>
+          <li>ERP, CRM, MIS business applications</li>
+          <li>Data Analytics and Predictive Research</li>
+        </ul>
+      </div>
+      </div>
+      
+      <div class="grid-img we-img-7">
+        <img src="img/theme/we-known-img-7.svg" alt="">
+      </div>
+      <div class="grid-content we-content-9">
+        <div class="grid-content-warp"> 
+        <h3 class="grid-content-title">We Support</h3>
+        <p class="grid-content-para-right">We understand technology has the power to shape the world and constantly support Entrepreneurs of all sizes to build Innovative world class solutions</p>
+        <ul>
+          <li>Secure and maintain web and mobile applications</li>
+          <li>Restore hacked websites</li>
+          <li>Complete projects abandoned by absconding freelancer</li>
+          <li>Staff Augmentation</li>
+          <li>Agile Development</li>
+          <li>CTO service for non-tech founders</li>
+        </ul>
+      </div>
+      </div>
+      
+      <div class="grid-img we-img-8">
+        <img src="img/theme/we-known-img-8.svg" alt="">
+      </div>
+
+       <div class="grid-content we-content-10">
+        <div class="grid-content-warp"> 
+        <h3 class="grid-content-title">We Nurture</h3>
+        <p class="grid-content-para-right">Whether you are working on your first startup idea, solving food distribution problems or building a finance solution built on Blockchain, we help you translate any kind of design into functional digital products such as websites, mobile apps or enterprise solutions.</p>
+        <ul>
+          <li>Startups</li>
+          <li>IT/ITES</li>
+          <li>E-Commerce & Retail Chains</li>
+          <li>Entertainment Houses</li>
+          <li>Manufacturing Industries</li>
+          <li>Healthcare Sector</li>
+          <li>Banking & Finance Companies</li>
+          <li>Education & E-Learning Companies</li>
+          <li>Logistics and Transportation</li>
+        </ul>
+      </div>
+      </div>
+
+       <div class="grid-content we-content-11">        
+        <p class="grid-content-para-right">We prove ourselves to be a trusted partner, we take ownership of our work, we take proactive steps, and focus on building long-term relationships. We have perfected this magical potion which resulted in us retaining our customers dated as long as the year 2013.
+          As a full-service Agency, we work closely with our clients to Ideate, Define, Design, and Develop innovative digital products for all platforms and across all industry verticals. Our tool stack contains
+          </p>
+      </div> 
+
+      <!-- <div class="grid-content we-content-12"> 
+        <div class="grid-content-warp-blue">  
+        <h3 class="grid-content-title">Web Framework</h3>    
+        <ul>
+          <li>Laravel</li>
+          <li>Codeigniter</li>
+          <li>Adonis.js</li>
+          <li>Django</li>
+        </ul>
+      </div>
+      </div>
+
+      <div class="grid-content we-content-13">    
+        <div class="grid-content-warp-blue">  
+        <h3 class="grid-content-title">Mobile Technologies</h3>    
+        <ul>
+          <li>Android</li>
+          <li>iOS</li>
+          <li>React Native</li>
+          <li>Flutter</li>
+          <li>Ionic</li>
+        </ul>
+      </div>
+      </div>
+
+      <div class="grid-content we-content-14">
+        <div class="grid-content-warp-blue">  
+        <h3 class="grid-content-title">Front End</h3>    
+        <ul>
+          <li>Angular</li>
+          <li>React JS</li>
+          <li>Vue.js</li>          
+        </ul>
+      </div>
+      </div> -->
+
+      <!-- <div class="grid-content we-content-15">    
+        <h3 class="grid-content-title">CMS</h3>    
+        <ul>
+          <li>WordPress</li>
+          <li>Shopify</li>
+          <li>Ghost CMS</li>          
+        </ul>
+      </div> -->
+
+      <!-- <div class="grid-content we-content-16">    
+        <h3 class="grid-content-title">Server Management</h3>    
+        <ul>
+          <li>AWS</li>
+          <li>Google Cloud</li>
+          <li>Microsoft Azure</li>
+          <li>Digital Ocean</li>
+        </ul>
+      </div> -->
+
+      <!-- <div class="grid-content we-content-17">    
+        <h3 class="grid-content-title">Core Technologies</h3>    
+        <ul>
+          <li>PHP</li>
+          <li>Python</li>
+          <li>Node</li>          
+        </ul>
+      </div> -->
+
+      <!-- <div class="grid-content we-content-18">    
+        <h3 class="grid-content-title">DevOps</h3>    
+        <ul>
+          <li>CI\CD</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>          
+        </ul>
+      </div> -->
+
+      <!-- <div class="grid-content we-content-19">    
+        <h3 class="grid-content-title">Quality assurance</h3>    
+        <ul>
+          <li>Manual</li>
+          <li>Automation</li>          
+        </ul>
+      </div> -->
+
+      <!-- <div class="grid-content we-content-20">    
+        <h3 class="grid-content-title">Deep Tech</h3>    
+        <ul>
+          <li>BlockChain</li>
+          <li>AI</li>
+          <li>ML</li>
+          <li>IOT</li>
+        </ul>
+      </div> -->
+
+    </section>
+ 
+
+	<section class="footer">		
+		<div class="policy">
+			<ul>
+				<li>Privacy</li>
+				<li>policy</li>
+				<li>terms</li>
+			</ul>
+		</div>
+		<div class="soical-media">
+			<ul>
+				<li><i class="fab fa-facebook-f"></i></li>
+				<li><i class="fab fa-facebook-f"></i></li>
+				<li><i class="fab fa-facebook-f"></i></li>
+				<li><i class="fab fa-facebook-f"></i></li>
+			</ul>
+		</div>
+		<div class="copyright py-4">Gyrix © 2021, All Rights Reserved</div>
+	</section>
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity=""></script>     
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+	  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	  
+    <script src="js/JQuery3.3.1.js"></script>
+    <script src="js/lightslider.js"></script>
+
+	  <script src="js/animation.js"></script>  
+	  
+</body>
+</html>
+
