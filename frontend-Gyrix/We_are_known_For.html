@@ -12,15 +12,8 @@
   <link rel="stylesheet" href="css/lightslider.css">
     <title>Gyrix</title>
 </head>
-<body onLoad="myfunction()">
-	<!--div id="loading">
-		<video loop autoplay muted id="vid">
-		  <source src="loader.mp4" type="video/mp4">
-		  <source src="loader.ogg" type="video/ogg">		  
-		  Your browser does not support HTML video.
-		</video>
-	</div-->
-    
+<body>
+
     <nav class="navbar navbar-expand-lg navbar-light box-shadow fixed-top" style="z-index: 10;">
         <div class="container-fluid">
           <a class="navbar-brand desktop-logo" href="#"><img src="img/brand/desktop-logo.svg" alt=""></a>
@@ -31,19 +24,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContenta">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link poppins-regular active" aria-current="page" href="#">Home</a>
+                <a class="nav-link poppins-regular"  href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link poppins-regular" href="#">About Gyrix</a>
+                <a class="nav-link poppins-regular" href="About us.html">About Gyrix</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link poppins-regular" href="#">We are known For</a>
+                <a class="nav-link poppins-regular active" aria-current="page" href="We_are_known_For.html">We are known For</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link poppins-regular" href="#">Join us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link poppins-regular" href="#">Contact Us</a>
+                <a class="nav-link poppins-regular" href="Contact.html">Contact Us</a>
               </li>			  	  
             </ul>            
           </div>
@@ -51,13 +44,13 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/theme/close.svg" alt=""></a>
             <ul class="navbar-nav ml-auto py-4">
                 <li class="nav-item">
-                    <a class="poppins-regular py-4 active" aria-current="page" href="#">Home</a>
+                    <a class="poppins-regular py-4 active" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="poppins-regular py-4" href="#">About Gyrix</a>
+                <a class="poppins-regular py-4" href="About us.html">About Gyrix</a>
                 </li>
                 <li class="nav-item">
-                <a class="poppins-regular py-4" href="#">We are known For</a>
+                <a class="poppins-regular py-4" href="We_are_known_For.html">We are known For</a>
                 </li>               
                 <li class="nav-item">
                     <a class="poppins-regular py-4" href="#">Join us</a>
@@ -76,14 +69,17 @@
             <p class="we-known-para">Technology should be empowering, inclusive and simple enough for a kid to understand. We demystify it so even the most complicated problem is free from technical jargons.</p>
     </section>
 
-    <section class="grid">
-      <div class="grid-img we-img-1">
+    <section class="main-grid">
+
+    <div class="grid-1">
+
+      <div class="grid-1-img we-img-1">
         <img src="img/theme/we-known-img-1.svg" alt="">
       </div>
-      <div class="grid-content we-content-1">
-        <div class="grid-content-warp">
-          <h3 class="grid-content-title">We Design</h3>
-          <p class="grid-content-para-right">A picture speaks a thousand words, or lines of code; our Human-Centric design team makes sure that your business delivers a stellar experience.</p>
+      <div class="grid-1-content we-content-1">
+        <div class="grid-1-content-warp">
+          <h3 class="grid-1-content-title">We Design</h3>
+          <p class="grid-1-content-para">A picture speaks a thousand words, or lines of code; our Human-Centric design team makes sure that your business delivers a stellar experience.</p>
           <ul>
             <li>E-commerce websites & Mobile apps</li>
             <li>Portfolio Pages</li>
@@ -92,13 +88,13 @@
       </div>
       </div>
 
-      <div class="grid-img we-img-2">
+      <div class="grid-1-img we-img-2">
         <img src="img/theme/we-known-img-2.svg" alt="">
       </div>
-      <div class="grid-content we-content-2">
-        <div class="grid-content-warp">
-        <h3 class="grid-content-title">We Develop</h3>
-        <p class="grid-content-para-left">We do the heavy lifting so you can focus where necessary - your business.</p>
+      <div class="grid-1-content we-content-2">
+        <div class="grid-1-content-warp">
+        <h3 class="grid-1-content-title">We Develop</h3>
+        <p class="grid-1-content-para">We do the heavy lifting so you can focus where necessary - your business.</p>
         <ul>
           <li>Chatbot</li>
           <li>Mobile Apps</li>
@@ -111,33 +107,37 @@
     </div>
 
 
-    <div class="grid-img we-img-3">
-        <img src="img/theme/we-known-img-3.svg" alt="">
+      <div class="grid-1-img we-img-3">
+          <img src="img/theme/we-known-img-3.svg" alt="">
       </div>
-      <div class="grid-content we-content-3">
-        <div class="grid-content-warp">
-        <h3 class="grid-content-title">We Consult</h3>
-        <p class="grid-content-para-right">We provide meaningful and actionable insights that resonate with your business objectives.</p>
-        <ul>
-          <li>Business Process Improvement & Automation</li>
-          <li>Prototype the MVP version for your business idea</li>
-          <li>Get HIPAA, GDPR, PCI Compliance</li>
-          <li>Project Management & Consultation</li>          
-          <li>Evaluation & Monitoring of your execution team</li>
-        </ul>
-      </div>
+      <div class="grid-1-content we-content-3">
+          <div class="grid-1-content-warp">
+            <h3 class="grid-1-content-title">We Consult</h3>
+              <p class="grid-1-content-para">We provide meaningful and actionable insights that resonate with your business objectives.</p>
+              <ul>
+                <li>Business Process Improvement & Automation</li>
+                <li>Prototype the MVP version for your business idea</li>
+                <li>Get HIPAA, GDPR, PCI Compliance</li>
+                <li>Project Management & Consultation</li>          
+                <li>Evaluation & Monitoring of your execution team</li>
+              </ul>
+          </div>
       </div> 
 
-       <div class="grid-img-content we-content-center">
+       <div class="grid-1-content we-content-center">
         <h3 class="grid-content-center">We Execute</h3>
         <p class="grid-content-center-para">We have built customized white-lable solutions to solve common business needs, feel free to ask for a demo and get started with speed.</p>
-      </div> 
+       </div>
 
-      <div class="grid-img we-img-4">
+    </div>
+
+     <div class="grid-2">
+
+      <div class="grid-2-img we-img-4">
         <img src="img/theme/we-known-img-4.svg" alt="">
       </div>
-      <div class="grid-content we-content-4">
-        <div class="grid-content-warp">
+      <div class="grid-2-content we-content-4">
+        <div class="grid-2-content-warp">
         <ul>
           <li>E-Learning
             <ol>
@@ -157,8 +157,8 @@
       </div>
       </div>
       
-       <div class="grid-content we-content-5">
-        <div class="grid-content-warp">            
+       <div class="grid-2-content we-content-5">
+        <div class="grid-2-content-warp">            
         <ul>
           <li>E-Commerce & Marketplaces Finance
             <ol>
@@ -177,11 +177,12 @@
       </div>
       </div>
 
-       <div class="grid-img we-img-5">
+      <div class="grid-2-img we-img-5">
         <img src="img/theme/we-known-img-5.svg" alt="">
       </div>
-      <div class="grid-content we-content-6"> 
-        <div class="grid-content-warp">             
+
+      <div class="grid-2-content we-content-6"> 
+        <div class="grid-2-content-warp">             
         <ul>
           <li>Sports & Gaming
             <ol>
@@ -199,8 +200,9 @@
         </ul>
         </div>
       </div> 
-       <div class="grid-content we-content-7"> 
-        <div class="grid-content-warp">                                
+
+       <div class="grid-2-content we-content-7"> 
+        <div class="grid-2-content-warp">                                
         <ul>
           <li>Human Resource Care
             <ol>
@@ -220,13 +222,16 @@
       </div> 
       </div>
 
-       <div class="grid-img we-img-6">
+    </div>
+
+    <div class="grid-3">
+      <div class="grid-3-img we-img-6">
         <img src="img/theme/we-known-img-6.svg" alt="">
       </div>
-      <div class="grid-content we-content-8">
-        <div class="grid-content-warp"> 
-        <h3 class="grid-content-title">We Implement</h3>
-        <p class="grid-content-para-right">We constantly learn, unlearn, relearn, and upskill ourselves to translate your business needs through technology.</p>
+      <div class="grid-3-content we-content-8">
+        <div class="grid-3-content-warp"> 
+        <h3 class="grid-3-content-title">We Implement</h3>
+        <p class="grid-3-content-para">We constantly learn, unlearn, relearn, and upskill ourselves to translate your business needs through technology.</p>
         <ul>
           <li>No Code, Low Code, or Deep Tech Code</li>
           <li>Entreprise Applications</li>
@@ -235,14 +240,14 @@
         </ul>
       </div>
       </div>
-      
-      <div class="grid-img we-img-7">
+
+      <div class="grid-3-img we-img-7">
         <img src="img/theme/we-known-img-7.svg" alt="">
       </div>
-      <div class="grid-content we-content-9">
-        <div class="grid-content-warp"> 
-        <h3 class="grid-content-title">We Support</h3>
-        <p class="grid-content-para-right">We understand technology has the power to shape the world and constantly support Entrepreneurs of all sizes to build Innovative world class solutions</p>
+      <div class="grid-3-content we-content-9">
+        <div class="grid-3-content-warp"> 
+        <h3 class="grid-3-content-title">We Support</h3>
+        <p class="grid-3-content-para">We understand technology has the power to shape the world and constantly support Entrepreneurs of all sizes to build Innovative world class solutions</p>
         <ul>
           <li>Secure and maintain web and mobile applications</li>
           <li>Restore hacked websites</li>
@@ -253,15 +258,15 @@
         </ul>
       </div>
       </div>
-      
-      <div class="grid-img we-img-8">
+
+      <div class="grid-3-img we-img-8">
         <img src="img/theme/we-known-img-8.svg" alt="">
       </div>
 
-       <div class="grid-content we-content-10">
-        <div class="grid-content-warp"> 
-        <h3 class="grid-content-title">We Nurture</h3>
-        <p class="grid-content-para-right">Whether you are working on your first startup idea, solving food distribution problems or building a finance solution built on Blockchain, we help you translate any kind of design into functional digital products such as websites, mobile apps or enterprise solutions.</p>
+       <div class="grid-3-content we-content-10">
+        <div class="grid-3-content-warp"> 
+        <h3 class="grid-3-content-title">We Nurture</h3>
+        <p class="grid-3-content-para">Whether you are working on your first startup idea, solving food distribution problems or building a finance solution built on Blockchain, we help you translate any kind of design into functional digital products such as websites, mobile apps or enterprise solutions.</p>
         <ul>
           <li>Startups</li>
           <li>IT/ITES</li>
@@ -276,102 +281,147 @@
       </div>
       </div>
 
-       <div class="grid-content we-content-11">        
-        <p class="grid-content-para-right">We prove ourselves to be a trusted partner, we take ownership of our work, we take proactive steps, and focus on building long-term relationships. We have perfected this magical potion which resulted in us retaining our customers dated as long as the year 2013.
+      <div class="grid-content we-content-11">        
+        <p class="grid-content-para">We prove ourselves to be a trusted partner, we take ownership of our work, we take proactive steps, and focus on building long-term relationships. We have perfected this magical potion which resulted in us retaining our customers dated as long as the year 2013.
           As a full-service Agency, we work closely with our clients to Ideate, Define, Design, and Develop innovative digital products for all platforms and across all industry verticals. Our tool stack contains
           </p>
-      </div> 
+      </div>   
 
-      <!-- <div class="grid-content we-content-12"> 
-        <div class="grid-content-warp-blue">  
-        <h3 class="grid-content-title">Web Framework</h3>    
-        <ul>
-          <li>Laravel</li>
-          <li>Codeigniter</li>
-          <li>Adonis.js</li>
-          <li>Django</li>
-        </ul>
+    </div>
+
+    <div class="grid-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="grid-4-we-content"> 
+              <div class="grid-4-warp-blue">  
+              <h3 class="grid-4-title">Web Framework</h3>    
+              <ul>
+                <li>Laravel</li>
+                <li>Codeigniter</li>
+                <li>Adonis.js</li>
+                <li>Django</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="grid-4-we-content">    
+              <div class="grid-4-warp-blue">  
+              <h3 class="grid-4-title">Mobile Technologies</h3>    
+              <ul>
+                <li>Android</li>
+                <li>iOS</li>
+                <li>React Native</li>
+                <li>Flutter</li>
+                <li>Ionic</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="grid-4-we-content">
+              <div class="grid-4-warp-blue">  
+              <h3 class="grid-4-title">Front End</h3>    
+              <ul>
+                <li>Angular</li>
+                <li>React JS</li>
+                <li>Vue.js</li>          
+              </ul>
+            </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+            <div class="grid-4-we-content">  
+                <div class="grid-4-warp-blue">
+                  <h3 class="grid-4-title">CMS</h3>    
+                  <ul>
+                    <li>WordPress</li>
+                    <li>Shopify</li>
+                    <li>Ghost CMS</li>          
+                  </ul>
+              </div>
+            </div>
+          </div>  
+
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+
+            <div class="grid-4-we-content">  
+              <div class="grid-4-warp-blue"> 
+                <h3 class="grid-4-title">Server Management</h3>    
+                <ul>
+                  <li>AWS</li>
+                  <li>Google Cloud</li>
+                  <li>Microsoft Azure</li>
+                  <li>Digital Ocean</li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+
+            <div class="grid-4-we-content">  
+              <div class="grid-4-warp-blue">
+              <h3 class="grid-4-title">Core Technologies</h3>    
+                <ul>
+                  <li>PHP</li>
+                  <li>Python</li>
+                  <li>Node</li>          
+                </ul>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+
+            <div class="grid-4-we-content">  
+              <div class="grid-4-warp-blue">
+                <h3 class="grid-4-title">DevOps</h3>    
+                <ul>
+                  <li>CI\CD</li>
+                  <li>Docker</li>
+                  <li>Kubernetes</li>          
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+
+            <div class="grid-4-we-content"> 
+              <div class="grid-4-warp-blue">
+              <h3 class="grid-4-title">Quality assurance</h3>    
+                <ul>
+                  <li>Manual</li>
+                  <li>Automation</li>          
+                </ul>
+              </div>
+            </div>   
+
+          </div>
+
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+
+            <div class="grid-4-we-content">
+             <div class="grid-4-warp-blue">
+              <h3 class="grid-4-title">Deep Tech</h3>    
+                <ul>
+                  <li>BlockChain</li>
+                  <li>AI</li>
+                  <li>ML</li>
+                  <li>IOT</li>
+                </ul>
+              </div>
+             </div> 
+          </div>
+
+        </div>
       </div>
-      </div>
-
-      <div class="grid-content we-content-13">    
-        <div class="grid-content-warp-blue">  
-        <h3 class="grid-content-title">Mobile Technologies</h3>    
-        <ul>
-          <li>Android</li>
-          <li>iOS</li>
-          <li>React Native</li>
-          <li>Flutter</li>
-          <li>Ionic</li>
-        </ul>
-      </div>
-      </div>
-
-      <div class="grid-content we-content-14">
-        <div class="grid-content-warp-blue">  
-        <h3 class="grid-content-title">Front End</h3>    
-        <ul>
-          <li>Angular</li>
-          <li>React JS</li>
-          <li>Vue.js</li>          
-        </ul>
-      </div>
-      </div> -->
-
-      <!-- <div class="grid-content we-content-15">    
-        <h3 class="grid-content-title">CMS</h3>    
-        <ul>
-          <li>WordPress</li>
-          <li>Shopify</li>
-          <li>Ghost CMS</li>          
-        </ul>
-      </div> -->
-
-      <!-- <div class="grid-content we-content-16">    
-        <h3 class="grid-content-title">Server Management</h3>    
-        <ul>
-          <li>AWS</li>
-          <li>Google Cloud</li>
-          <li>Microsoft Azure</li>
-          <li>Digital Ocean</li>
-        </ul>
-      </div> -->
-
-      <!-- <div class="grid-content we-content-17">    
-        <h3 class="grid-content-title">Core Technologies</h3>    
-        <ul>
-          <li>PHP</li>
-          <li>Python</li>
-          <li>Node</li>          
-        </ul>
-      </div> -->
-
-      <!-- <div class="grid-content we-content-18">    
-        <h3 class="grid-content-title">DevOps</h3>    
-        <ul>
-          <li>CI\CD</li>
-          <li>Docker</li>
-          <li>Kubernetes</li>          
-        </ul>
-      </div> -->
-
-      <!-- <div class="grid-content we-content-19">    
-        <h3 class="grid-content-title">Quality assurance</h3>    
-        <ul>
-          <li>Manual</li>
-          <li>Automation</li>          
-        </ul>
-      </div> -->
-
-      <!-- <div class="grid-content we-content-20">    
-        <h3 class="grid-content-title">Deep Tech</h3>    
-        <ul>
-          <li>BlockChain</li>
-          <li>AI</li>
-          <li>ML</li>
-          <li>IOT</li>
-        </ul>
-      </div> -->
+    </div>      
 
     </section>
  
@@ -386,9 +436,9 @@
 		</div>
 		<div class="soical-media">
 			<ul>
-				<li><i class="fab fa-facebook-f"></i></li>
-				<li><i class="fab fa-facebook-f"></i></li>
-				<li><i class="fab fa-facebook-f"></i></li>
+				<li><i class="fab fa-linkedin-in"></i></li>
+				<li><i class="fab fa-instagram"></i></li>
+				<li><i class="fab fa-twitter"></i></li>
 				<li><i class="fab fa-facebook-f"></i></li>
 			</ul>
 		</div>
