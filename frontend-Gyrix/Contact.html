@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/lightslider.css">
+  
     <title>Gyrix</title>
 </head>
 <body>	
@@ -69,7 +69,7 @@
         <div class="contact-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-lx-6 col-lg-6 col-md-12 py-5">
+                    <div class="col-lx-6 col-lg-6 col-md-12 py-5 contact-container-center">
                         <h3 class="contact-container-title">Contact details</h3>
                         <ul>
                             <li>
@@ -90,14 +90,16 @@
                             <ul>
                                 <li><i class="fab fa-linkedin-in"></i></li>
                                 <li><i class="fab fa-twitter"></i></li>
+                                <span>
                                 <li><i class="fab fa-facebook-f"></i></li>
                                 <li><i class="fab fa-instagram"></i></li>
+                                </span>
                             </ul>
                         </div>
 
                     </div>
-                    <div class="col-lx-6 col-lg-6 col-md-12 py-5">
-                        <p class="contact-container-para">2nd floor, BG-202, near V-Care Hospital, Scheme No 74C, Indore, Madhya Pradesh 452010</p>
+                    <div class="col-lx-6 col-lg-6 col-md-12 py-5 contact-container-paragraph">
+                        <p class="contact-container-para"><i class="fas fa-map-marker-alt"></i> 2nd floor, BG-202, near V-Care Hospital, Scheme No 74C, Indore, Madhya Pradesh 452010</p>
                     </div>
                 </div>
             </div>     
@@ -108,21 +110,33 @@
         <div id="map"></div> 
     </section> 
 
-    <section class="form">
+    <section class="form py-5">
         <div class="form-container">
             <form action="/action_page.php" target="_blank">
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" value=""><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" value=""><br><br>
-                <textarea name="message" rows="10" cols="30"></textarea>
-                <input type="submit" value="Submit">
+                <div class="grid">
+                    <div class="grid-name">
+                        <label for="fname">Name</label>
+                        <input class="fields" type="text" id="fname" name="fname" value="">
+                    </div>  
+
+                    <div class="grid-email">
+                        <label for="fname">Email</label>              
+                        <input class="fields" type="email" id="lname" name="email" value="">
+                    </div>
+
+                    <div class="grid-message">
+                        <label for="fname">Message</label>
+                        <textarea class="message" name="message" rows="10" cols="30"></textarea>
+                    </div>
+                    
+                    <input class="button" type="submit" value="Submit">
+                </div>
             </form>
         </div>
     </section> 
  
 
-	<section class="footer">
+	 <section class="footer">
 
 		<div class="policy">
 			<ul>
@@ -141,20 +155,20 @@
 		</div>
 		<div class="copyright py-4">Gyrix © 2021, All Rights Reserved</div>
 
-	</section>
+	</section> 
 	
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity=""></script>     
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-	  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	  
     <script src="js/JQuery3.3.1.js"></script>
-    <script src="js/lightslider.js"></script>
-
-	  <script src="js/animation.js"></script>  
+	<script src="js/map.js"></script>  
 	  
 </body>
 </html>

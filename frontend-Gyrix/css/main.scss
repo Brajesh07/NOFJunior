@@ -84,6 +84,53 @@ button.navbar-toggler {
     background-image: url('../img/theme/hambruger.svg')!important;
 }
 
+.nav-link {
+    position: relative;
+    color: var(--blue)!important;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--main-red);
+        height: 3px;
+        width: 100%;
+        transform: scaleX(0);
+
+        transition: 1000ms all ease;
+    }
+}
+
+.nav-link:hover{
+    color: var(--main-red)!important;
+    font-weight: 600;
+    &::after{    
+   transform: scaleX(1);
+}
+}
+
+.navbar {
+    .active{
+        color: var(--main-red)!important;
+        font-weight: 600;
+        position: relative;
+        width: fit-content;  
+        
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: var(--blue);
+            height: 0;
+            width: 100%;
+            transform: scaleX(0);       
+        }
+    }
+}
+
+
+
 /* temporary classes */
 
 .ml-auto {
@@ -1321,6 +1368,20 @@ body{
     @media screen and (max-width: 768px){
         .footer{        
             flex-direction: column;
+            
+        }
+    }
+    @media screen and (max-width: 320px){
+        .footer{        
+            .soical-media{
+                ul{
+                    li{
+                        padding: .5rem .8rem;
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
             
         }
     }
@@ -2782,6 +2843,10 @@ body{
     align-items: center;
     padding: 2rem 5rem;    
     position: relative;
+    background-image: url(../img/theme/circle.png);
+    background-repeat: no-repeat;
+    background-position: center left -8rem;
+    background-size: 290px;
 
     &-heading {
         font-weight: 600;
@@ -2827,8 +2892,14 @@ body{
         }
         &-para{
             color: #faf3f3;
-            padding-top: 5rem;
+            padding-top: 8rem;
             font-family: PT serif;
+            width: 70%;
+            display: flex;
+
+            .fas {
+                padding: 5px 10px;
+            }
         }
         ul {
             list-style: none;
@@ -2850,7 +2921,11 @@ body{
             padding: 0 5rem;
             margin-top: 3rem;
             ul{
-                color: #000;                
+                color: #FFF;  
+                
+                span{
+                    color: var(--main-red);
+                }
             }
         }
     }
@@ -2858,22 +2933,185 @@ body{
 
 .map {
     width: 100%;
-    height: 500px;
-    position: relative;
+    height: 700px;
+    position: relative;    
     #map {
-        background-color: blue;
+        background-color: FFF;
         width: calc(100vw - 50%);
         height: 500px;
         position: absolute;
         right: 0;
         top: 131px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .2);
     }
 }
 
-.form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: calc(100vh - 15%);
+.form-container{
+
+        .grid {
+            display: grid;
+            grid-template-columns: 50px 400px 50px 400px 50px;
+            grid-template-rows: auto auto auto;
+            justify-content: center;
+        
+            .fields, .message {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            &-name{
+                grid-column: 2/3;  
+            }
+
+            &-email{
+                grid-column: 4/5;
+            }
+
+            &-message{
+                grid-row: 2/3;
+                grid-column: 2/5;
+            }
+
+            label{
+                color: var(--main-red);
+            }
+
+            .fields, .message {
+                border: 2px solid var(--main-red);
+                padding: .8rem;
+                border-radius: 30px;
+                color: var(--main-red);
+                outline: none;
+            }
+
+            .button{
+                background-color: var(--main-red);
+                border: none;
+                color: #fff;
+                padding: 1rem 2rem;
+                border-radius: 50px;
+                grid-column: 2/5;
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+ @media screen and (max-width: 768px) {
+     .contact {
+
+         &-container {
+             height: 580px;
+             background-size: 400px;
+
+                &-center {
+                    width: 60%;
+                    margin: 0 auto;
+                    padding-bottom: 0!important;
+                }
+               
+                &-paragraph {
+                    padding-top: 0!important;
+                }
+
+             &-para{
+                text-align: center;
+                padding-top: 0;
+                margin: 0 auto;
+             }            
+    
+             .social {
+                 display: none;
+             }
+         }
+         
+        }
+    }
+
+ @media screen and (max-width: 768px) {
+     .map{
+         #map{
+             width: calc(100vw - 20%);
+             height: 360px;
+             top: 331px;
+         }
+     }
+ }
+ @media screen and (max-width: 768px) {
+    .form-container{
+
+        .grid {     
+            grid-template-columns: 50px 250px 50px 250px 50px;                        
+        }
+    }
+   }
+ 
+    @media screen and (max-width: 425px) {
+        .contact {
+   
+            &-container { 
+                &-para{
+                    text-align: left;
+                    padding-top: 0;
+                    width: 100%;
+                 }          
+                
+                &-center {
+                       width: 70%;
+                       margin: 0 auto;
+                   }
+                }            
+            
+               
+                
+           }
+       }
+
+       @media screen and (max-width: 425px) {
+        .form-container{
+
+            .grid {                
+                grid-template-columns: 50px auto auto auto 50px;
+                grid-template-rows: auto auto auto auto;
+                    
+                &-name{
+                    grid-column: 2/5;  
+                }
+    
+                &-email{
+                    grid-column: 2/5;
+                    grid-row: 2/3;
+                }
+    
+                &-message{
+                    grid-column: 2/5;
+                    grid-row: 3/4;
+                }     
+                
+                .button {
+                    padding: 1rem;
+                }
+            }
+        }
+
+    }
+
+
+@media screen and (max-width: 375px) {
+    .contact {
+        &-heading{
+            padding: 1rem 0;
+        }
+
+        &-container {          
+                
+            &-center {
+                   width: 90%;
+                   margin: 0 auto;
+                   padding-bottom: 0!important;
+               }
+                       
+       }
+
+    }
 }
