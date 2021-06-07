@@ -2043,7 +2043,7 @@ body{
                 }
                 a{
                     color: var(--main-red);
-                    padding: 5px 10px;
+                    padding: 6px 10px;
                     border: 2px solid var(--main-red);
                     margin-right: 1rem;
                     border-radius: 50%;
@@ -2062,7 +2062,7 @@ body{
                 background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) );
                 transform: translateY(70%);
                 transition: transform 500ms ease;
-                transition-delay: 100ms;
+                transition-delay: 100ms;                
                 }
                 .cards-content > *:not(.cards-title){
                     opacity: 0;
@@ -2125,11 +2125,64 @@ body{
                     background-image: url(../img/team/Ram.png);
                 }
 
+                .ankur{
+                    background-image: url(../img/team/Ankur.png);
+                }
+
+                .arti{
+                    background-image: url(../img/team/arti.png);
+                }
+               
+
             }
 
 }
 
+@media screen and (max-width: 360px) {
+    .Charismatic-leader {
+          padding: 1.8rem;    
+                  
+    
+        .Charismatic-leader-main-content{   
+            .cards {                   
+                width: 250px;
+                height: 400px;
+                     &-body{
+                        padding:1rem 0;
+                        font-family:var(--font-poppin);
+                        font-size: 12px;
+                    }                        
+            }
+            .cards:hover,
+            .cards:focus {
+                    transform: scale(1);                    
+                }
+        }   
+    }
+}
 
+@media screen and (max-width: 320px) {
+    .Charismatic-leader {
+          padding: 1rem;    
+                  
+    
+        .Charismatic-leader-main-content{   
+            .cards {                   
+                width: 250px;
+                height: 400px;
+                     &-body{
+                        padding:1rem 0;
+                        font-family:var(--font-poppin);
+                        font-size: 12px;
+                    }                        
+            }
+            .cards:hover,
+            .cards:focus {
+                    transform: scale(1);                    
+                }
+        }   
+    }
+}
 .passionate-magicians {
     overflow-x: hidden;
     &-title{            
@@ -2227,9 +2280,25 @@ body{
             transform: translateY(50px);
         }
 
-        .passionate-magicians-container:hover .passionate-magicians-container-section-para{
-            color: var(--main-red);
-        }
+        // .passionate-magicians-container:hover .passionate-magicians-container-section-para{
+        //     color: var(--main-red);
+        // }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .passionate-magicians {   
+        
+        
+            &-container {
+                &-section{                                  
+        
+                    .down {                        
+                        font-size: .8rem;                       
+                    }
+                }   
+        }    
+    }
     
 }
 

@@ -2590,7 +2590,7 @@ body {
 
 .Charismatic-leader .Charismatic-leader-main-content .cards a {
   color: var(--main-red);
-  padding: 5px 10px;
+  padding: 6px 10px;
   border: 2px solid var(--main-red);
   margin-right: 1rem;
   border-radius: 50%;
@@ -2684,6 +2684,54 @@ body {
 
 .Charismatic-leader .Charismatic-leader-main-content .ram {
   background-image: url(../img/team/Ram.png);
+}
+
+.Charismatic-leader .Charismatic-leader-main-content .ankur {
+  background-image: url(../img/team/Ankur.png);
+}
+
+.Charismatic-leader .Charismatic-leader-main-content .arti {
+  background-image: url(../img/team/arti.png);
+}
+
+@media screen and (max-width: 360px) {
+  .Charismatic-leader {
+    padding: 1.8rem;
+  }
+  .Charismatic-leader .Charismatic-leader-main-content .cards {
+    width: 250px;
+    height: 400px;
+  }
+  .Charismatic-leader .Charismatic-leader-main-content .cards-body {
+    padding: 1rem 0;
+    font-family: var(--font-poppin);
+    font-size: 12px;
+  }
+  .Charismatic-leader .Charismatic-leader-main-content .cards:hover,
+  .Charismatic-leader .Charismatic-leader-main-content .cards:focus {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Charismatic-leader {
+    padding: 1rem;
+  }
+  .Charismatic-leader .Charismatic-leader-main-content .cards {
+    width: 250px;
+    height: 400px;
+  }
+  .Charismatic-leader .Charismatic-leader-main-content .cards-body {
+    padding: 1rem 0;
+    font-family: var(--font-poppin);
+    font-size: 12px;
+  }
+  .Charismatic-leader .Charismatic-leader-main-content .cards:hover,
+  .Charismatic-leader .Charismatic-leader-main-content .cards:focus {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .passionate-magicians {
@@ -2796,8 +2844,10 @@ body {
           transform: translateY(50px);
 }
 
-.passionate-magicians .passionate-magicians-container:hover .passionate-magicians-container-section-para {
-  color: var(--main-red);
+@media screen and (max-width: 1024px) {
+  .passionate-magicians-container-section .down {
+    font-size: .8rem;
+  }
 }
 
 @media screen and (max-width: 425px) {
