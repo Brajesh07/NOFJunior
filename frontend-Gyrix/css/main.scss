@@ -390,7 +390,7 @@ body{
  @media screen and (max-width : 768px ){ 
 
      .section-one{
-        height: 70vh;
+        height: 80vh;
              svg {
                  position: absolute;
                  z-index: -1;
@@ -416,7 +416,8 @@ body{
  @media screen and (max-width : 450px ){ 
      
      .section-one {
-         margin-top: 15%;         
+         margin-top: 15%;
+         height: 100vh;         
 
          svg {
             position: absolute;
@@ -1390,7 +1391,8 @@ body{
 
     .about-us {
         height: 100%;
-        padding-top: 130px;       
+        padding-top: 130px;    
+        overflow-x: hidden;   
         
         &-main-title{
             font-family: var(--font-family-poppins);
@@ -1520,7 +1522,7 @@ body{
 }
 
 .time-line{
-    
+    overflow-x: hidden;
     &-title {
         font-size: 1.2rem;
         color: var(--blue);
@@ -1557,7 +1559,7 @@ body{
     background-repeat: no-repeat;
     background-size: 250px;
     background-position:bottom left -10%;
-    
+    overflow-x: hidden;
 
     &-main{
         display: grid;
@@ -1991,6 +1993,7 @@ body{
     height: 100%;
     background-color: var(--blue);      
     padding: 2rem;    
+    overflow-x: hidden;
 
     &-main{
         &-title{            
@@ -2014,7 +2017,7 @@ body{
     .Charismatic-leader-main-content{
 
         display: flex;
-        justify-content: center;
+        justify-content: center;        
 
             .cards {
                 color: #faf3f3;        
@@ -2128,7 +2131,7 @@ body{
 
 
 .passionate-magicians {
-     
+    overflow-x: hidden;
     &-title{            
             width: fit-content;
             margin: 0 auto;
@@ -2936,7 +2939,7 @@ body{
     height: 700px;
     position: relative;    
     #map {
-        background-color: FFF;
+        background-color: #FFF;
         width: calc(100vw - 50%);
         height: 500px;
         position: absolute;

@@ -421,7 +421,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .section-one {
-    height: 70vh;
+    height: 80vh;
   }
   .section-one svg {
     position: absolute;
@@ -444,6 +444,7 @@ body {
 @media screen and (max-width: 450px) {
   .section-one {
     margin-top: 15%;
+    height: 100vh;
   }
   .section-one svg {
     position: absolute;
@@ -1310,6 +1311,7 @@ body {
 .about-us {
   height: 100%;
   padding-top: 130px;
+  overflow-x: hidden;
 }
 
 .about-us-main-title {
@@ -1427,6 +1429,10 @@ body {
   }
 }
 
+.time-line {
+  overflow-x: hidden;
+}
+
 .time-line-title {
   font-size: 1.2rem;
   color: var(--blue);
@@ -1457,6 +1463,7 @@ body {
   background-repeat: no-repeat;
   background-size: 250px;
   background-position: bottom left -10%;
+  overflow-x: hidden;
 }
 
 .time-line-illustration-main {
@@ -2527,6 +2534,7 @@ body {
   height: 100%;
   background-color: var(--blue);
   padding: 2rem;
+  overflow-x: hidden;
 }
 
 .Charismatic-leader-main-title {
@@ -2676,6 +2684,10 @@ body {
 
 .Charismatic-leader .Charismatic-leader-main-content .ram {
   background-image: url(../img/team/Ram.png);
+}
+
+.passionate-magicians {
+  overflow-x: hidden;
 }
 
 .passionate-magicians-title {
@@ -4043,7 +4055,7 @@ body {
 }
 
 .map #map {
-  background-color: FFF;
+  background-color: #FFF;
   width: calc(100vw - 50%);
   height: 500px;
   position: absolute;
