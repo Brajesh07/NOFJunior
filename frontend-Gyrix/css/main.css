@@ -17,6 +17,89 @@
   --line-spacing-35: 35px;
 }
 
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--font-family-poppins);
+  cursor: url(/img/brand/mobile-logo.svg), auto;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-animation: cursorAnim 100ms infinite alternate;
+          animation: cursorAnim 100ms infinite alternate;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+#svg {
+  width: 100px;
+  position: absolute;
+  -webkit-animation: rotation 4.5s infinite linear;
+          animation: rotation 4.5s infinite linear;
+  pointer-events: none;
+  -webkit-transition: top 500ms, left 500ms right 500ms bottom 500ms;
+  transition: top 500ms, left 500ms right 500ms bottom 500ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+text {
+  font-size: 4em;
+  font-family: 'Poppins';
+  font-weight: bold;
+  fill: #BF353E;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.button {
+  background: #0045db;
+  border: none;
+  outline: none;
+  padding: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: .3em;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+  #svg {
+    display: none;
+  }
+}
+
 /* Character Styles */
 .poppins-regular {
   font-family: var(--font-family-poppins);
@@ -141,12 +224,6 @@ button.navbar-toggler {
 }
 
 /* predefine class */
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: var(--font-family-poppins);
-}
-
 .box-shadow {
   -webkit-box-shadow: 0px 3px 36px #0000000d;
           box-shadow: 0px 3px 36px #0000000d;
@@ -721,6 +798,8 @@ body {
   min-width: 200px;
   bottom: -7rem;
   left: 4rem;
+  -webkit-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .section-pro .custom-card {

@@ -20,6 +20,75 @@
     --line-spacing-35: 35px;
 }
 
+
+
+body{
+    box-sizing: border-box;
+    font-family: var(--font-family-poppins); 
+    cursor: url(/img/brand/mobile-logo.svg), auto;  
+}
+
+
+.cursor {
+    width: 20px;
+    height: 20px;    
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim 100ms infinite alternate;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#svg {
+    width: 100px;
+    position: absolute;
+    animation: rotation 4.5s infinite linear;
+    pointer-events: none;
+    transition: top 500ms, left 500ms right 500ms bottom 500ms;
+    transition-timing-function: ease-out;
+}
+
+text {
+    font-size: 4em;
+    font-family: 'Poppins';
+    font-weight: bold;
+    fill: #BF353E;
+}
+
+
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  .button {
+    background: rgb(0, 69, 219);
+    border: none;
+    outline: none;
+    padding: 2em;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    letter-spacing: .3em;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+    #svg {
+        display: none;
+    }
+}
+
     /* Character Styles */
     .poppins-regular {
     font-family: var(--font-family-poppins);
@@ -146,10 +215,7 @@ button.navbar-toggler {
 
 /* predefine class */
 
-body{
-    box-sizing: border-box;
-    font-family: var(--font-family-poppins);    
-}
+
 
 .box-shadow {
     box-shadow: 0px 3px 36px #0000000d;
@@ -738,6 +804,7 @@ body{
             min-width: 200px;
             bottom: -7rem;
             left: 4rem;
+            box-shadow: 3px 0 6px rgba(0, 0, 0, .3);
         }
     }
 

@@ -19,6 +19,26 @@
 		  Your browser does not support HTML video.
 		</video>
 	</div-->
+	<div class="cursor">
+		<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+		xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" id="svg">
+			<title>Circular Text Path</title>
+	
+			<defs>
+				<path id="textcircle"
+					d="M250,400
+						a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
+					transform="rotate(12,250,250)"/>
+			</defs>
+			<rect width="100%" height="100%" fill="none" />
+			<text>
+				<textPath xlink:href="#textcircle"
+						aria-label="All for One &amp; One for All"
+						textLength="942">GTRICX TECHNOLAB.         .</textPath>
+			</text>
+	
+		</svg>
+	</div>
     
     <nav class="navbar navbar-expand-lg navbar-light box-shadow fixed-top" style="z-index: 10;">
         <div class="container-fluid">
@@ -514,15 +534,15 @@
 									<div class="row">
 								
 										<div class="col-4 rela">
-											<img class="rela-logo" src="img/theme/logo.png" alt="">
-											<img class="rela-project" src="img/theme/clickbetter.png" alt="">
+											<img class="rela-logo" src="img/theme/murari-&-sons-LOGO.png" alt="">
+											<img class="rela-project" src="img/theme/murari and sons.png" alt="">
 										</div>
 									
 										<div class="col-6 rela-1">
 											<div class="card-body custom-card">
 												<h6 class="date">May 8, 2018</h6>
-												<h5 class="card-title">Phpcore Php, Mysql, E-Commerce, Secure Payment Processing</h5>
-												<p class="card-text">A marketplace for selling virtual items. Vendors list and market their products. Affiliates select and market available products for commission. Features : Core PHP based project requiring extensive understanding of marketplace and marketing concepts, Performance improvement and optimization of resources, Sophisticated reporting and analysis mechanism.</p>
+												<h5 class="card-title">A Murray & Sons</h5>
+												<p class="card-text">A Murray & Sons is a local plumbing company that was founded in 1952 in the town of Tumut NSW by the Late Albert Murray. Their mission is to provide the best plumbing services and keep-up their name in terms of honesty, loyalty, reliability, and client’s satisfaction......</p>
 												<a href="#" class="btn read-more">Read more</a>
 											</div>
 										</div>
@@ -539,15 +559,15 @@
 									<div class="row">
 								
 										<div class="col-4 rela">
-											<img class="rela-logo" src="img/theme/softwareskills-logo.svg" alt="">
-											<img class="rela-project" src="img/theme/softwareskills-se.png" alt="">
+											<img class="rela-logo" src="img/theme/My Pooch Face-logo.png" alt="">
+											<img class="rela-project" src="img/theme/My-Pooch-Face-website.png" alt="">
 										</div>
 									
 										<div class="col-6 rela-1">
 											<div class="card-body custom-card">
 												<h6 class="date">May 8, 2018</h6>
-												<h5 class="card-title">Mean, Bootstrap, SASS</h5>
-												<p class="card-text">Software Skills is a leading IT recruiter in the Nordic Region. The application allows other companies to leverage Software Skills’ platform. Candidates are tested against various skills ranging from programming, personality, english communication etc. and integrates various tools like LinkedIn, Trello, Google etc.</p>
+												<h5 class="card-title">My Pooch Face</h5>
+												<p class="card-text">My Pooch Face is an online art gallery with professional artists that create custom pet portraits from customer’s favorite pet photos. These portraits are hand drawn by a professional team of digital artists with a stylus & tablet or directly on to the monitor using sophisticated fine art software......</p>
 												<a href="#" class="btn read-more">Read more</a>
 											</div>
 										</div>
@@ -563,15 +583,15 @@
 									<div class="row">
 								
 										<div class="col-4 rela">
-											<img class="rela-logo" src="img/theme/thewatchbuyersgroup-logo.png" alt="">
-											<img class="rela-project" src="img/theme/thewatchbuyersgroup-com.png" alt="">
+											<img class="rela-logo" src="img/theme/ScalaMed.svg" alt="">
+											<img class="rela-project" src="img/theme/ScalaMed-website.png" alt="">
 										</div>
 									
 										<div class="col-6 rela-1">
 											<div class="card-body custom-card">
 												<h6 class="date">May 8, 2018</h6>
-												<h5 class="card-title">WordPress, Gravity form, Adwords, Google Analytics</h5>
-												<p class="card-text">Buy. Sell. Service. Appraise. | The Watch Buyers Group Your destination for all luxury timepiece needs. Serving Los Angeles and the Globe. The Watch Buyers Group. 380 S Lake Ave, STE 206, Pasadena, CA 91101</p>
+												<h5 class="card-title">ScalaMed</h5>
+												<p class="card-text">ScalaMed is the technology partner for the patients, doctors, pharmacists, and general practitioners where they can get access to their medical records, anytime, anywhere through the App. They focus on providing Rx management and fulfilment.....</p>
 												<a href="#" class="btn read-more">Read more</a>
 											</div>
 										</div>
@@ -854,6 +874,12 @@
 	  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	  
 	  <script src="js/animation.js"></script>  
+	  <script>
+		   const cursor = document.querySelector('.cursor');
+		   document.addEventListener('mousemove', e => {
+			   cursor.setAttribute("style", "top: "+(e.pageY - 35)+"px; left: "+(e.pageX - 35)+"px;")
+			})
+	  </script>
 	  
 </body>
 </html>

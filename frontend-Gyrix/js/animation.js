@@ -1,5 +1,3 @@
-
-//
 // var perloader = document.getElementById('loading');
 //       setTimeout(function myfunction(){
 //         perloader.style.display = 'none';
