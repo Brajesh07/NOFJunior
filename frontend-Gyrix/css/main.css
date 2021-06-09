@@ -21,7 +21,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: var(--font-family-poppins);
-  cursor: url(/img/brand/mobile-logo.svg), auto;
+  cursor: url(../img/brand/mobile-logo.svg), auto;
 }
 
 .cursor {
