@@ -3,7 +3,11 @@
 //         perloader.style.display = 'none';
 //       }, 6000);
   
-//    
+//  
+
+
+
+
 //document.getElementById('vid').play();
   
 //
