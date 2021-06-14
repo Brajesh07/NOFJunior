@@ -107,15 +107,15 @@ text {
     }
    
 
-    #loading{	 
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background-color: #fff;
-        /*background: #000 url("") no-repeat center;*/
-        z-index: 999;	
+    // #loading{	 
+    //     position: fixed;
+    //     width: 100vw;
+    //     height: 100vh;
+    //     background-color: #fff;
+    //     /*background: #000 url("") no-repeat center;*/
+    //     z-index: 999;	
         
-    }
+    // }
     
     video {
         width: 50%;
@@ -1080,11 +1080,7 @@ button.navbar-toggler {
     }
 }
 
-    .animate__animated.animate__bounce {
-    --animate-duration: 1s;
-    --animate-delay: 1s;
-    animation-delay: calc(var(--animate-delay)*11);
-  }
+  
 
 
   .service-content{
@@ -1370,13 +1366,19 @@ button.navbar-toggler {
                 padding: 0;       
 
                     li {
-                        padding: 1rem;
-                        border: 1px solid #fff;
+                        padding: 1rem 1.1rem;
                         width: 50px;
                         height: 50px;
+                        border: 1px solid;
                         border-radius: 50%;
                         margin: 1rem;
-                        text-align: center;                    
+
+                        a{
+                            text-align: center;
+                            color: #fff;
+                            width: 50px;
+                            height: 50px;   
+                        }                 
                     }
             }
         }
@@ -2427,14 +2429,13 @@ button.navbar-toggler {
     align-self: center;
     text-align: center;
     color: #fff;
-    padding: 5rem 0;
-
+    padding: 5rem 0;   
 
     &-app{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center;        
 
         &-heading{
             width: 300px;
@@ -2444,17 +2445,29 @@ button.navbar-toggler {
             line-height: 1.5rem;
         }
 
+        .feature{
+            position: relative;
+
+            &-hover{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                object-fit: contain;
+                opacity: 0;
+                transition: opacity 500ms;
+            }
+    
+            &-hover:hover{
+                opacity: 1;
+            }
+            
+        }
+
         
 
-        &-img{
-            background-image: url(../img/theme/awawds-best-bussiness.svg);
-            width: 250px;
-            height: 350px;
-            transition: 500ms ease-in;
-        }
-        &-img:hover{
-            background-image: url(../img/theme/awawds-best-bussiness-hover.svg);
-        }
+        
     }
 
     &-bussiness{
@@ -2472,15 +2485,25 @@ button.navbar-toggler {
             line-height: 1.5rem;
         }
 
-        &-img{
-            background-image: url(../img/theme/awawds-best-bussiness.svg);
-            width: 250px;
-            height: 350px;
-            transition: 500ms ease-in;
-        }
-
-        &-img:hover{
-            background-image: url(../img/theme/awawds-best-bussiness-hover.svg);
+        .feature{
+            position: relative;
+            
+            &-hover{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                object-fit: contain;
+                opacity: 0;
+                transition: opacity 500ms;
+                
+            }
+    
+            &-hover:hover{
+                opacity: 1;
+            }
+            
         }
     }
     
@@ -2575,7 +2598,7 @@ button.navbar-toggler {
         grid-template-rows: auto auto auto 200px;        
         column-gap: 1.5rem;
         row-gap: 1rem;
-        margin-right: 10%;
+        margin-right: 5%;
         
         &-content {
             //background-color: rgba(0, 0, 0, .2);
@@ -3109,7 +3132,8 @@ button.navbar-toggler {
 .map {
     width: 100%;
     height: 700px;
-    position: relative;    
+    position: relative;  
+   
     #map {
         background-color: #FFF;
         width: calc(100vw - 50%);
@@ -3118,6 +3142,7 @@ button.navbar-toggler {
         right: 0;
         top: 131px;
         box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+        
     }
 }
 

@@ -12,7 +12,7 @@
   
 //
  AOS.init({
-  offset: 100,
+  offset: 200,
   duration: 1000,
   easing: 'ease',
  });

@@ -119,15 +119,6 @@ text {
   color: var(--blue-dark);
 }
 
-#loading {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  /*background: #000 url("") no-repeat center;*/
-  z-index: 999;
-}
-
 video {
   width: 50%;
   position: absolute;
@@ -1019,13 +1010,6 @@ button.navbar-toggler {
   }
 }
 
-.animate__animated.animate__bounce {
-  --animate-duration: 1s;
-  --animate-delay: 1s;
-  -webkit-animation-delay: calc(var(--animate-delay)*11);
-          animation-delay: calc(var(--animate-delay)*11);
-}
-
 .service-content {
   background-image: url(../img/theme/circle.png);
   background-repeat: no-repeat;
@@ -1320,13 +1304,19 @@ button.navbar-toggler {
 }
 
 .footer .soical-media ul li {
-  padding: 1rem;
-  border: 1px solid #fff;
+  padding: 1rem 1.1rem;
   width: 50px;
   height: 50px;
+  border: 1px solid;
   border-radius: 50%;
   margin: 1rem;
+}
+
+.footer .soical-media ul li a {
   text-align: center;
+  color: #fff;
+  width: 50px;
+  height: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -3013,16 +3003,25 @@ button.navbar-toggler {
   line-height: 1.5rem;
 }
 
-.awards-app-img {
-  background-image: url(../img/theme/awawds-best-bussiness.svg);
-  width: 250px;
-  height: 350px;
-  -webkit-transition: 500ms ease-in;
-  transition: 500ms ease-in;
+.awards-app .feature {
+  position: relative;
 }
 
-.awards-app-img:hover {
-  background-image: url(../img/theme/awawds-best-bussiness-hover.svg);
+.awards-app .feature-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.awards-app .feature-hover:hover {
+  opacity: 1;
 }
 
 .awards-bussiness {
@@ -3049,16 +3048,25 @@ button.navbar-toggler {
   line-height: 1.5rem;
 }
 
-.awards-bussiness-img {
-  background-image: url(../img/theme/awawds-best-bussiness.svg);
-  width: 250px;
-  height: 350px;
-  -webkit-transition: 500ms ease-in;
-  transition: 500ms ease-in;
+.awards-bussiness .feature {
+  position: relative;
 }
 
-.awards-bussiness-img:hover {
-  background-image: url(../img/theme/awawds-best-bussiness-hover.svg);
+.awards-bussiness .feature-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.awards-bussiness .feature-hover:hover {
+  opacity: 1;
 }
 
 .we-known {
@@ -3156,7 +3164,7 @@ button.navbar-toggler {
   -webkit-column-gap: 1.5rem;
           column-gap: 1.5rem;
   row-gap: 1rem;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .main-grid .grid-1-content {
