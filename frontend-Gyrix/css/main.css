@@ -1015,6 +1015,7 @@ button.navbar-toggler {
   background-repeat: no-repeat;
   background-size: 250px;
   background-position: bottom right -7%;
+  overflow: hidden;
 }
 
 .service-content .row div {
@@ -1074,6 +1075,7 @@ button.navbar-toggler {
   background-repeat: no-repeat;
   background-position: top 2% right;
   background-size: 150px;
+  overflow: hidden;
 }
 
 .content-blog .row {
@@ -1278,6 +1280,7 @@ button.navbar-toggler {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
+  overflow: hidden;
 }
 
 .footer .policy ul {
@@ -1339,7 +1342,7 @@ button.navbar-toggler {
 .about-us {
   height: 100%;
   padding-top: 130px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .about-us-main-title {
@@ -1458,7 +1461,7 @@ button.navbar-toggler {
 }
 
 .time-line {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .time-line-title {
@@ -1491,7 +1494,7 @@ button.navbar-toggler {
   background-repeat: no-repeat;
   background-size: 250px;
   background-position: bottom left -10%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .time-line-illustration-main {
@@ -2562,7 +2565,7 @@ button.navbar-toggler {
   height: 100%;
   background-color: var(--blue);
   padding: 2rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .Charismatic-leader-main-title {
@@ -2777,7 +2780,7 @@ button.navbar-toggler {
 }
 
 .passionate-magicians {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .passionate-magicians-title {
@@ -2843,7 +2846,7 @@ button.navbar-toggler {
   border: 2px solid #fff;
   padding: 5px 8px;
   font-size: 15px;
-  margin: 10px;
+  margin-right: 10px;
   -webkit-transition: 500ms all ease;
   transition: 500ms all ease;
 }
@@ -2977,6 +2980,7 @@ button.navbar-toggler {
   text-align: center;
   color: #fff;
   padding: 5rem 0;
+  overflow: hidden;
 }
 
 .awards-app {
@@ -3085,6 +3089,7 @@ button.navbar-toggler {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem 5rem;
+  overflow: hidden;
 }
 
 .we-known-heading {
@@ -3152,6 +3157,7 @@ button.navbar-toggler {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .main-grid .grid-1 {
@@ -4427,6 +4433,7 @@ button.navbar-toggler {
 
 .sec-one {
   padding-top: 150px;
+  overflow: hidden;
 }
 
 .sec-one-header {
@@ -4499,6 +4506,7 @@ button.navbar-toggler {
 
 .sec-two {
   margin-top: -6rem;
+  overflow: hidden;
 }
 
 .sec-two-desktop {
@@ -4541,6 +4549,7 @@ button.navbar-toggler {
   max-width: 1200px;
   min-width: 800px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .sec-three-grid-img-1 {
@@ -5262,6 +5271,7 @@ button.navbar-toggler {
   background-position: bottom right -5%;
   padding: 5rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .sec-five-heading {
@@ -5314,6 +5324,7 @@ button.navbar-toggler {
   background-repeat: no-repeat;
   background-size: 50px;
   background-position: left -10rem top 2rem;
+  overflow: hidden;
 }
 
 .blogs-heading {
@@ -5512,6 +5523,7 @@ button.navbar-toggler {
   background-repeat: no-repeat;
   background-position: bottom right -5rem;
   background-size: 250px;
+  overflow: hidden;
 }
 
 .blog-banner-grid {
@@ -5697,6 +5709,7 @@ button.navbar-toggler {
 
 .blog-banner-para {
   padding: 5rem 1rem 1rem;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
@@ -5721,6 +5734,7 @@ button.navbar-toggler {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 .blog-form-container .blog-grid .fields, .blog-form-container .blog-grid .message {

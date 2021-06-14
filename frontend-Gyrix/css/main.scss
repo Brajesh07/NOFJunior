@@ -1088,6 +1088,7 @@ button.navbar-toggler {
     background-repeat: no-repeat;
     background-size: 250px;
     background-position: bottom right -7%;
+    overflow: hidden;
 
     .row {
         div{
@@ -1152,6 +1153,7 @@ button.navbar-toggler {
             background-repeat: no-repeat;
             background-position: top 2% right;
             background-size: 150px;
+            overflow: hidden;
 
             .row{
             background-image: url(../img/theme/tech-red-left.svg);
@@ -1343,6 +1345,7 @@ button.navbar-toggler {
         flex-direction: row;
         align-items: center;
         color: #fff;
+        overflow: hidden;
 
         .policy {
             ul{
@@ -1410,7 +1413,7 @@ button.navbar-toggler {
     .about-us {
         height: 100%;
         padding-top: 130px;    
-        overflow-x: hidden;   
+        overflow: hidden;   
         
         &-main-title{
             font-family: var(--font-family-poppins);
@@ -1540,7 +1543,7 @@ button.navbar-toggler {
 }
 
 .time-line{
-    overflow-x: hidden;
+    overflow: hidden;
     &-title {
         font-size: 1.2rem;
         color: var(--blue);
@@ -1577,7 +1580,7 @@ button.navbar-toggler {
     background-repeat: no-repeat;
     background-size: 250px;
     background-position:bottom left -10%;
-    overflow-x: hidden;
+    overflow: hidden;
 
     &-main{
         display: grid;
@@ -2011,7 +2014,7 @@ button.navbar-toggler {
     height: 100%;
     background-color: var(--blue);      
     padding: 2rem;    
-    overflow-x: hidden;
+    overflow: hidden;
 
     &-main{
         &-title{            
@@ -2216,7 +2219,7 @@ button.navbar-toggler {
     }
 }
 .passionate-magicians {
-    overflow-x: hidden;
+    overflow: hidden;
     &-title{            
             width: fit-content;
             margin: 0 auto;
@@ -2269,7 +2272,7 @@ button.navbar-toggler {
                     border: 2px solid #fff;
                     padding: 5px 8px;
                     font-size: 15px;
-                    margin: 10px;
+                    margin-right: 10px;
                     transition: 500ms all ease;
                 }
             }
@@ -2430,6 +2433,7 @@ button.navbar-toggler {
     text-align: center;
     color: #fff;
     padding: 5rem 0;   
+    overflow: hidden;
 
     &-app{
         display: flex;
@@ -2519,6 +2523,7 @@ button.navbar-toggler {
     justify-content: center;
     align-items: center;
     padding: 2rem 5rem;
+    overflow: hidden;
 
     &-heading {
         font-weight: 600;
@@ -2590,6 +2595,7 @@ button.navbar-toggler {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     
 
     .grid-1{
@@ -3045,6 +3051,7 @@ button.navbar-toggler {
     background-repeat: no-repeat;
     background-position: center left -8rem;
     background-size: 290px;
+    
 
     &-heading {
         font-weight: 600;
@@ -3132,7 +3139,8 @@ button.navbar-toggler {
 .map {
     width: 100%;
     height: 700px;
-    position: relative;  
+    position: relative; 
+    
    
     #map {
         background-color: #FFF;
@@ -3147,7 +3155,7 @@ button.navbar-toggler {
 }
 
 .form-container{
-
+    
         .grid {
             display: grid;
             grid-template-columns: 50px 400px 50px 400px 50px;
@@ -3320,7 +3328,7 @@ button.navbar-toggler {
 
 .sec-one{
     padding-top: 150px;
-
+    overflow: hidden;
 
     &-header{
         font-family: var(--font-family-poppins);
@@ -3398,6 +3406,8 @@ button.navbar-toggler {
 
 .sec-two{
     margin-top: -6rem ;
+    overflow: hidden;
+
         &-desktop{
         width: 100%;
         }
@@ -3436,6 +3446,7 @@ button.navbar-toggler {
     max-width: 1200px;
     min-width: 800px;
     margin: 0 auto;
+    overflow: hidden;
 
     &-img-1{
         grid-column: 2/4;
@@ -4031,6 +4042,8 @@ button.navbar-toggler {
     background-position: bottom right -5%;
     padding: 5rem;
     text-align: center;
+    overflow: hidden;
+
 
     &-heading{
         font-size: 1.8rem;
@@ -4091,6 +4104,7 @@ button.navbar-toggler {
     background-repeat: no-repeat;
     background-size: 50px;
     background-position: left -10rem top 2rem;
+    overflow: hidden;
 
     &-heading{
         color: var(--blue);
@@ -4260,6 +4274,7 @@ button.navbar-toggler {
     background-repeat: no-repeat;
     background-position: bottom right -5rem;
     background-size: 250px;
+    overflow: hidden;
 
 
     &-grid{
@@ -4410,7 +4425,7 @@ button.navbar-toggler {
 
 .blog-banner-para {
     padding: 5rem 1rem 1rem;
-    
+    overflow: hidden;    
     
 }
 
@@ -4433,6 +4448,7 @@ button.navbar-toggler {
         grid-template-columns: 50px 400px 50px 400px 50px;
         grid-template-rows: auto auto 50px auto;
         justify-content: center;
+        overflow: hidden;
     
         .fields, .message {
             width: 100%;
