@@ -13,32 +13,10 @@
     <title>Pain of a Considerate Employer – Unprofessional employee</title>
 </head>
 <body>
-
-	 <div class="cursor">
-		<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en"
-		xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" id="svg">
-			<title>Circular Text Path</title>
-	
-			<defs>
-				<path id="textcircle"
-					d="M250,400
-						a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
-					transform="rotate(12,250,250)"/>
-			</defs>
-			<rect width="100%" height="100%" fill="none" />
-			<text>
-				<textPath xlink:href="#textcircle"
-						aria-label="All for One &amp; One for All"
-						textLength="942">GYRICX TECHNOLABS.   .</textPath>
-			</text>
-	
-		</svg>
-	</div> 
-    
     <nav class="navbar navbar-expand-lg navbar-light box-shadow fixed-top" style="z-index: 10;">
         <div class="container-fluid">
-          <a class="navbar-brand desktop-logo" href="#"><img src="img/brand/desktop-logo.svg" alt=""></a>
-          <a class="navbar-brand mobile-logo" href="#"><img src="img/brand/mobile-logo.svg" alt=""></a>
+            <a class="navbar-brand desktop-logo" href="index.html"><img src="img/brand/desktop-logo.svg" alt=""></a>
+            <a class="navbar-brand mobile-logo" href="index.html"><img src="img/brand/mobile-logo.svg" alt=""></a>
           <button onclick="openNav()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -197,9 +175,9 @@
 	<section class="footer">		
 		<div class="policy">
 			<ul>
-				<li>Privacy</li>
-				<li>policy</li>
-				<li>terms</li>
+				<a href="#"><li>Privacy</li></a>
+				<a href="#"><li>policy</li></a>
+				<a href="#"><li>terms</li></a>
 			</ul>
 		</div>
 		<div class="soical-media">
@@ -229,15 +207,7 @@
             image2: 'img/blog/Pain-Considerate.png',
             displacementImage: 'img/blog/stripe1.png',
             })
-    </script>
-	  <script>
-		   const cursor = document.querySelector('.cursor');
-		   document.addEventListener('mousemove', e => {
-			   cursor.setAttribute("style", "top: "+(e.pageY - 35)+"px; left: "+(e.pageX - 35)+"px;")
-			})
-	  </script>      
-
-	  
+    </script>	  
 </body>
 </html>
 

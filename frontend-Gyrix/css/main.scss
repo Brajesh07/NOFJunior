@@ -25,7 +25,7 @@
 body{
     box-sizing: border-box;
     font-family: var(--font-family-poppins); 
-    cursor: url(../img/brand/mobile-logo.svg), auto; 
+    // cursor: url(../img/brand/mobile-logo.svg), auto; 
 }
 
 .cursor {
@@ -371,21 +371,12 @@ button.navbar-toggler {
         
         .big-title{
             color: var(--blue-dark);                  
-            font-size: 2.5rem;   
-            
-            &::after {
-                content: '';
-                background-color: var(--main-red);
-                width: 200px;
-                height: 8px;
-                position: absolute;
-                display: block;                        
-            }
+            font-size: 2.5rem;               
         }
 
         .dynamic::after{
             content:'';
-            animation: scale 9s ease-in infinite;
+            animation: scale 25s ease-in infinite;
             color: var(--main-red);
             font-weight: 600;
         }
@@ -1268,6 +1259,7 @@ button.navbar-toggler {
                 p{
                     padding:0 0 1rem;
                     text-align:center;
+                    font-family: PT serif; 
                 }
             }
 
@@ -1355,8 +1347,14 @@ button.navbar-toggler {
                 justify-content: space-around;
                 padding: 0;
 
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+
                 li {
                     padding: 1rem;
+                   
                 }
             }
         }
@@ -1437,8 +1435,8 @@ button.navbar-toggler {
 
         &-main-para{
             text-align: center;
-            line-height: 1.7rem;
-            font-size: 1.2rem;
+            line-height: 1.7rem;            
+            font-family: PT serif;
         }
     
         &-left-content {
@@ -1446,6 +1444,11 @@ button.navbar-toggler {
             justify-content: flex-end;
             align-items: flex-end;
             position: relative;
+
+            &-para{
+                font-family: PT serif;
+            }
+            
 
             .about-us-main-img{
                 width: 100%;
@@ -1461,12 +1464,13 @@ button.navbar-toggler {
                 width: 65%;
                 padding: 1rem;
                 left: 3%;
-                bottom: 3%;
+                bottom: 3%;                
 
                 li{
                     font-size: 0.8rem;
                     color: var(--blue);
                     line-height: 1rem;
+                    font-family: PT serif;
                 }
                 
             }
@@ -1551,8 +1555,8 @@ button.navbar-toggler {
     }
 
     &-para {
-        line-height: 1.7rem;
-        font-size: 1.2rem;
+        line-height: 1.7rem;        
+        font-family: PT serif;
     }
 
 }
@@ -2809,6 +2813,9 @@ button.navbar-toggler {
                 
             }
         }
+        ul{
+            font-family: PT serif;
+        }
     }
 
 }
@@ -3169,10 +3176,60 @@ button.navbar-toggler {
 
             &-name{
                 grid-column: 2/3;  
+                position: relative;
+                padding-bottom: 15px;               
+
+                i{
+                    visibility: hidden;
+                    position: absolute;
+                    top: 52px;
+                    right: 20px;
+                }
+
+                small{
+                    visibility: hidden;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
             }
+
+            .success-message{
+                  .fa-check-circle{
+                    color: var(--blue);
+                    visibility: visible;
+                }
+            }
+            .error-message{
+                .fa-exclamation-circle{
+                  color: var(--main-red);
+                  visibility: visible;
+              }             
+
+              small{
+                  visibility: visible;
+                  color: var(--main-red);
+              }
+          }
 
             &-email{
                 grid-column: 4/5;
+                position: relative;
+                padding-bottom: 15px;
+
+
+                i{
+                    visibility: hidden;
+                    position: absolute;
+                    top: 52px;
+                    right: 20px;
+                }
+                small{
+                    visibility: hidden;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
             }
 
             &-message{
@@ -3448,6 +3505,10 @@ button.navbar-toggler {
     margin: 0 auto;
     overflow: hidden;
 
+    li{
+        font-family: PT serif;
+    }
+
     &-img-1{
         grid-column: 2/4;
         grid-row: 1/3;
@@ -3648,6 +3709,8 @@ button.navbar-toggler {
     color: #39D1C2;
 }
 #pooch-para {
+
+    font-family: PT serif;
     &::before{
         content: '"';
         position: absolute;
@@ -3682,6 +3745,7 @@ button.navbar-toggler {
 }
 
 #scalamed-para {
+    font-family: PT serif;
     &::before{
         content: '"';
         position: absolute;
@@ -3692,7 +3756,7 @@ button.navbar-toggler {
         line-height: 1;
         color: #008DFF;
         z-index: -1;
-        opacity: .5;
+        opacity: .5;        
     }    
 }
 
@@ -4057,6 +4121,7 @@ button.navbar-toggler {
         width: 600px;
         margin: 0 auto;
         padding: 1rem 0;
+        font-family: PT serif;
     }
 }
 
@@ -4166,8 +4231,10 @@ button.navbar-toggler {
         &-para{
             grid-column: 2/3;
             grid-row: 2/4; 
+
             p{
                 padding: 0 1rem;
+                font-family: PT serif;               
             }
         }
     }
@@ -4277,6 +4344,7 @@ button.navbar-toggler {
     overflow: hidden;
 
 
+
     &-grid{
         display: grid;
         grid-template-columns: 50px 1fr 50px 1fr 50px;
@@ -4326,6 +4394,10 @@ button.navbar-toggler {
             }
         }
     }
+}
+
+.blog-banner-para{
+    font-family: PT serif;
 }
 
 @media screen and (max-width: 768px) {
