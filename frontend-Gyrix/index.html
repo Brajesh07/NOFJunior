@@ -35,7 +35,7 @@
                 <a class="nav-link poppins-regular" href="#">Join us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link poppins-regular" href="#">Contact Us</a>
+                <a class="nav-link poppins-regular" href="Contact.html">Contact Us</a>
               </li>			  	  
             </ul>            
           </div>
@@ -708,7 +708,7 @@
 						<div class="carousel-inner">
 						  <div class="carousel-item active">
 							<div class="testimonials">
-								<p>I spent considerable time looking for a company to service our development needs. It is not guaranteed that the company you choose lives  up to their feedback, although I have to say that I feel extremely lucky to have found Gyrix, they have definitely surpassed my expectations. Not only do they respect our dream and go out of their way to help, but I also trust their judgement. Ram and the team always suggest a better way if there is one. I also love how forward thinking RAM is in the way he runs the company. I love innovators and I definitely think he is one.
+								<p class="para">I spent considerable time looking for a company to service our development needs. It is not guaranteed that the company you choose lives  up to their<span class="dots">...</span><span class="more"> feedback, although I have to say that I feel extremely lucky to have found Gyrix, they have definitely surpassed my expectations. Not only do they respect our dream and go out of their way to help, but I also trust their judgement. Ram and the team always suggest a better way if there is one. I also love how forward thinking RAM is in the way he runs the company. I love innovators and I definitely think he is one.</span>
 								</p>
 								<img class="avatar" src="img/theme/Kate Borg.jpg" alt="">
 								<h4 class="client-name">Kate Borg</h4>
@@ -717,11 +717,10 @@
 						  </div>
 						  <div class="carousel-item">
 							<div class="testimonials">
-								<p>I am very happy that we at Software Skills started working with Gyrix – the quality of work and continuity has been great for us.
-									Gyrix employees have always delivered what we have asked, and often worked hard to find good solutions.
+								<p class="para">I am very happy that we at Software Skills started working with Gyrix – the quality of work and continuity has been great for us.<span class="dots">...</span><span class="more">Gyrix employees have always delivered what we have asked, and often worked hard to find good solutions.
 									Sometimes with very little guidance more than a broad idea from me.
-									We hope to work with Gyrix many years to come!
-								</p>
+									We hope to work with Gyrix many years to come!</span>
+								</p>							
 								<img class="avatar" src="img/theme/Henrik Enström.png" alt="">
 								<h4 class="client-name">Henrik Enström</h4>
 								<h5 class="client-pro">Founder, Software Skills</h5>
@@ -729,7 +728,7 @@
 						  </div>
 						  <div class="carousel-item">
 							<div class="testimonials">
-								<p>We are very happy to have been involved with Gyrix and we find all of the people that we have dealt with over the past 6 months to be very accommodating and professional. All of our  requirements are met in a very timely and effective manner. Overall we are very happy with all of the dealings and the works that have been  completed by Gyrix and look forward to counting working with you over the long term. Based on this experience I have recently I have recommended Gyrix to a couple of other people due to the ongoing service.
+								<p class="para">We are very happy to have been involved with Gyrix and we find all of the people that we have dealt with over the past 6 months to<span class="dots">...</span><span class="more"> be very accommodating and professional. All of our  requirements are met in a very timely and effective manner. Overall we are very happy with all of the dealings and the works that have been  completed by Gyrix and look forward to counting working with you over the long term. Based on this experience I have recently I have recommended Gyrix to a  couple of other people due to the ongoing service.</span>
 								</p>
 								<img class="avatar" src="img/theme/Dean Shipp.jpg" alt="">
 								<h4 class="client-name">Dean Shipp</h4>
@@ -738,20 +737,19 @@
 						  </div>
 						  <div class="carousel-item">
 							<div class="testimonials">
-								<p>Gyrix is a great team to work with. They communicate well so that the client can relax and know that progress is being made. They are also good at adapting to changing needs quickly so that a new client request does not disrupt work. I would highly recommend them to colleagues, and will continue to work with them in the future.
-								</p>
+								<p class="para">Gyrix is a great team to work with. They communicate well so that the client can relax and know that progress is being made.<span class="dots">...</span><span class="more"> They are also good at adapting to changing needs quickly so that a new client request does not disrupt work. I would highly recommend them to colleagues, and will continue to work with them in the future.
+								</span></p>
 								<img class="avatar" src="img/theme/Rebecca Vogt.jpg" alt="">
 								<h4 class="client-name">Rebecca Vogt</h4>
 								<h5 class="client-pro">Seeker</h5>
 							</div>
 						  </div>
-						  <!-- <div class="carousel-item">
+						  <div class="carousel-item">
 							<div class="testimonials">
-								<video width="100%" height="100%" controls>
-								  <source src="/img/theme/Gyrix – Gyrix Technolabs.mp4" type="video/mp4">								  								  
+								<video src="/img/theme/Gyrix – Gyrix Technolabs.mp4" width="100%" height="100%" preload loop controls>								  							  								  
 								</video>
 							</div>
-						  </div> -->
+						  </div>
 						</div>
 						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControl" data-bs-slide="prev">
 						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -856,7 +854,42 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 	  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	  
-	  <script src="js/animation.js"></script>  	 
+	  <script src="js/animation.js"></script>  
+	  <script>
+	  	function myFunction(x) {
+  if (x.matches) { // If media query matches
+      var x, i;
+      x = document.querySelectorAll(".more");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+    
+      var y, e;
+      y = document.querySelectorAll(".dots");
+        for (e = 0; e < y.length; e++) {
+          y[e].style.display = "inline";
+        }
+  } else {
+    var x, i;
+      x = document.querySelectorAll(".more");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "inline";
+      }
+    
+      var y, e;
+      y = document.querySelectorAll(".dots");
+        for (e = 0; e < y.length; e++) {
+          y[e].style.display = "none";
+        }
+  }
+}
+
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+
+	  </script>	 
 	  
 </body>
 </html>

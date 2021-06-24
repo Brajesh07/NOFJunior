@@ -118,7 +118,7 @@ text {
   color: var(--blue-dark);
 }
 
-video {
+/*video {
   width: 50%;
   position: absolute;
   top: 40%;
@@ -139,7 +139,7 @@ video {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-}
+}*/
 
 /* over right bootstarp css */
 button.navbar-toggler {
@@ -524,7 +524,7 @@ button.navbar-toggler {
   background-repeat: no-repeat;
   position: absolute;
   width: 110%;
-  height: 100%;
+  height: 40%;
   bottom: 2%;
   left: -1rem;
 }
@@ -567,6 +567,14 @@ button.navbar-toggler {
   color: var(--light-red);
   font-family: Chivo;
   line-height: 2rem;
+}
+
+.section-three .testimonials .dots {
+  display:none; 
+}
+
+.section-three .testimonials .more {
+  display:inline;
 }
 
 .section-three .testimonials .avatar {
@@ -4279,115 +4287,20 @@ button.navbar-toggler {
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.form-container .grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50px 400px 50px 400px 50px;
-      grid-template-columns: 50px 400px 50px 400px 50px;
-  -ms-grid-rows: auto auto auto;
-      grid-template-rows: auto auto auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+/* form chillpipper css */
+
+section.form {
+    display: flex;
+    justify-content: center;
+    height: 600px;    
 }
 
-.form-container .grid .fields, .form-container .grid .message {
-  width: 100%;
-  margin: 10px 0;
+.form div#__next{
+  background-color: red;
 }
 
-.form-container .grid-name {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  position: relative;
-  padding-bottom: 15px;
-}
+/* form chillpipper css */
 
-.form-container .grid-name i {
-  visibility: hidden;
-  position: absolute;
-  top: 52px;
-  right: 20px;
-}
-
-.form-container .grid-name small {
-  visibility: hidden;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.form-container .grid .success-message .fa-check-circle {
-  color: var(--blue);
-  visibility: visible;
-}
-
-.form-container .grid .error-message .fa-exclamation-circle {
-  color: var(--main-red);
-  visibility: visible;
-}
-
-.form-container .grid .error-message small {
-  visibility: visible;
-  color: var(--main-red);
-}
-
-.form-container .grid-email {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-column: 4/5;
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.form-container .grid-email i {
-  visibility: hidden;
-  position: absolute;
-  top: 52px;
-  right: 20px;
-}
-
-.form-container .grid-email small {
-  visibility: hidden;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.form-container .grid-message {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-column: 2/5;
-}
-
-.form-container .grid label {
-  color: var(--main-red);
-}
-
-.form-container .grid .fields, .form-container .grid .message {
-  border: 2px solid var(--main-red);
-  padding: .8rem;
-  border-radius: 30px;
-  color: var(--main-red);
-  outline: none;
-}
-
-.form-container .grid .button {
-  background-color: var(--main-red);
-  border: none;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-column: 2/5;
-  width: 50%;
-  margin: 0 auto;
-}
 
 @media screen and (max-width: 768px) {
   .contact-container {
