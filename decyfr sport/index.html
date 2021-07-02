@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fontawsome.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+        
+    <div id="navigation">
+        <div id="menu" onclick="onclickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </div>
+        <div class="nav" id="nav">
+            <div class="col-menu">
+                <a href="#">ABOUT</a>
+                <a href="#">WHAT’S COMING NEXT?</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="main">
+        <div class="center">
+            <img class="logo" src="img/brand/logo1.png" alt="">
+        </div>        
+    </section>
+
+    <section class="social">
+        <a href=""><i class="fab fa-facebook-square"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+    </section>
+
+    <script>
+        function onclickMenu(){
+            document.getElementById("menu").classList.toggle("icon");
+            document.getElementById("nav").classList.toggle("change");
+        }
+
+    </script>
+
+</body>
+</html>
