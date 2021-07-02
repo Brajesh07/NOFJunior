@@ -6,7 +6,6 @@
 }
 
 body {
-  background-color: black;
   font-family: Open Sans;
 }
 
@@ -162,5 +161,123 @@ body {
 .social a .fab {
   font-size: clamp(24px, 3vw, 35px);
   color: #fff;
+}
+
+.container {
+  height: 100vh;
+}
+
+.container .nfl {
+  background-image: url("../img/theme/NFL IN 10 STEPS.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .nfl a {
+  font-family: Impact;
+  font-weight: 800;
+  font-size: clamp(50px, 10vw, 200px);
+  text-decoration: none;
+  color: #fff;
+}
+
+.green {
+  height: 100vh;
+}
+
+.green-img {
+  background-image: url("../img/theme/green-bay.png");
+  height: 100%;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.green-img .right {
+  margin-left: auto;
+}
+
+.green-img .left, .green-img .right {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  max-width: 100%;
+}
+
+.green-img .left img, .green-img .right img {
+  width: 190px;
+}
+
+.green-img .left img.pin-1, .green-img .right img.pin-1 {
+  position: absolute;
+  top: -120px;
+  left: -10px;
+  opacity: 1;
+  -webkit-transition: opacity 100ms;
+  transition: opacity 100ms;
+}
+
+.green-img .left img.pin-1-hover, .green-img .right img.pin-1-hover {
+  position: absolute;
+  top: -110px;
+  left: -10px;
+  opacity: 0;
+  -webkit-transition: opacity 100ms;
+  transition: opacity 100ms;
+}
+
+.green-img .left:hover img.pin-1-hover, .green-img .right:hover img.pin-1-hover {
+  opacity: 1;
+}
+
+.green-img .left:hover img.pin-1, .green-img .right:hover img.pin-1 {
+  opacity: 0;
+}
+
+.green-img .year {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  font-size: clamp(40px, 8vh, 100px);
+  font-family: AdobeHandwriting-Ernie;
+}
+
+.photos {
+  height: 100vh;
+  background-image: url("../img/theme/wallpaper.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .green-img {
+    background-image: url("../img/theme/green-bay-tab.png");
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .green-img {
+    background-image: url("../img/theme/green-bay-mobile.png");
+  }
 }
 /*# sourceMappingURL=style.css.map */
