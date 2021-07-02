@@ -9,6 +9,55 @@ body {
   font-family: Open Sans;
 }
 
+@font-face {
+  font-family: 'Adobe Handwriting';
+  src: url("../font/AdobeHandwriting-Frank.woff") format("woff"), url("../font/AdobeHandwriting-Frank.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adobe Handwriting';
+  src: url("../font/AdobeHandwriting-Frank.woff") format("woff"), url("../font/AdobeHandwriting-Frank.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Adobe Handwriting';
+  src: url("../font/AdobeHandwriting-Frank.woff") format("woff"), url("../font/AdobeHandwriting-Frank.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futur';
+  src: url("../font/futur.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futur';
+  src: url("../font/Futura Bold font.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futur';
+  src: url("../font/futura light bt.ttf") format("truetype");
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futur';
+  src: url("../font/futura medium bt.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
 #navigation {
   position: fixed;
 }
@@ -195,6 +244,7 @@ body {
 
 .green {
   height: 100vh;
+  overflow: hidden;
 }
 
 .green-img {
@@ -254,7 +304,19 @@ body {
   bottom: 10%;
   right: 5%;
   font-size: clamp(40px, 8vh, 100px);
-  font-family: AdobeHandwriting-Ernie;
+  font-family: 'Adobe Handwriting';
+}
+
+@media screen and (max-width: 768px) {
+  .green-img {
+    background-image: url("../img/theme/green-bay-tab.png");
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .green-img {
+    background-image: url("../img/theme/green-bay-mobile.png");
+  }
 }
 
 .photos {
@@ -269,15 +331,27 @@ body {
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
-  .green-img {
-    background-image: url("../img/theme/green-bay-tab.png");
-  }
+.photos .ft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-@media screen and (max-width: 425px) {
-  .green-img {
-    background-image: url("../img/theme/green-bay-mobile.png");
-  }
+.photos .ft-para {
+  font-family: 'Adobe Handwriting';
+  font-weight: normal;
+  font-size: clamp(20px, 5vw, 30px);
+  line-height: clamp(35px, 15vw, 55px);
+  width: clamp(300px, 70vw, 1200px);
+  margin: 0 auto;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
