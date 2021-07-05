@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -46,14 +47,21 @@ body {
 
 @font-face {
   font-family: 'futur';
-  src: url("../font/futura light bt.ttf") format("truetype");
-  font-weight: light;
+  src: url("../font/pricedow.ttf") format("truetype");
+  font-weight: noraml;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'futur';
   src: url("../font/futura medium bt.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pricedown';
+  src: url("../font/pricedow.ttf") format("truetype");
   font-weight: medium;
   font-style: normal;
 }
@@ -320,7 +328,7 @@ body {
 }
 
 .photos {
-  height: 100vh;
+  height: 100%;
   background-image: url("../img/theme/wallpaper.png");
   background-position: center;
   background-size: cover;
@@ -329,6 +337,97 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+}
+
+.photos .photo {
+  position: absolute;
+  height: clamp(150px, 25vw, 500px);
+  width: clamp(150px, 25vw, 500px);
+}
+
+.photos .photo img {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.photos .photo p {
+  font-size: 28px;
+  position: absolute;
+  bottom: -10px;
+  z-index: 3;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  font-family: 'Adobe Handwriting';
+  text-shadow: 0px 0px 5px #000;
+}
+
+.photos .photo-2 {
+  position: absolute;
+  height: clamp(150px, 25vw, 500px);
+  width: clamp(150px, 25vw, 500px);
+  right: 0;
+}
+
+.photos .photo-2 img {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.photos .photo-2 p {
+  font-size: 28px;
+  position: absolute;
+  bottom: -10px;
+  z-index: 3;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  font-family: 'Adobe Handwriting';
+  text-shadow: 0px 0px 5px #000;
+}
+
+.photos .left, .photos .right {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  max-width: 100%;
+  z-index: 2;
+}
+
+.photos .left img, .photos .right img {
+  width: 190px;
+}
+
+.photos .left img.pin-1, .photos .right img.pin-1 {
+  position: absolute;
+  top: -120px;
+  left: -10px;
+  opacity: 1;
+  -webkit-transition: opacity 100ms;
+  transition: opacity 100ms;
+}
+
+.photos .left img.pin-1-hover, .photos .right img.pin-1-hover {
+  position: absolute;
+  top: -110px;
+  left: -10px;
+  opacity: 0;
+  -webkit-transition: opacity 100ms;
+  transition: opacity 100ms;
+}
+
+.photos .left:hover img.pin-1-hover, .photos .right:hover img.pin-1-hover {
+  opacity: 1;
+}
+
+.photos .left:hover img.pin-1, .photos .right:hover img.pin-1 {
+  opacity: 0;
+}
+
+.photos .right {
+  right: 0;
 }
 
 .photos .ft {
@@ -343,6 +442,10 @@ body {
           align-items: center;
   width: 100vw;
   height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .photos .ft-para {
@@ -353,5 +456,163 @@ body {
   width: clamp(300px, 70vw, 1200px);
   margin: 0 auto;
   text-align: center;
+  line-height: clamp(20px, 10vw, 40px);
+}
+
+@media screen and (max-width: 425px) {
+  .photos .left {
+    left: -10%;
+  }
+  .photos .right {
+    right: -20%;
+  }
+  .photos .photo p {
+    display: none;
+  }
+}
+
+.season {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.season .don-shula {
+  position: absolute;
+  width: 50%;
+  z-index: 1;
+  left: 50%;
+  top: 10%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+}
+
+.season .car {
+  position: absolute;
+  z-index: 1;
+  width: 45%;
+  bottom: -10%;
+  right: 5%;
+}
+
+.season-one {
+  background-color: #FFABA0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/theme/Perfect-season–1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.season-one .dolphin-logo {
+  margin: clamp(2rem, 5vw, 5rem);
+  width: clamp(80px, 8vw, 240px);
+  position: absolute;
+}
+
+.season-one h1 {
+  font-family: 'Pricedown';
+  color: black;
+  -webkit-text-fill-color: #FF88ED;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  font-size: clamp(10rem, 10vw, 20rem);
+}
+
+.season-one .season-para {
+  padding: clamp(1rem, 3vw, 30px);
+  background-color: #ff88ED;
+  width: 80%;
+  max-width: 600px;
+  min-width: 300px;
+  margin-top: 40vh;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-size: 22px;
+  font-family: 'futur';
+  font-weight: 500;
+}
+
+.season-two {
+  background-color: #FF88ED;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/theme/Perfect-season–2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1024px) {
+  .season .season-para {
+    margin-top: 30vh;
+    font-size: 22px;
+  }
+  .season-one, .season-two {
+    background-size: contain;
+    background-position: bottom;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .season {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .season .don-shula {
+    position: absolute;
+    width: 80%;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .season .car {
+    width: 90%;
+    bottom: -5%;
+    right: 5%;
+  }
+  .season-one, .season-two {
+    background-size: 100%;
+    background-position: bottom;
+  }
+  .season-one .don-shula, .season-two .don-shula {
+    display: none;
+  }
+  .season-one .season-para, .season-two .season-para {
+    margin-top: 40vh;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .season {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .season .car {
+    bottom: 0%;
+  }
+  .season-one, .season-two {
+    background-size: 100%;
+    background-position: bottom;
+  }
+  .season-one .season-para, .season-two .season-para {
+    margin-top: 30vh;
+    font-size: 18px;
+  }
+  .season-two {
+    background-image: url("../img/theme/Perfect-season–2-2.png");
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,6 +7,7 @@
     <title>Decyfr sport</title>
     <link rel="stylesheet" href="css/fontawsome.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 </head>
 <body>
@@ -33,16 +34,44 @@
             </div>
         </section>
         <section id="nxt" class="photos">
+            <div class="left img">                
+                <a href="#">
+                    <img src="img/theme/Paperclip.png" class="pin-1" alt="" data-src="img/theme/Paperclip.png">                
+                    <img src="img/theme/Paperclip-1.png" class="pin-1-hover" alt="" data-src="img/theme/Paperclip-1.png">  
+                </a>
+            </div>
+            <div class="photo">
+                <a href="#nxt" class="fade-out"><img class="img" src="img/theme/Lambeau-Field-polaroid.png" alt=""></a>
+                <p class="img">Lambeau Field</p>
+            </div>
 
+            <div class="photo-2">
+                <a href="#nxt" class="fade-out"><img class="img" src="img/theme/Bart-Starr-polaroid.png" alt=""></a>
+                <p class="img">Bart Starr</p>
+            </div>
+
+            <div class="right img">                
+                <a class="active" href="#nxt">
+                    <img src="img/theme/Paperclip.png" class="pin-1" alt="" data-src="img/theme/Paperclip.png">                
+                    <img src="img/theme/Paperclip-1.png" class="pin-1-hover" alt="" data-src="img/theme/Paperclip-1.png">  
+                </a>
+            </div>
 
             <div class="ft">
-                <p class="ft-para">In 1966, the National Football League merged with the rival American Football League. Then, in 1967, the winners of each league played in the first ‘AFL-NFL World Championship Game’. The NFL’s Green Bay Packers won the first two championship games, and the trophy was soon named after their legendary coach, Vince Lombardi. The championship game was renamed in 1969,  and the Super Bowl was born.</p>
+                <p class="ft-para">In 1966, the National Football League merged with the rival American Football League. Then, in 1967, the winners of each league played in the first ‘AFL-NFL World Championship Game’. The NFL’s Green Bay Packers won the first two championship games, and the trophy was soon named after their legendary coach, Vince Lombardi. The championship game was renamed in 1969,  and the Super Bowl was born.</p>                
             </div>
+            
             
         </section>       
     </div>        
     
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/javascript.js"></script>
+    <script>
+        $('.fade-out').on('click', function(){
+            $('.img').addClass('animate__animated animate__fadeOut');
+        })
+    </script>
+
 </body>
 </html>
