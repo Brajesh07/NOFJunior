@@ -12,19 +12,19 @@
 </head>
 <body>
 
-    <div class="scroll">
+    
         <section class="green">
             <div class="green-img">     
                 <!-- <div class="pin-1"></div> -->
                 <div class="left">                
-                    <a href="NFL.html">
+                    <a href="index.html">
                         <img src="img/theme/Paperclip.png" class="pin-1" alt="" data-src="img/theme/Paperclip.png">                
                         <img src="img/theme/Paperclip-1.png" class="pin-1-hover" alt="" data-src="img/theme/Paperclip-1.png">  
                     </a>
                 </div>
     
                 <div class="right">                
-                    <a class="active" href="#">
+                    <a class="active" href="#nxt">
                         <img src="img/theme/Paperclip.png" class="pin-1" alt="" data-src="img/theme/Paperclip.png">                
                         <img src="img/theme/Paperclip-1.png" class="pin-1-hover" alt="" data-src="img/theme/Paperclip-1.png">  
                     </a>
@@ -33,45 +33,101 @@
                 <p class="year">1967</p>
             </div>
         </section>
-        <section id="nxt" class="photos">
-            <div class="left img">                
-                <a href="#">
+    <div class="scroller">
+        <section id="nxt" class="photos scroll">
+            <div class="left">                
+                <a class="fadeOutNxt" href="#">
                     <img src="img/theme/Paperclip.png" class="pin-1" alt="" data-src="img/theme/Paperclip.png">                
                     <img src="img/theme/Paperclip-1.png" class="pin-1-hover" alt="" data-src="img/theme/Paperclip-1.png">  
                 </a>
             </div>
-            <div class="photo">
-                <a href="#nxt" class="fade-out"><img class="img" src="img/theme/Lambeau-Field-polaroid.png" alt=""></a>
-                <p class="img">Lambeau Field</p>
+            <div class="photo fade-out-nxt">
+                <a href="#nxt" class="fade-out-nxt"><img class="fadeOutNxt" src="img/theme/Lambeau-Field-polaroid.png" alt=""></a>
+                <p class="fadeOutNxt">Lambeau Field</p>
             </div>
 
-            <div class="photo-2">
-                <a href="#nxt" class="fade-out"><img class="img" src="img/theme/Bart-Starr-polaroid.png" alt=""></a>
-                <p class="img">Bart Starr</p>
+            <div class="photo-2 fade-out">
+                <a href="#nxt" class="fade-out"><img class="fadeOut" src="img/theme/Bart-Starr-polaroid.png" alt=""></a>
+                <p class="fadeOut">Bart Starr</p>
             </div>
 
-            <div class="right img">                
-                <a class="active" href="#nxt">
+            <div class="right">                
+                <a class="active fadeOut" href="#">
                     <img src="img/theme/Paperclip.png" class="pin-1" alt="" data-src="img/theme/Paperclip.png">                
                     <img src="img/theme/Paperclip-1.png" class="pin-1-hover" alt="" data-src="img/theme/Paperclip-1.png">  
                 </a>
+            </div>
+
+            <div class="stamp">
+                <div class="stamp-container">
+                    <img class="fade-in"src="img/theme/stamp.png" alt="">
+                    <img class="print fade-in" src="img/theme/stamp print.png" alt="">
+                </div>                
             </div>
 
             <div class="ft">
                 <p class="ft-para">In 1966, the National Football League merged with the rival American Football League. Then, in 1967, the winners of each league played in the first ‘AFL-NFL World Championship Game’. The NFL’s Green Bay Packers won the first two championship games, and the trophy was soon named after their legendary coach, Vince Lombardi. The championship game was renamed in 1969,  and the Super Bowl was born.</p>                
+                <a class="nxt-page" href="#seasons"></a>
+            </div>      
+        </section>
+        
+        <section class="season" id="seasons">
+            <img class="don-shula" src="/img/theme/don shula.png" alt="">
+            <img class="car" src="img/theme/car.png" alt="">
+            <div class="season-one">
+                <img class="dolphin-logo" src="img/theme/dolphins-logo.png" alt="">
+                <p class="season-para">In 1970, the NFL officially absorbed the AFL, creating one league with two conferences – the NFC and the AFC.<br>
+                    Then, the Miami Dolphins won Super Bowl VII, finishing the 1972 season undefeated. This remains the NFL’s only perfect season, and it even gave birth to a legend. It was claimed that the ‘72 Dolphins popped champagne when the league’s last unbeaten team finally chalked up their first loss of the year, but coach Don Shula eventually admitted this was untrue.
+                </p>
+            </div>
+            <div class="season-two"> 
+                <a class="glow-arrow-off" href="Steelers.html"><img src="img/theme/chevrons.png" alt=""></a>           
             </div>
             
-            
-        </section>       
+        </section>
+
+        
+        
     </div>        
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/javascript.js"></script>
+    
     <script>
-        $('.fade-out').on('click', function(){
-            $('.img').addClass('animate__animated animate__fadeOut');
+        $('.active').on('click', function(){
+            $('.photos').addClass('photos-appear');
         })
+
+        $('.fade-out').on('click', function(){
+            $('.fadeOut').addClass('animate__animated animate__fadeOut event-none');            
+        });
+
+        $('.fade-out-nxt').on('click', function(){
+            $('.fadeOutNxt').addClass('animate__animated animate__fadeOut event-none');            
+            $('.fade-in').addClass('on');
+            $('.nxt-page').addClass('process');
+        });                
+
+        $('.nxt-page').on('click', function(){
+            $('.season').addClass('season-appear');
+        })        
+
+        $(function() {
+            $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 2000);
+                    return false;
+                }
+            });
+        });
+
     </script>
+
+    <script src="js/javascript.js"></script>
+    
 
 </body>
 </html>

@@ -10,34 +10,79 @@
 
 </head>
 <body style="background-color:black";>
-        
-    <div id="navigation">
-        <div id="menu" onclick="onclickMenu()">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-        </div>
-        <div class="nav" id="nav">
-            <div class="col-menu">
-                <a href="#">ABOUT</a>
-                <a href="#">WHAT’S COMING NEXT?</a>
+    <div class="index">
+        <div id="navigation" class="nv">
+            <div id="menu" onclick="onclickMenu()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+            <div class="nav" id="nav">
+                <div class="col-menu">
+                    <a href="#">ABOUT</a>
+                    <a href="#">WHAT’S COMING NEXT?</a>
+                </div>
             </div>
         </div>
+
+        <section class="main">
+            <div class="center">
+                <a class="active" href="#nfl-nxt"><img class="logo" src="img/brand/logo1.png" alt=""></a>
+            </div>        
+        </section>
+
+        <section class="social">
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+        </section>
     </div>
 
-    <section class="main">
-        <div class="center">
-            <a href="NFL.html"><img class="logo" src="img/brand/logo1.png" alt=""></a>
-        </div>        
+
+    <section class="container" id="nfl-nxt">
+        <div class="nfl">            
+            <a class="glow-off" href="Green Bay Postcard.html"><img src="img/theme/glow.png" alt=""></a>
+            <p>NFL IN 10 STEPS</p>
+        </div>
     </section>
 
-    <section class="social">
-        <a href=""><i class="fab fa-facebook-square"></i></a>
-        <a href=""><i class="fab fa-instagram"></i></a>
-        <a href=""><i class="fab fa-twitter"></i></a>
-    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="js/javascript.js"></script>    
+    <script>
+        //vanilla js menu 
+
+        function onclickMenu(){
+            document.getElementById("menu").classList.toggle("icon");
+            document.getElementById("nav").classList.toggle("change");
+        }
+    </script>
+    
+    <script> 
+
+        $('.active').on('click', function(){
+            $('.nv').addClass('nv-hide');
+        })
+
+        $('.active').on('click', function(){
+            $('.container').addClass('reveal');
+        })
+
+        $(function() {
+            $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 2000);
+                    return false;
+                }
+            });
+        });
+
+    </script>
+
+    
 
 </body>
 </html>

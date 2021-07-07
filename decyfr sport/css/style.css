@@ -10,24 +10,31 @@ body {
   font-family: Open Sans;
 }
 
-@font-face {
-  font-family: 'Adobe Handwriting';
-  src: url("../font/AdobeHandwriting-Frank.woff") format("woff"), url("../font/AdobeHandwriting-Frank.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px grey;
+          box-shadow: inset 0 0 2px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
 }
 
 @font-face {
   font-family: 'Adobe Handwriting';
-  src: url("../font/AdobeHandwriting-Frank.woff") format("woff"), url("../font/AdobeHandwriting-Frank.ttf") format("truetype");
+  src: local("Adobe Handwriting Ernie"), local("Adobe-Handwriting-Ernie"), url("../font/AdobeHandwriting-Ernie.woff") format("woff"), url("../font/AdobeHandwriting-Ernie.ttf") format("truetype");
   font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Adobe Handwriting';
-  src: url("../font/AdobeHandwriting-Frank.woff") format("woff"), url("../font/AdobeHandwriting-Frank.ttf") format("truetype");
-  font-weight: bold;
   font-style: normal;
 }
 
@@ -64,6 +71,17 @@ body {
   src: url("../font/pricedow.ttf") format("truetype");
   font-weight: medium;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'American';
+  src: url("../font/American Typewriter Regular.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+.index {
+  height: 101vh;
 }
 
 #navigation {
@@ -221,14 +239,16 @@ body {
 }
 
 .container {
+  display: none;
   height: 100vh;
 }
 
 .container .nfl {
   background-image: url("../img/theme/NFL IN 10 STEPS.png");
-  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: center;
+  background-position-y: 0;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -240,18 +260,78 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-.container .nfl a {
+.container .nfl .glow-off {
+  position: absolute;
+  top: -100px;
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes example {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes example {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container .nfl .glow-off img {
+  width: 100%;
+}
+
+.container .nfl p {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-family: Impact;
   font-weight: 800;
-  font-size: clamp(50px, 10vw, 200px);
+  font-size: clamp(22px, 5vw, 70px);
   text-decoration: none;
   color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#742177), to(#009DDD));
+  background-image: linear-gradient(to right, #742177, #009DDD);
+  padding: clamp(10px, 2vw, 20px);
+  border: clamp(5px, 1vw, 10px) solid #fff;
+}
+
+.reveal {
+  display: block;
+}
+
+.nv-hide {
+  display: none;
+}
+
+.scroll {
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 .green {
-  height: 100vh;
+  height: 101vh;
   overflow: hidden;
 }
 
@@ -328,15 +408,23 @@ body {
 }
 
 .photos {
-  height: 100%;
+  height: 100vh;
   background-image: url("../img/theme/wallpaper.png");
   background-position: center;
   background-size: cover;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
+}
+
+.photos .event-none {
+  pointer-events: none;
+  display: none;
+  cursor: none;
 }
 
 .photos .photo {
@@ -430,6 +518,39 @@ body {
   right: 0;
 }
 
+.photos .stamp-container {
+  width: clamp(150px, 15vw, 350px);
+  margin-left: auto;
+  margin-right: calc(100% - 95%);
+  margin-top: calc(100% - 98%);
+  outline: 2px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.photos .stamp-container img {
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 1000ms ease;
+  transition: 1000ms ease;
+}
+
+.photos .stamp-container .print {
+  position: absolute;
+  width: 100%;
+  bottom: -20%;
+  left: -71%;
+  opacity: 0;
+  -webkit-transition: 1000ms ease 500ms;
+  transition: 1000ms ease 500ms;
+}
+
+.photos .stamp-container .on {
+  opacity: 1;
+}
+
 .photos .ft {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,11 +562,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .photos .ft-para {
@@ -459,22 +581,43 @@ body {
   line-height: clamp(20px, 10vw, 40px);
 }
 
+.photos .ft .nxt-page {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.photos .ft .process {
+  pointer-events: visible;
+}
+
+.photos-appear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media screen and (max-width: 425px) {
   .photos .left {
     left: -10%;
+    pointer-events: none;
   }
   .photos .right {
     right: -20%;
+    pointer-events: none;
   }
-  .photos .photo p {
+  .photos .photo p, .photos .photo-2 p {
     display: none;
   }
 }
 
 .season {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: relative;
   overflow: hidden;
 }
@@ -546,6 +689,42 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.season-two .glow-arrow-off {
+  position: absolute;
+  bottom: -5%;
+  right: 50%;
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  z-index: 5;
+}
+
+@keyframes example {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.season-two .glow-arrow-off img {
+  width: 100%;
+}
+
+.season-appear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (max-width: 1024px) {
@@ -614,5 +793,256 @@ body {
   .season-two {
     background-image: url("../img/theme/Perfect-season–2-2.png");
   }
+}
+
+section.slide {
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+section.slide .button {
+  position: absolute;
+  z-index: 10;
+  height: 100px;
+  width: 100px;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%) scale(0);
+          transform: translate(-50%, 50%) scale(0);
+  -webkit-animation: display 1s ease-in-out 2s forwards;
+          animation: display 1s ease-in-out 2s forwards;
+}
+
+@-webkit-keyframes display {
+  from {
+    -webkit-transform: translate(-50%, 50%) scale(0);
+            transform: translate(-50%, 50%) scale(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, 50%) scale(1);
+            transform: translate(-50%, 50%) scale(1);
+  }
+}
+
+@keyframes display {
+  from {
+    -webkit-transform: translate(-50%, 50%) scale(0);
+            transform: translate(-50%, 50%) scale(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, 50%) scale(1);
+            transform: translate(-50%, 50%) scale(1);
+  }
+}
+
+section.slide .garage-door {
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  height: 130%;
+  opacity: 1;
+  -webkit-transform: translateY(-1400px);
+          transform: translateY(-1400px);
+  -webkit-animation: close 3s ease-in-out 18s forwards, transparacy 1s ease-in-out 28s forwards;
+          animation: close 3s ease-in-out 18s forwards, transparacy 1s ease-in-out 28s forwards;
+  overflow: hidden;
+}
+
+@-webkit-keyframes close {
+  0% {
+    -webkit-transform: translateY(-1400px) scaleY(0);
+            transform: translateY(-1400px) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes close {
+  0% {
+    -webkit-transform: translateY(-1400px) scaleY(0);
+            transform: translateY(-1400px) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+  }
+}
+
+@-webkit-keyframes transparacy {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes transparacy {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+section.slide .garage-door-open {
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  height: 130%;
+  -webkit-transform: translateY(-1400px);
+          transform: translateY(-1400px);
+  animation: open 3s ease-in-out 28s reverse;
+}
+
+@-webkit-keyframes open {
+  0% {
+    -webkit-transform: translateY(-1400px) scaleY(0);
+            transform: translateY(-1400px) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes open {
+  0% {
+    -webkit-transform: translateY(-1400px) scaleY(0);
+            transform: translateY(-1400px) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+  }
+}
+
+section.slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+section.slide .anim-delay {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+section.slide .slider-anim {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+section.slide .slider-anim .open-bar-img {
+  position: absolute;
+  z-index: 4;
+  opacity: 0;
+  -webkit-animation: appear 3s ease-in-out 26s forwards;
+          animation: appear 3s ease-in-out 26s forwards;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+section.slide .slider-anim img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+section.slide .slider-anim .slider-anim-one {
+  position: absolute;
+  z-index: 3;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  top: 50%;
+  left: 50%;
+  width: clamp(100px, 95vw, 900px);
+  height: clamp(74px, 70vw, 600px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section.slide .slider-anim .slider-anim-one img {
+  width: 100%;
+}
+
+section.slide .slider-anim .slider-anim-one .txt-anim {
+  position: absolute;
+  top: 5%;
+  right: 10px;
+  z-index: 4;
+  width: clamp(120px, 40vw, 400px);
+  overflow: hidden;
+}
+
+section.slide .slider-anim .slider-anim-one .txt-anim .fadeInUp-delay {
+  font-family: 'American';
+  line-height: clamp(10px, 2vw, 49px);
+  letter-spacing: clamp(1px, 1vw, 10px);
+  display: inline-block;
+  font-size: clamp(10px, 1vw, 18px);
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+section.slide .slider-anim .slider-anim-one .txt-anim .confidential-img, section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: clamp(50px, 30vw, 300px);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotateZ(345deg);
+          transform: translate(-50%, -50%) rotateZ(345deg);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+}
+
+section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
+  width: clamp(50px, 40vw, 450px);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 17s;
+          animation-delay: 17s;
 }
 /*# sourceMappingURL=style.css.map */
