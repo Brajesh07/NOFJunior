@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decyfr sport</title>
+    <link rel="stylesheet" href="css/fontawsome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body style="background-color:black";>
+    
+    <section class="bill-dinner">
+        
+        <a href="#" class="img-appear"><img src="img/theme/chevrons-up.png" alt=""></a>
+        <div class="bill-dinner-img-conatiner">
+
+           <a class="nxt-page-dallas" href="Dallas.html"><img src="img/theme/chevrons-black-down.png" alt=""></a>
+           <div class="anim">            
+            <h1 class="animate__animated">49ers</h1>
+            <p class="animate__animated">San Francisco 49ers</p>
+            <p class="animate__animated">head coach <span>Bill Walsh</span></p>
+            <p class="animate__animated">transformed the NFL</p>
+            <p class="animate__animated">with his West Coast</p>
+            <p class="animate__animated">offense. All-time greats</p>
+            <p class="animate__animated"><span>Joe Montana</span> and</p>
+            <p class="animate__animated"><span>Jerry Rice</span> thrived in</p>
+            <p class="animate__animated">the system. The 49ers</p>
+            <p class="animate__animated">were the NFL’s team of</p>
+            <p class="animate__animated">the decade and brought</p>
+            <p class="animate__animated">Super Bowls back to</p>
+            <p class="animate__animated">Candlestick Park in</p>
+            <p class="animate__animated">1981, 1984, 1988, and 1989</p>            
+           </div>
+
+            <img class="bill-dinner-img-2" src="img/theme/board.jpg" alt="">
+        </div>
+        <div class="overlay"></div> 
+        <img class="bill-dinner-img-1" src="img/theme/bill's-dinner.jpg" alt="">
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+         $('.img-appear').on('click', function(){
+            $('.bill-dinner-img-conatiner').addClass('fadein');            
+            $('.overlay').addClass('fadein');
+            $('.img-appear').addClass('hide');
+            $('.animate__animated').addClass('animate__fadeInUp anim-delay');
+            $('span').addClass('line');
+            $('.nxt-page-dallas').addClass('nxt-appear-button-down');
+        })
+        
+    </script>
+</body>
+</html>
