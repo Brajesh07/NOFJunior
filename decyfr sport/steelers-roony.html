@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decyfr sport</title>
+    <link rel="stylesheet" href="css/fontawsome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body style="background-color:black";>
+    
+  
+    <section class="letter">
+        <img class="cup" src="img/theme/cup.png" alt="">
+        <img class="book" src="img/theme/book.png" alt="">
+        <img class="pen" src="img/theme/pen.png" alt="">
+        <div class="letter-page">
+            <div class="steeler">
+                <img class="steeler-img" src="img/theme/steelers.png" alt="">
+            </div>
+            <div class="seal">
+                <a href="#slide" class="onclick-img"><img class="apear-img-4" src="img/theme/Rooney-white.png" alt=""></a>
+                <img class="apear-img-3" src="img/theme/seal-glow.png" alt="">
+                <img class="apear-img-2" src="img/theme/Rooney.png" alt="">
+                <img class="apear-img-1" src="img/theme/seal.png" alt="">
+            </div>
+            <p>The Pittsburgh Steelers have long been at the forefront of championing diversity and inclusivity within the NFL. In previous years they became the first team to hire an African-American coach, the first to hire an African-American coordinator, the first to start an African-American quarterback, and had the league’s first African-American Super Bowl MVP. In response to the firing of high-profile African-American head coaches despite the numerous wins on their CVs, the NFL established the ‘Rooney Rule’ in 2003. Named after Pittsburgh’s owner, Dan Rooney, the rule means that teams have to interview at least one ethnic-minority candidate for head coaching and football operations positions. The Steelers then went on to hire their first African-American head coach in 2007, and Mike Tomlin eventually won Super Bowl XLIII.</p>
+        </div>        
+    </section>
+    <section class="slide-img" id="slide">
+          <p>
+            In 2016, Kaepernick began kneeling during the national anthem to protest against police brutality and racial injustice. The then-49er was both praised and criticised for his actions, but he soon found himself out of the NFL. Kaepernick later became an important figure in the Black Lives Matter protests of 2020, and inspi red many other athletes, in various sports leagues across the world, to begin taking the knee before games.
+          </p>
+          <a href="#new" class="new"><img class="nxt-page-click" src="img/theme/chevrons-donw.png" alt=""></a>
+    </section> 
+
+    <section class="breaking-news" id="new">
+        <img class="new-break" src="img/theme/break-news.png" alt="">
+
+        <div class="player">
+            <img src="img/theme/player.jpg" alt="">
+        </div>
+        <div class="yellow-line">
+            <h1 class="heading-1">BRADY SUSPENDED</h1>
+        </div>
+        <div class="black-line">
+            <p class="para-1">On  the field, the two decades belonged to the New England Patriots. Under coach Bill Belichick, winning simply became routine. In 20 years, they appeared in nine Super Bowls and won six, although the Patriots weren’t without their controversies. In 2014, New England’s quarterback, Tom Brady, was accused of having the balls used in that year’s AFC Championship Game against the Indianapolis Colts deflated. Brady was eventually suspended for the first four games of the 2016 season. However, it was business as usual in New England that year, as they went on to win Super Bowl LI.</p>
+        </div>
+        
+    </section>
+ 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+
+         
+
+        $(function() {
+            $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 2000);
+                    return false;
+                }
+            });
+        });
+
+        $(document).ready(function(){
+
+            $(window).scroll(function(event){
+                var y = $(this).scrollTop();
+
+                if (y >= 300){
+                    $('.steeler-img').addClass('img-appear');
+                    $('.apear-img-1').addClass('img-appear');
+                    $('.apear-img-2').addClass('img-appear-1');
+                    $('.apear-img-3').addClass('img-appear-2');
+                    $('.apear-img-4').addClass('img-appear-3');
+                }
+            });
+        });     
+        
+        $('.onclick-img').on('click', function(){
+            $('.slide-img').addClass('slide-img-appear');
+            $('.nxt-page-click').addClass('faded-appear');
+        })    
+        
+        $('.new').on('click', function(){
+            $('.breaking-news').addClass('breaking-news-appear');            
+        })
+        
+    </script>
+</body>
+</html>
