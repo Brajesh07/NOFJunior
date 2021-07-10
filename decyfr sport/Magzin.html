@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decyfr sport</title>
+    <link rel="stylesheet" href="css/fontawsome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body style="background-color:black";>
+   
+    <section class="magzine-top">
+          
+      </section>
+  
+   <section class="magzine-bottom">
+     <a href="#" class="magzine-cover"><img src="img/theme/chevrons-up.png" alt=""></a>
+     <img class="up" src="img/theme/flip.png" alt="">    
+     <section class="cover-page">
+         <a class="paper-glow-action" href="index.html">
+             <img class="papper-glow" src="img/theme/glow.png" alt="">
+             <img class="paper" src="img/theme/paper.png" alt="">
+         </a>
+        <img src="img/theme/left-1.jpg" alt="" class="left">
+        <img src="img/theme/right-2.jpg" alt="" class="right">
+    </section> 
+   </section>
+  
+ 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+
+            $(window).scroll(function(event){
+                var y = $(this).scrollTop();
+
+                if (y >= 400){
+                    $('.magzine-cover').addClass('button-highlight');
+                   
+                }
+            });
+        });     
+        
+        $('.magzine-cover').on('click', function(){
+            $('.up').addClass('up-animate'); 
+            $('.magzine-top').addClass('none');
+            $('.cover-page').addClass('cover-appear')
+        })    
+    </script>
+</body>
+</html>
