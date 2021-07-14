@@ -1,0 +1,556 @@
+
+.scroll-1{
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+.green-1{
+    height: 101vh;
+    overflow: hidden;    
+       
+    .green-1-img{
+        background-image: url('../img/theme/green-bay.png');
+        height: 100%;
+        background-position: center; 
+        position: relative;
+        background-size: cover;
+        display: flex;
+
+        .right-1{
+            margin-left: auto;            
+
+            .pointer-1{
+                max-width: 50%;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-60%);
+                animation-delay: 3s;
+                pointer-events: none;
+            }
+        }
+
+        .left-1, .right-1{
+            position: relative;
+            width: 230px;
+            height: 230px;         
+            max-width: 100%;      
+            
+            img{
+                width: 250px;                
+            }
+
+            img.pin-1-1{
+                position: absolute;
+                top: -150px;
+                left: -30px;
+                opacity: 1;
+                transition: opacity 100ms;
+            }
+
+            img.pin-1-hover-1{
+                position: absolute;
+                top: -150px;
+                left: -30px;
+                opacity: 0;
+                transition: opacity 100ms;
+            }
+
+            &:hover img.pin-1-hover-1{
+                opacity: 1;
+            }
+
+            &:hover img.pin-1-1{
+                opacity: 0;
+            }
+        }
+
+        
+        .year-1{
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            font-size: clamp(40px, 8vh, 100px);
+            font-family: 'Adobe Handwriting';
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .green-1{
+        .green-img{
+         background-image: url('../img/theme/green-bay-tab.png');
+        }
+    }    
+ }
+ 
+ @media screen and (max-width: 425px){
+     .green{
+        .green-img{
+          background-image: url('../img/theme/green-bay-mobile.png');
+
+          .right-1{                     
+
+            .pointer-1{
+                bottom: 30%;
+                left: 50%;
+                transform: translateX(-70%);                
+            }
+        }
+
+        .left, .right{            
+            img{
+                width: 160px;                
+            }
+
+            img.pin-1{                
+                top: -90px;
+                left: -10px;                
+            }
+
+            img.pin-1-hover{                
+                top: -90px;
+                left: -10px;                
+            }            
+        }
+         
+         }
+     }    
+  }
+
+
+
+  //photos
+
+
+
+.photos-1{
+    height: 100vh;
+    background-image: url('../img/theme/wallpaper.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;   
+    
+    .event-none-1{
+        pointer-events: none;
+        display: none;
+        cursor: none;
+    }
+
+
+    .photo-1{
+        position: absolute;
+        height: clamp(150px, 35vw, 650px);
+        width: clamp(150px, 35vw, 650px);       
+        
+
+        img{
+            position: absolute;
+            width: 100%;    
+            z-index: 1;        
+        }
+
+        p{  
+            font-size: 28px;
+            position: absolute;
+            bottom: -10px;
+            z-index: 3;
+            left: 50%;
+            transform: translate(-50%);
+            font-family: 'Adobe Handwriting';
+            text-shadow: 0px 0px 5px #000;
+        }
+    }
+    
+    .photo-2-1{
+        position: absolute;
+        height: clamp(150px, 35vw, 650px);
+        width: clamp(150px, 35vw, 650px);               
+        right: 0;       
+
+        img{
+            position: absolute;
+            width: 100%;    
+            z-index: 1;        
+        }
+        p{  
+            font-size: 28px;
+            position: absolute;
+            bottom: -10px;
+            z-index: 3;
+            left: 50%;
+            transform: translate(-50%);
+            font-family: 'Adobe Handwriting';
+            text-shadow: 0px 0px 5px #000;
+            
+        }
+    }
+
+    .left-1, .right-1{
+        position: absolute;
+        width: 230px;
+        height: 230px;         
+        max-width: 100%;   
+        z-index: 2;          
+
+        img{
+            width: 250px;                
+        }
+
+        img.pin-1-1{
+            position: absolute;
+            top: -150px;
+            left: -30px;
+            opacity: 1;
+            transition: opacity 100ms;
+        }
+
+        img.pin-1-hover-1{
+            position: absolute;
+            top: -150px;
+            left: -30px;
+            opacity: 0;
+            transition: opacity 100ms;
+        }
+
+        &:hover img.pin-1-hover-1{
+            opacity: 1;
+        }
+
+        &:hover img.pin-1-1{
+            opacity: 0;
+        }
+    }
+
+    .left-1{
+        .pointer-1-3{
+            max-width: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-60%);
+            animation-delay: 100ms;
+            pointer-events: none;
+            opacity: 0;
+        }
+    }
+
+    .right-1{                       
+        right:0;
+
+        .pointer-1-2{
+            max-width: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-60%);
+            animation-delay: 3s;
+            pointer-events: none;
+        }
+    }
+    
+    .stamp-1{
+        .stamp-container-1{
+            width: clamp(150px, 15vw, 350px);
+            margin-left: auto;
+            margin-right: calc(100% - 95%);
+            margin-top: calc(100% - 98%);
+            outline: 2px solid;
+            display: flex;
+            position: relative;
+
+            img{
+                width: 100%;
+                opacity: 0;
+                transition: 1000ms ease;
+            }
+
+            .print{
+                position: absolute;
+                width: 100%;
+                bottom: -20%;
+                left: -71%;
+                opacity: 0;
+                transition: 1000ms ease 500ms;
+            }
+
+            .on{
+                opacity: 1;
+            }
+        }
+    }
+
+    .ft-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;        
+        height: 100%;
+        flex-direction: column;
+        position: relative;
+
+        .ft-para-1{
+            font-family: 'Adobe Handwriting';
+            font-weight: normal;
+            font-size: clamp(20px, 5vw, 30px);
+            line-height: clamp(35px, 15vw, 55px);
+            width: clamp(300px, 70vw, 1200px);
+            margin: 0 auto;
+            text-align: center;
+            line-height: clamp(20px, 10vw, 40px);
+        }
+        .nxt-page{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            bottom: 5%;
+            right: 5%;                     
+            pointer-events: none;
+
+            .visible-pointer{
+                opacity: 0;
+                width: 70%;
+            }
+
+        }
+
+        .process{
+            pointer-events: visible;
+        }
+
+        .active-pointer{
+            opacity: 0;
+            animation: pointer-visible 2s ease 1s forwards;
+
+            @keyframes pointer-visible {
+                from{opacity: 0;}
+                to{opacity: 1;}
+            }
+        }
+
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 425px){
+    .photos-1{
+        
+        .left-1{
+            left: -10%;            
+
+            img.pin-1-1{
+                top: -50px;
+                left: 40px;
+            }
+
+            img{
+                width: 90px;
+            }
+            
+        }
+        .right-1{
+            right: -20%;                     
+            
+            img.pin-1-1{
+                top: -50px;
+                left: 40px;
+            }
+
+            img{
+                width: 90px;
+            }
+        }
+
+        .photo-1, .photo-2-1{
+           
+            p{
+                display: none;                
+            }
+           
+            
+        }
+    }
+}
+
+
+.season-1{    
+    display: flex;  
+    position: relative;   
+    overflow: hidden;
+
+    .don-shula-1{
+        position: absolute;
+        width: 50%;
+        z-index: 1;
+        left: 50%;     
+        top: 10%;   
+        transform: translate(-50%, -10%);
+    }       
+    .car-1{
+        position: absolute;
+        z-index: 1;
+        width: 45%;
+        bottom: -10%;
+        left: 45%;
+        }
+    .season-one-1 {
+        background-color: #FFABA0;
+        width: 100%;
+        height: 100vh;
+        background-image: url('../img/theme/Perfect-season–1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        .dolphin-logo-1{
+            margin: clamp(2rem, 5vw, 5rem);
+            width: clamp(80px, 8vw, 240px);
+            position: absolute;         
+        }
+
+        
+        h1{
+            font-family: 'Pricedown';            
+            color: black;
+            -webkit-text-fill-color: #FF88ED;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: black;
+            font-size: clamp(10rem, 10vw, 20rem);
+        }        
+
+        .season-para-1{
+            padding: clamp(1rem, 3vw, 30px);
+            background-color: #ff88ED;
+            width: 70%;
+            // max-width: 600px;
+            // min-width: 300px;            
+            color: #fff;
+            font-size: 18px;
+            font-family: 'futura';
+            font-weight: 300;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .season-two-1 {
+        background-color: #FF88ED;
+        width: 100%;
+        height: 100vh;
+        background-image: url('../img/theme/Perfect-season–2.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        
+        .glow-arrow-off-1{
+            position: absolute;
+            bottom: -5%;
+            right: 50%;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+            z-index: 5;
+    
+            @keyframes example {
+                0% {opacity: 0;}                 
+                100% {opacity: 1;}
+              }
+    
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .season-1{
+
+        .season-para-1{            
+            font-size: 18px;
+        } 
+
+        .season-one-1, .season-two-1 {
+            background-size: contain;
+            background-position: bottom;   
+            
+
+                       
+        }
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .season-1{
+        flex-direction: column;
+
+        .don-shula-1{
+            position: absolute;
+            width: 80%;
+            z-index: 1;
+            left: 50%;     
+            top: 50%;   
+            transform: translate(-50%, -50%);
+        }   
+
+        .car-1{            
+            width: 90%;
+            bottom: -5%;
+            left: 5%;
+            }
+
+       .season-one-1, .season-two-1 {
+            background-size: 100%;
+            background-position: bottom;  
+            
+            // .don-shula-1{
+            //     display: none;
+            // }
+
+            .season-para-1{   
+                bottom: 10%;              
+                font-size: 12px;
+            }  
+        }
+       
+    }    
+}
+
+@media screen and (max-width: 425px) {
+    .season-1{
+        flex-direction: column;
+
+        .car-1{   
+            bottom: 0%;
+            }
+      .season-one-1, .season-two-1 {
+            background-size: cover;
+            background-position: bottom;    
+
+            
+
+            .season-para-1{     
+                bottom: 10%;           
+                font-size: 12px;
+            }  
+        }
+
+        .season-two-1{
+            background-image: url('../img/theme/Perfect-season–2-2.png');
+        }
+       
+    }    
+}

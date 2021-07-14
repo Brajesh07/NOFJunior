@@ -1,0 +1,226 @@
+:root {
+   //slide-one-2.png
+    --fsdu: 4s;
+   --fsdl: 1s;
+
+   //hole container files car parking   
+   --scdu: 4s;
+   --scdl: 6s;
+
+   //paragraph animation
+   --thdu:100ms;
+   --thdl:9s;
+
+   //confidential
+   --frdu:2s;
+   --frdl:74s;
+   
+   //glow
+   --fvdu:2s;
+   --fvdl:75s;
+
+   //close-garage-door
+   --sxdu:3s;
+   --sxdl:76s;
+
+   //transparacy-garage-door
+   --svdu:1s;
+   --svdl:80s;
+
+   //open-garage-door
+   --egdu:3s;
+   --egdl:80s;
+
+   //bill's dinner parking
+   --nidu:1s;
+   --nidl:79s;
+
+   //button
+   --tedu:1s;
+   --tedl:81s;
+
+   //aorrw
+   --eldu:2s;
+   --eldl:81s;
+
+   
+}
+
+
+section.slide{    
+    background-color: #000;    
+    height: 100vh;
+    width: 100%;        
+    position: relative;
+    overflow: hidden;    
+
+    .left-arrow{
+        width: 50px;
+        position: relative;
+        z-index: 3;
+        top: 50%;
+        opacity: 0;
+        animation: arrow-appear var(--eldu) ease var(--eldl) forwards;
+
+        @keyframes arrow-appear {
+            from{ opacity: 0;}            
+            to{ opacity: 1;}
+        }
+
+    }
+
+    .button{
+        position: absolute;
+        z-index: 14;                
+        height: 100px;
+        width: 100px;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, 50%) scale(0);        
+        animation: display var(--tedu) ease-in-out var(--tedl) forwards;
+
+        @keyframes display {
+            from{ transform: translate(-50%, 50%) scale(0);}
+            to{ transform: translate(-50%, 50%) scale(1);}
+        }
+    }
+   
+    .garage-door{
+        width: 100%;
+        position: absolute;
+        z-index: 12;
+        height: 130%;   
+        opacity: 1;
+        transform: translateY(-1400px);     
+        animation: close var(--sxdu) ease-in-out var(--sxdl) forwards, transparacy var(--svdu) ease-in-out var(--svdl) forwards;
+        overflow: hidden;
+          
+
+        @keyframes close {
+            0% {transform: translateY(-1400px) scaleY(0);}                 
+            100% { transform: translateY(0) scaleY(1);}
+          }
+         
+          @keyframes transparacy {
+            0% { opacity: 1; }                 
+            100% {opacity: 0; }          
+        }
+       
+    }
+
+    .garage-door-open{
+        width: 100%;
+        position: absolute;
+        z-index: 12;
+        height: 130%;   
+        transform: translateY(-1400px);     
+        animation: open var(--egdu) ease-in-out var(--egdl) reverse;
+          
+
+        @keyframes open {
+            0% {transform: translateY(-1400px) scaleY(0);;}                 
+            100% { transform: translateY(0) scaleY(1);}
+          }
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .anim-delay{
+        animation-duration: var(--fsdu);
+        animation-delay: var(--fsdl);        
+    }
+
+    .slider-anim{
+        height: 100vh;
+        width: 100%; 
+        position: absolute;
+        z-index: 2;
+        animation-duration: var(--scdu);
+        animation-delay: var(--scdl);  
+        
+        .open-bar{
+
+            
+
+            &-img{
+                position: absolute;
+                z-index: 4;
+                opacity: 0;
+                animation: appear var(--nidu) ease-in-out var(--nidl) forwards;
+
+                @keyframes appear {
+                    from{opacity: 0;}                
+                    to{opacity: 1;}
+                }
+            }
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+
+        }
+        .slider-anim-one{
+            position: absolute;
+            z-index: 3;
+            animation-duration: 4s;
+            animation-delay: 6s;
+            top: 50%;
+            left: 50%;
+            width: clamp(100px, 95vw, 900px);
+            height: clamp(74px, 70vw, 600px);
+            transform: translate(-50%, -50%);
+
+            img{
+                width: 100%;
+            }
+
+            .txt-anim{
+                position: absolute;
+                top: 5%;
+                right: 10px;
+                z-index: 4;
+                width: clamp(120px, 40vw, 400px);
+                overflow: hidden;
+
+                p{
+                    font-family: 'American';
+                    line-height: 35px;
+                    letter-spacing: 5px;
+                    display: inline-block;
+                    font-size: clamp(10px, 1vw, 18px);
+                    animation-duration: var(--thdu);
+                    animation-delay: var(--thdl);
+                    padding: 15% 0;
+                }
+                
+                .confidential-img, .confidential-glow{
+                    object-fit: contain;
+                    width: clamp(50px, 30vw, 300px);
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotateZ(345deg);
+                    animation-duration: var(--frdu);
+                    animation-delay: var(--frdl);
+                }
+                .confidential-glow{
+                    width: clamp(50px, 40vw, 450px);
+                    animation-duration: var(--fvdu);
+                    animation-delay: var(--fvdl);
+                }
+
+            }
+            
+        }
+
+    }
+    
+}

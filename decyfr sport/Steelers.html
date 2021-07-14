@@ -33,7 +33,7 @@
         <div class="line-1"></div>
         <div class="line-1"></div>
         <div class="line-1"></div>
-        <div class="center"><p>10</p><i class="fas fa-sort-down"></i></div>  
+        <div class="center"><p>30</p><i class="fas fa-sort-down"></i></div>  
       </div>
         <div class="right-timeline">    
           <div class="line"></div>
@@ -91,9 +91,10 @@
       </div>
     
     <section class="slide">  
+        <!-- <img class="left-arrow" src="img/theme/chevrons-white-left.png" alt=""> -->
         <a href="bill.html" class="button"><img src="img/theme/open-bar.png" alt=""></a>
         <img class="garage-door" src="img/theme/garage-door.jpg" alt="">   
-        <img class="garage-door-open" src="img/theme/garage-door.jpg" alt="">
+        <img class="garage-door-open" src="img/theme/garage-door.jpg" alt=""> 
         <img  class="animate__animated animate__fadeIn anim-delay" src="img/theme/slide-one-2.png" alt="">
         <div class="animate__animated animate__fadeIn slider-anim">
             <div class="open-bar">                
@@ -105,13 +106,79 @@
                 <div class="txt-anim">
                     <img class="confidential-img animate__animated animate__fadeIn" src="img/theme/confidential.png" alt="">
                     <img class="confidential-glow animate__animated animate__fadeIn" src="img/theme/confidential-glow.png" alt="">
-                    <p class="animate__animated animate__fadeInUp fadeInUp-delay">The Steel Curtain was Raised in the seventies, as the  pittsburghs steelers won  supuer bowls  in 1974. These wins were thanks to Pittsburgh's defense, featuring the  intimidating figures of Joe Greene, Jack Ham, and Mel Blount,  which slammed the gate shut on opponents.</p>
+                    <p id="typewriter" class="animate__animated animate__fadeIn typer">The Steel Curtain was raised in the seventies, as the  Pittsburgh Steelers won  Supuer Bowls  in 1974, 1975, 1978, and 1979. These wins were thanks to Pittsburgh's defense, featuring the  intimidating figures of Joe Greene, Jack Ham, and Mel Blount,  which slammed the gate shut on opponents.</p>
                 </div>
                 <img class="file" src="img/theme/file.png" alt="">
             </div>
         </div>   
         
     </section>
+
+    <script>
+      function setupTypewriter(t) {
+	    var HTML = t.innerHTML;
+	    t.innerHTML = "";
+	    var cursorPosition = 0,
+	        tag = "",
+	        writingTag = false,
+	        tagOpen = false,
+	        typeSpeed = 300,
+        tempTypeSpeed = 0;
+	    var type = function() {
+	        if (writingTag === true) {
+	            tag += HTML[cursorPosition];
+	        }
+	        if (HTML[cursorPosition] === "<") {
+	            tempTypeSpeed = 0;
+	            if (tagOpen) {
+	                tagOpen = false;
+	                writingTag = true;
+	            } else {
+	                tag = "";
+	                tagOpen = true;
+	                writingTag = true;
+	                tag += HTML[cursorPosition];
+	            }
+	        }
+	        if (!writingTag && tagOpen) {
+	            tag.innerHTML += HTML[cursorPosition];
+	        }
+	        if (!writingTag && !tagOpen) {
+	            if (HTML[cursorPosition] === " ") {
+	                tempTypeSpeed = 0;
+	            }
+	            else {
+	                tempTypeSpeed = (Math.random() * typeSpeed) + 100;
+	            }
+	            t.innerHTML += HTML[cursorPosition];
+	        }
+	        if (writingTag === true && HTML[cursorPosition] === ">") {
+	            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+	            writingTag = false;
+	            if (tagOpen) {
+	                var newSpan = document.createElement("span");
+	                t.appendChild(newSpan);
+	                newSpan.innerHTML = tag;
+	                tag = newSpan.firstChild;
+	            } 
+	        }
+	        cursorPosition += 1;
+        
+	        if (cursorPosition < HTML.length - 1) {
+            if(cursorPosition == 1){
+              tempTypeSpeed = 10000;
+            }
+	            setTimeout(type, tempTypeSpeed);
+	        }
+	    };
+	    return {
+	        type: type
+	    };
+	}
+	var typer = document.getElementById('typewriter');
+	typewriter = setupTypewriter(typewriter);
+	typewriter.type();
+    </script>
     
 </body>
 </html>
