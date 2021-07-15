@@ -147,6 +147,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        overflow: hidden;
         
         .glow-off{
             position: absolute;
@@ -156,6 +157,23 @@
             animation-delay: 4s;
             animation-fill-mode: forwards;
             opacity: 0;
+
+            .chevron{
+                background-image: url(../img/theme/chevrons-white-down.png);
+                background-repeat: no-repeat;
+                width: 200px;
+                height: 200px;
+                z-index: 1;
+                position: absolute;
+                top: 55%;
+                left: 55%;
+                transform: rotateZ(134deg);
+                transition: 1000ms;
+            }
+
+            .chevron:hover{
+                background-image: url('../img/theme/chevrons-black-down.png');
+            }
 
             @keyframes example {
                 0% {opacity: 0;}                 

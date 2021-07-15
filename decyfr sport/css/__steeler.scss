@@ -54,21 +54,6 @@ section.slide{
     position: relative;
     overflow: hidden;    
 
-    .left-arrow{
-        width: 50px;
-        position: relative;
-        z-index: 3;
-        top: 50%;
-        opacity: 0;
-        animation: arrow-appear var(--eldu) ease var(--eldl) forwards;
-
-        @keyframes arrow-appear {
-            from{ opacity: 0;}            
-            to{ opacity: 1;}
-        }
-
-    }
-
     .button{
         position: absolute;
         z-index: 14;                
@@ -145,7 +130,25 @@ section.slide{
         animation-delay: var(--scdl);  
         
         .open-bar{
+            
 
+            .left-arrow{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                z-index: 5;
+                top: 50%;
+                left: 50%;
+                transform: translate(-140%, 100%);                
+                opacity: 0;
+                animation: arrow-appear var(--eldu) ease var(--eldl) forwards;
+        
+                @keyframes arrow-appear {
+                    from{ opacity: 0;}            
+                    to{ opacity: 1;}
+                }
+        
+            }
             
 
             &-img{
@@ -166,6 +169,7 @@ section.slide{
             height: 100%;
             object-fit: cover;
             position: absolute;
+            top: 0;
 
         }
         .slider-anim-one{
@@ -223,4 +227,19 @@ section.slide{
 
     }
     
+}
+
+@media screen and (max-width:452px) {
+    section.slide{
+        .slider-anim{
+            .slider-anim-one{
+                .txt-anim{
+                    p{
+                        line-height: 13px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }    
 }

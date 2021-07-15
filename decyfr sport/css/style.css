@@ -434,6 +434,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .container .nfl .glow-off {
@@ -448,6 +449,25 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
+}
+
+.container .nfl .glow-off .chevron {
+  background-image: url(../img/theme/chevrons-white-down.png);
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  -webkit-transform: rotateZ(134deg);
+          transform: rotateZ(134deg);
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
+}
+
+.container .nfl .glow-off .chevron:hover {
+  background-image: url("../img/theme/chevrons-black-down.png");
 }
 
 @-webkit-keyframes example {
@@ -805,7 +825,7 @@ body {
   width: clamp(300px, 70vw, 1200px);
   margin: 0 auto;
   text-align: center;
-  line-height: clamp(20px, 10vw, 40px);
+  line-height: clamp(10px, 7vw, 40px);
 }
 
 .photos .ft .nxt-page {
@@ -860,6 +880,10 @@ body {
   .photos .left {
     left: -10%;
   }
+  .photos .left .pointer-3 {
+    bottom: 30%;
+    left: 45%;
+  }
   .photos .left img.pin-1 {
     top: -50px;
     left: 40px;
@@ -874,11 +898,21 @@ body {
     top: -50px;
     left: 40px;
   }
+  .photos .right .pointer-2 {
+    bottom: 30%;
+    left: 40%;
+  }
   .photos .right img {
     width: 90px;
   }
   .photos .photo p, .photos .photo-2 p {
     display: none;
+  }
+  .photos .ft .nxt-page {
+    bottom: -15%;
+  }
+  .photos .ft .nxt-page .visible-pointer {
+    width: 30%;
   }
 }
 
@@ -1022,7 +1056,7 @@ body {
   .season .car {
     width: 90%;
     bottom: -5%;
-    right: 5%;
+    left: 0;
   }
   .season-one, .season-two {
     background-size: 100%;
@@ -1633,34 +1667,6 @@ section.slide {
   overflow: hidden;
 }
 
-section.slide .left-arrow {
-  width: 50px;
-  position: relative;
-  z-index: 3;
-  top: 50%;
-  opacity: 0;
-  -webkit-animation: arrow-appear var(--eldu) ease var(--eldl) forwards;
-          animation: arrow-appear var(--eldu) ease var(--eldl) forwards;
-}
-
-@-webkit-keyframes arrow-appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes arrow-appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 section.slide .button {
   position: absolute;
   z-index: 14;
@@ -1808,6 +1814,38 @@ section.slide .slider-anim {
           animation-delay: var(--scdl);
 }
 
+section.slide .slider-anim .open-bar .left-arrow {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-140%, 100%);
+          transform: translate(-140%, 100%);
+  opacity: 0;
+  -webkit-animation: arrow-appear var(--eldu) ease var(--eldl) forwards;
+          animation: arrow-appear var(--eldu) ease var(--eldl) forwards;
+}
+
+@-webkit-keyframes arrow-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 section.slide .slider-anim .open-bar-img {
   position: absolute;
   z-index: 4;
@@ -1840,6 +1878,7 @@ section.slide .slider-anim img {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
+  top: 0;
 }
 
 section.slide .slider-anim .slider-anim-one {
@@ -1905,6 +1944,13 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
           animation-delay: var(--fvdl);
 }
 
+@media screen and (max-width: 452px) {
+  section.slide .slider-anim .slider-anim-one .txt-anim p {
+    line-height: 13px;
+    letter-spacing: 1px;
+  }
+}
+
 .bill-dinner {
   width: 100vw;
   height: 100vh;
@@ -1963,7 +2009,7 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
 
 .bill-dinner-img-conatiner .nxt-page-dallas {
   position: absolute;
-  bottom: -10%;
+  bottom: -20%;
   display: none;
   opacity: 0;
   z-index: 6;
@@ -2690,10 +2736,10 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
 
 .letter .pen {
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   right: 0;
   max-width: clamp(80px, 35vw, 700px);
-  z-index: 1;
+  z-index: 4;
 }
 
 .letter .letter-page {
@@ -2719,7 +2765,7 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
   font-size: clamp(10px, 5vw, 1.5rem);
   width: 100%;
   padding: 0 10%;
-  line-height: clamp(10px, 5vw, 2.2rem);
+  line-height: 75px;
 }
 
 .letter .letter-page .steeler, .letter .letter-page .seal {
@@ -2859,7 +2905,40 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
   }
 }
 
+@media screen and (max-width: 1366px) {
+  .letter .pen {
+    bottom: 30%;
+  }
+  .letter .letter-page {
+    width: 60%;
+  }
+  .letter .letter-page p {
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .letter .letter-page {
+    width: 60%;
+  }
+  .letter .letter-page p {
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .letter .letter-page {
+    width: 60%;
+  }
+  .letter .letter-page p {
+    line-height: 40px;
+  }
+}
+
 @media screen and (max-width: 452px) {
+  .letter .pen {
+    bottom: 50%;
+  }
   .letter .letter-page {
     width: 80%;
   }
@@ -2868,7 +2947,7 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
     font-size: clamp(10px, 5vw, 1.5rem);
     width: 100%;
     padding: 0 10%;
-    line-height: 25px;
+    line-height: 35px;
   }
 }
 

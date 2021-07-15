@@ -302,7 +302,7 @@
             width: clamp(300px, 70vw, 1200px);
             margin: 0 auto;
             text-align: center;
-            line-height: clamp(20px, 10vw, 40px);
+            line-height: clamp(10px, 7vw, 40px);
         }
         .nxt-page{
             position: absolute;
@@ -349,7 +349,12 @@
     .photos{
         
         .left{
-            left: -10%;            
+            left: -10%; 
+            
+            .pointer-3{
+                bottom: 30%;
+                left: 45%;
+            }
 
             img.pin-1{
                 top: -50px;
@@ -369,6 +374,11 @@
                 left: 40px;
             }
 
+            .pointer-2{
+                bottom: 30%;
+                left: 40%;
+            }
+
             img{
                 width: 90px;
             }
@@ -379,9 +389,18 @@
             p{
                 display: none;                
             }
-           
-            
         }
+
+        .ft{
+            .nxt-page{
+                bottom: -15%;
+
+                .visible-pointer{
+                    width: 30%;
+                }
+            }
+        }
+
     }
 }
 
@@ -522,7 +541,7 @@
         .car{            
             width: 90%;
             bottom: -5%;
-            right: 5%;
+            left: 0;
             }
 
         &-one, &-two {
