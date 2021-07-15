@@ -28,6 +28,7 @@
                 transform: translateX(-60%);
                 animation-delay: 3s;
                 pointer-events: none;
+                background-color: red;
             }
         }
 
@@ -242,7 +243,7 @@
     .right-1{                       
         right:0;
 
-        .pointer-1-2{
+        .pointer-2-1{
             max-width: 50%;
             position: absolute;
             bottom: 0;

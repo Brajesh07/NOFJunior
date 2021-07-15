@@ -115,6 +115,13 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Impact';
+  src: url("../font/impact.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
 .nav {
   position: fixed;
   height: 100vh;
@@ -189,9 +196,14 @@ body {
 }
 
 .top .line-1, .top .line-2, .top .line {
-  width: clamp(20px, 25vw, 50px);
+  width: 10px;
   height: 2px;
   background-color: #fff;
+}
+
+.top .line-2 {
+  -webkit-transform: scaleX(8);
+          transform: scaleX(8);
 }
 
 .top .right-timeline {
@@ -226,7 +238,7 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  width: 10%;
+  width: 5%;
 }
 
 .top .left-timeline .center {
@@ -1127,6 +1139,7 @@ body {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   pointer-events: none;
+  background-color: red;
 }
 
 .green-1 .green-1-img .left-1, .green-1 .green-1-img .right-1 {
@@ -1329,7 +1342,7 @@ body {
   right: 0;
 }
 
-.photos-1 .right-1 .pointer-1-2 {
+.photos-1 .right-1 .pointer-2-1 {
   max-width: 50%;
   position: absolute;
   bottom: 0;

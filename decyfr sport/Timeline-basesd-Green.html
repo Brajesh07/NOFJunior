@@ -13,15 +13,15 @@
 <body>
     <div class="nav">
         <div class="liner"></div>
-        <div class="liner"><a class="symb active" href="#nxt">40</a></div>
-        <div class="liner"><a class="symb nxt-page" href="#seasons">30</a></div>
-        <div class="liner"><a class="symb" href="">20</a></div>
-        <div class="liner"><a class="symb" href="">10</a></div>
-        <div class="liner"><a href="">50</a></div>
-        <div class="liner"><a class="syma" href="">40</a></div>
-        <div class="liner"><a class="syma" href="">30</a></div>
-        <div class="liner"><a class="syma" href="">20</a></div>
-        <div class="liner"><a class="syma" href="">10</a></div>
+        <div class="liner"><a id="liner40" class="symb active" href="#a">10</a></div>
+        <div class="liner"><a id="liner30" class="symb nxt-page" href="#seasons">20</a></div>
+        <div class="liner"><a id="liner20" class="symb" href="Steelers.html">30</a></div>
+        <div class="liner"><a id="liner10" class="symb" href="Dallas.html">40</a></div>
+        <div class="liner"><a id="liner50" href="">50</a></div>
+        <div class="liner"><a id="liner-40" class="syma" href="">40</a></div>
+        <div class="liner"><a id="liner-30" class="syma" href="">30</a></div>
+        <div class="liner"><a id="liner-20" class="syma" href="">20</a></div>
+        <div class="liner"><a id="liner-10" class="syma" href="Magzin.html">10</a></div>
         <div class="liner"></div>
       </div>
       <div class="top">
@@ -33,7 +33,7 @@
         <div class="line-1"></div>
         <div class="line-1"></div>
         <div class="line-1"></div>
-        <div class="center"><p>10</p><i class="fas fa-sort-down"></i></div>  
+        <div class="center"><p id="textLeft">10</p><i class="fas fa-sort-down"></i></div>  
       </div>
         <div class="right-timeline">    
           <div class="line"></div>
@@ -111,7 +111,7 @@
                 <p class="year-1">1967</p>
             </div>
         </section>
-    <div class="scroller-1">
+    <div class="scroller-1 slidde" id="a">
         <section id="nxt" class="photos-1 scroll">
             <div class="left-1">                
                 <a class="fadeOutNxt fade-out-nxt">
@@ -134,7 +134,7 @@
                     <img src="img/theme/Paperclip.png" class="pin-1-1" alt="" data-src="img/theme/Paperclip.png">                
                     <img src="img/theme/Paperclip-1.png" class="pin-1-hover-1" alt="" data-src="img/theme/Paperclip-1.png">  
                 </a>
-                <img class="pointer-1 animate__animated animate__fadeIn" src="img/theme/chevrons-up.png" alt="">
+                <img class="pointer-2-1 animate__animated animate__fadeIn" src="img/theme/chevrons-up.png" alt="">
             </div>
 
             <div class="stamp-1">
@@ -150,7 +150,7 @@
             </div>      
         </section>
         
-        <section class="season-1" id="seasons">
+        <section class="season-1 slidde" id="seasons">
             <img class="don-shula-1" src="img/theme/don shula.png" alt="">
             <img class="car-1" src="img/theme/car.png" alt="">
             <div class="season-one-1">
@@ -191,8 +191,8 @@
 
         $('.nxt-page').on('click', function(){
             $('.season').addClass('season-appear');
-        })        
-
+        })   
+        
         $(function() {
             $('a[href*=\\#]:not([href=\\#])').on('click', function() {
                 var target = $(this.hash);
@@ -204,6 +204,61 @@
                     return false;
                 }
             });
+        });   
+
+        // handle links with @href started with '#' only
+        $(document).on('click', 'a[href^="#"]', function(e) {
+            // target element id
+            var id = $(this).attr('href');
+            var idtag = $(this).attr('id');    
+            var lefttext = '';
+            if(id == '#a'){
+                lefttext = 10; 
+            }
+            else if(id == '#seasons'){
+                lefttext = 20; 
+            }
+            else if(id == '#c'){
+                lefttext = 30; 
+            }
+            else if(id == '#d'){
+                lefttext = 40; 
+            }
+            else if(id == '#e'){
+                lefttext = 50; 
+            }
+            $('#textLeft').html(lefttext);
+            // target element
+            var $id = $(id);
+            if ($id.length === 0) {
+                return;
+            }
+            // prevent standard hash navigation (avoid blinking in IE)
+            e.preventDefault();
+            // top position relative to the document
+            var pos = $id.offset().top;
+            // animated top scrolling
+            $('body, html').animate({scrollTop: pos});
+        });
+        $('.slidde  section').mouseover(function(){
+        var id = $(this).attr('id');    
+            var lefttext = '';
+            if(id == 'a'){
+                lefttext = 10; 
+            }
+            else if(id == 'b'){
+                lefttext = 20; 
+            }
+            else if(id == 'c'){
+                lefttext = 30; 
+            }
+            else if(id == 'd'){
+                lefttext = 40; 
+            }
+            else if(id == 'e'){
+                lefttext = 50; 
+            }
+            $('#textLeft').html(lefttext);
         });
 
     </script>

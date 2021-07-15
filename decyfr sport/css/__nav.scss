@@ -58,9 +58,13 @@
     opacity: 0.7;
 
     .line-1, .line-2, .line{
-        width: clamp(20px, 25vw, 50px);
+        width: 10px;
         height: 2px;
         background-color: #fff;
+    }
+
+    .line-2{
+      transform: scaleX(8);
     }
 
     .right-timeline{
@@ -81,7 +85,7 @@
         height:100vh;  
         overflow: hidden;
         position:relative;
-        width: 10%;
+        width: 5%;
 
         .center {
             position:absolute;
