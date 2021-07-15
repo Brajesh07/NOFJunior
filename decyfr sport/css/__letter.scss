@@ -296,7 +296,7 @@
      .new-break{
          width: 50%;
          position: absolute;
-         top: 30%;
+         top: 40%;
          left: 50%;
          transform: translate(-50%, -50%);
          
@@ -423,11 +423,12 @@
         }
 
         .heading-1{
+            font-family: 'Helvetica';
             position: absolute;
             top: 50%;
             left: 50%;
             opacity: 0;
-            font-size: 30px;
+            font-size: 45px;
             transform: translate(-50%, -50%);
             animation: fade-in 2s ease 7s forwards,
             goes 4s ease 30s forwards;
@@ -443,10 +444,11 @@
 
         }
         .heading-2{
+            font-family: 'Helvetica';            
             position: absolute;
             top: 50%;
             left: 50%;            
-            font-size: 30px;
+            font-size: 45px;
             transform: translate(400%, -50%);
             animation: comes 4s ease 30s forwards,
             goings 4s ease 50s forwards;
@@ -463,10 +465,11 @@
 
         }
         .heading-3{
+            font-family: 'Helvetica';
             position: absolute;
             top: 50%;
             left: 50%;            
-            font-size: 30px;
+            font-size: 45px;
             transform: translate(400%, -50%);
             animation: going 4s ease 50s forwards,
             went 4s ease 70s forwards;

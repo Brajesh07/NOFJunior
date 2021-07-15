@@ -19,8 +19,8 @@
         <div class="liner"><a id="liner10" class="symb" href="Dallas.html">40</a></div>
         <div class="liner"><a id="liner50" href="Dallas.html">50</a></div>
         <div class="liner"><a id="liner-40" class="syma" href="steelers-roony.html">40</a></div>
-        <div class="liner"><a id="liner-30" class="syma" href="steelers-roony.html#new">30</a></div>
-        <div class="liner"><a id="liner-20" class="syma" href="steelers-roony.html#new">20</a></div>
+        <div class="liner"><a id="liner-30" class="syma onclick-img" href="#slide">30</a></div>
+        <div class="liner"><a id="liner-20" class="syma new" href="#new">20</a></div>
         <div class="liner"><a id="liner-10" class="syma" href="Magzin.html">10</a></div>
         <div class="liner"></div>
       </div>
@@ -33,7 +33,7 @@
         <div class="line-1"></div>
         <div class="line-1"></div>
         <div class="line-1"></div>
-        <div class="center"><p id="textLeft">10</p><i class="fas fa-sort-down"></i></div>  
+        <div class="center"><p id="textLeft">40</p><i class="fas fa-sort-down"></i></div>  
       </div>
         <div class="right-timeline">    
           <div class="line"></div>
@@ -108,14 +108,14 @@
             <p>The Pittsburgh Steelers have long been at the forefront of championing diversity and inclusivity within the NFL. In previous years they became the first team to hire an African-American coach, the first to hire an African-American coordinator, the first to start an African-American quarterback, and had the league’s first African-American Super Bowl MVP. In response to the firing of high-profile African-American head coaches despite the numerous wins on their CVs, the NFL established the ‘Rooney Rule’ in 2003. Named after Pittsburgh’s owner, Dan Rooney, the rule means that teams have to interview at least one ethnic-minority candidate for head coaching and football operations positions. The Steelers then went on to hire their first African-American head coach in 2007, and Mike Tomlin eventually won Super Bowl XLIII.</p>
         </div>        
     </section>
-    <section class="slide-img" id="slide">
+    <section class="slide-img slidde" id="slide">
           <p>
             In 2016, Kaepernick began kneeling during the national anthem to protest against police brutality and racial injustice. The then-49er was both praised and criticised for his actions, but he soon found himself out of the NFL. Kaepernick later became an important figure in the Black Lives Matter protests of 2020, and inspi red many other athletes, in various sports leagues across the world, to begin taking the knee before games.
           </p>
           <a href="#new" class="new"><img class="nxt-page-click" src="img/theme/chevrons-donw.png" alt=""></a>
     </section> 
 
-    <section class="breaking-news" id="new">
+    <section class="breaking-news slidde" id="new">
         <img class="new-break" src="img/theme/break-news.png" alt="">
         <div class="rugby-boy">
             <a href="Magzin.html"></a>
@@ -183,6 +183,61 @@
         $('.new').on('click', function(){
             $('.breaking-news').addClass('breaking-news-appear');            
         })
+
+        // handle links with @href started with '#' only
+        $(document).on('click', 'a[href^="#"]', function(e) {
+            // target element id
+            var id = $(this).attr('href');
+            var idtag = $(this).attr('id');    
+            var lefttext = '';
+            if(id == '#nxt'){
+                lefttext = 10; 
+            }
+            else if(id == '#new'){
+                lefttext = 20; 
+            }
+            else if(id == '#slide'){
+                lefttext = 30; 
+            }
+            else if(id == '#d'){
+                lefttext = 40; 
+            }
+            else if(id == '#e'){
+                lefttext = 50; 
+            }
+            $('#textLeft').html(lefttext);
+            // target element
+            var $id = $(id);
+            if ($id.length === 0) {
+                return;
+            }
+            // prevent standard hash navigation (avoid blinking in IE)
+            e.preventDefault();
+            // top position relative to the document
+            var pos = $id.offset().top;
+            // animated top scrolling
+            $('body, html').animate({scrollTop: pos});
+        });
+        $('.slidde').mouseover(function(){
+        var id = $(this).attr('id');    
+            var lefttext = '';
+            if(id == 'nxt'){
+                lefttext = 10; 
+            }
+            else if(id == 'new'){
+                lefttext = 20; 
+            }
+            else if(id == 'slide'){
+                lefttext = 30; 
+            }
+            else if(id == 'd'){
+                lefttext = 40; 
+            }
+            else if(id == 'e'){
+                lefttext = 50; 
+            }
+            $('#textLeft').html(lefttext);
+        });
         
     </script>
 </body>

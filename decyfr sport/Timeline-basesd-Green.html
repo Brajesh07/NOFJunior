@@ -13,7 +13,7 @@
 <body>
     <div class="nav">
         <div class="liner"></div>
-        <div class="liner"><a id="liner40" class="symb active" href="#a">10</a></div>
+        <div class="liner"><a id="liner40" class="symb active" href="#nxt">10</a></div>
         <div class="liner"><a id="liner30" class="symb nxt-page" href="#seasons">20</a></div>
         <div class="liner"><a id="liner20" class="symb" href="Steelers.html">30</a></div>
         <div class="liner"><a id="liner10" class="symb" href="Dallas.html">40</a></div>
@@ -33,7 +33,7 @@
         <div class="line-1"></div>
         <div class="line-1"></div>
         <div class="line-1"></div>
-        <div class="center"><p id="textLeft">10</p><i class="fas fa-sort-down"></i></div>  
+        <div class="center"><p id="textLeft"></p><i class="fas fa-sort-down"></i></div>  
       </div>
         <div class="right-timeline">    
           <div class="line"></div>
@@ -111,8 +111,8 @@
                 <p class="year-1">1967</p>
             </div>
         </section>
-    <div class="scroller-1 slidde" id="a">
-        <section id="nxt" class="photos-1 scroll">
+    <div class="scroller-1">
+        <section id="nxt" class="photos-1 scroll slidde">
             <div class="left-1">                
                 <a class="fadeOutNxt fade-out-nxt">
                     <img src="img/theme/Paperclip.png" class="pin-1-1" alt="" data-src="img/theme/Paperclip.png">                
@@ -212,7 +212,7 @@
             var id = $(this).attr('href');
             var idtag = $(this).attr('id');    
             var lefttext = '';
-            if(id == '#a'){
+            if(id == '#nxt'){
                 lefttext = 10; 
             }
             else if(id == '#seasons'){
@@ -240,13 +240,13 @@
             // animated top scrolling
             $('body, html').animate({scrollTop: pos});
         });
-        $('.slidde  section').mouseover(function(){
+        $('.slidde').mouseover(function(){
         var id = $(this).attr('id');    
             var lefttext = '';
-            if(id == 'a'){
+            if(id == 'nxt'){
                 lefttext = 10; 
             }
-            else if(id == 'b'){
+            else if(id == 'seasons'){
                 lefttext = 20; 
             }
             else if(id == 'c'){

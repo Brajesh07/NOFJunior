@@ -122,6 +122,13 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Helvetica';
+  src: url("../font/HelveticaNeueBold.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
 .nav {
   position: fixed;
   height: 100vh;
@@ -1139,7 +1146,6 @@ body {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   pointer-events: none;
-  background-color: red;
 }
 
 .green-1 .green-1-img .left-1, .green-1 .green-1-img .right-1 {
@@ -3042,7 +3048,7 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
 .breaking-news .new-break {
   width: 50%;
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -3302,11 +3308,12 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
 }
 
 .breaking-news .yellow-line .heading-1 {
+  font-family: 'Helvetica';
   position: absolute;
   top: 50%;
   left: 50%;
   opacity: 0;
-  font-size: 30px;
+  font-size: 45px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-animation: fade-in 2s ease 7s forwards, goes 4s ease 30s forwards;
@@ -3358,10 +3365,11 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
 }
 
 .breaking-news .yellow-line .heading-2 {
+  font-family: 'Helvetica';
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 30px;
+  font-size: 45px;
   -webkit-transform: translate(400%, -50%);
           transform: translate(400%, -50%);
   -webkit-animation: comes 4s ease 30s forwards, goings 4s ease 50s forwards;
@@ -3413,10 +3421,11 @@ section.slide .slider-anim .slider-anim-one .txt-anim .confidential-glow {
 }
 
 .breaking-news .yellow-line .heading-3 {
+  font-family: 'Helvetica';
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 30px;
+  font-size: 45px;
   -webkit-transform: translate(400%, -50%);
           transform: translate(400%, -50%);
   -webkit-animation: going 4s ease 50s forwards, went 4s ease 70s forwards;
